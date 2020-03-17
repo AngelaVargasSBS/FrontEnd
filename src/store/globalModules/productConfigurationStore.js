@@ -80,6 +80,20 @@ const mutations = {
 
 
 
+  },
+
+  resetProductPlanSummsAssured(state){
+    let productPlanSummsAssuredInitial =  [
+      //{ descripcion: 'SUMA LIBRE', sumaMinima: 0, sumaMaxima: 1000000000, obligatoria: false, sumAssured: null },
+      { codigoSuma:1, descripcion: 'ESTRUCTURA', sumaMinima: 50000000, sumaMaxima: 2000000000, obligatoria: false, summAssured: null, summIncluded:null },
+      { codigoSuma:2, descripcion: 'CONTENIDOS', sumaMinima: 10000000, sumaMaxima: 500000000, obligatoria: true, summAssured: null, summIncluded:null },
+      { codigoSuma:3, descripcion: 'TODO RIESGO', sumaMinima: 1000000, sumaMaxima: 50000000, obligatoria: false, summAssured: null, summIncluded:null }
+    ]
+
+
+    Object.assign(state.productPlan.productPlanSummsAssured,  productPlanSummsAssuredInitial)
+
+
   }
 }
 
@@ -101,9 +115,9 @@ export default {
         productPlanIntermediary: [],
         productPlanSummsAssured: [
           //{ descripcion: 'SUMA LIBRE', sumaMinima: 0, sumaMaxima: 1000000000, obligatoria: false, sumAssured: null },
-          { descripcion: 'ESTRUCTURA', sumaMinima: 50000000, sumaMaxima: 2000000000, obligatoria: false, summAssured: null, summIncluded:null },
-          { descripcion: 'CONTENIDOS', sumaMinima: 10000000, sumaMaxima: 500000000, obligatoria: true, summAssured: null, summIncluded:null },
-          { descripcion: 'TODO RIESGO', sumaMinima: 1000000, sumaMaxima: 50000000, obligatoria: false, summAssured: null, summIncluded:null }
+          { codigoSuma:1, descripcion: 'ESTRUCTURA', sumaMinima: 50000000, sumaMaxima: 2000000000, obligatoria: false, summAssured: null, summIncluded:null },
+          { codigoSuma:2, descripcion: 'CONTENIDOS', sumaMinima: 10000000, sumaMaxima: 500000000, obligatoria: true, summAssured: null, summIncluded:null },
+          { codigoSuma:3, descripcion: 'TODO RIESGO', sumaMinima: 1000000, sumaMaxima: 50000000, obligatoria: false, summAssured: null, summIncluded:null }
         ],
         timeFrom: null,
         timeUp: null

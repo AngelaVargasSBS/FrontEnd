@@ -904,7 +904,7 @@ export default {
           });
 
           store.commit("formPropertyStore/addNewRiskList");
-          store.commit("formPropertyStore/resetState");
+          store.commit("riskPolicyStore/resetState");
           store.commit("productConfigurationStore/resetProductPlanSummsAssured")
           this.dialogEdit =false
           this.$swal({
