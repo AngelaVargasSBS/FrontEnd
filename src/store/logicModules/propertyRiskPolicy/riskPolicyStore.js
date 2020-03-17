@@ -1,5 +1,9 @@
 import Vue from 'vue'
 import restApi from '@/store/utils/restApi.js'
+import {
+  getField,
+  updateField
+} from 'vuex-map-fields'
 
 const defaultState = {
 
@@ -44,7 +48,7 @@ const defaultState = {
 
 
 const getters = {
-
+  getField,
 }
 const actions = {
 
@@ -166,8 +170,21 @@ const actions = {
         })
     })
   },
+  getSummsAssuredRisk({
+    commit,
+    state
+  }) {
+    
+  },
+  getSummsAssuredRisk({
+    commit,
+    state
+  }) {
+  }
 }
 const mutations = {
+  updateField,
+
   setNewRisk(state, dataNewRisk) {
 
     state.riskNumber = dataNewRisk.riskNumber
@@ -181,6 +198,9 @@ const mutations = {
   },
   resetState(state) {
     Object.assign(state, defaultState)
+  },
+  loadRiskState(state, dataRiskList) {
+    Object.assign(state, dataRiskList)
   }
 
 }

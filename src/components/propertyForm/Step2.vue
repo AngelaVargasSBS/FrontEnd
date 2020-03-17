@@ -676,9 +676,14 @@ import PropertyController from "@/components/propertyForm/propertyComponents/Pro
 import personModuleStore from "@/store/globalModules/personStore";
 import DatePickers from "@/components/globalComponents/DatePickers.vue";
 
-const { mapFields } = createHelpers({
+const { mapFields: formPropertyStoreFields } = createHelpers({
   getterType: "formPropertyStore/getField",
   mutationType: "formPropertyStore/updateField"
+});
+
+const { mapFields: riskPolicyStoreFields } = createHelpers({
+  getterType: "riskPolicyStore/getField",
+  mutationType: "riskPolicyStore/updateField"
 });
 
 export default {
@@ -729,17 +734,27 @@ export default {
   },
 
   computed: {
-    ...mapFields({
+    ...formPropertyStoreFields({
       serialRiskNumber: "step1.serialNumberRisk",
       risks: "step2.risks",
-      editedIndexrisks: "step2.editedIndexrisks",
-      editedItemrisks: "step2.editedItemrisks",
-      countryCode: "step2.editedItemrisks.countryCode",
-      departamentCode: "step2.editedItemrisks.departamentCode",
-      municipalityCode: "step2.editedItemrisks.municipalityCode",
-      address: "step2.editedItemrisks.address",
-      constructionYear: "step2.editedItemrisks.constructionYear",
-      defaultItemrisks: "step2.defaultItemrisks"
+      editedIndexrisks: "step2.editedIndexrisks"
+      //editedItemrisks: "step2.editedItemrisks",
+      //countryCode: "step2.editedItemrisks.countryCode",
+      // departamentCode: "step2.editedItemrisks.departamentCode",
+      // municipalityCode: "step2.editedItemrisks.municipalityCode",
+      // address: "step2.editedItemrisks.address",
+      // constructionYear: "step2.editedItemrisks.constructionYear",
+      // defaultItemrisks: "step2.defaultItemrisks"
+    }),
+
+    ...riskPolicyStoreFields({
+      editedItemrisks: "riskProperty",
+      countryCode: "riskProperty.countryCode",
+      departamentCode: "riskProperty.departamentCode",
+      municipalityCode: "riskProperty.municipalityCode",
+      address: "riskProperty.address",
+      constructionYear: "riskProperty.constructionYear",
+      defaultItemrisks: "riskProperty.defaultItemrisks"
     }),
     ...mapState("dictionariesStore", [
       "typeAddress",
@@ -801,7 +816,6 @@ export default {
       return errors;
       console.log(errors);
     },
-
     generateAddress: function() {
       this.editedItemrisks.address =
         (this.editedItemrisks.streetTypeCode == null
@@ -859,10 +873,22 @@ export default {
 
     // risks methods
     editItemrisks(item) {
-      console.log(item);
+      // console.log(item);
       this.editedIndexrisks = this.risks.indexOf(item);
-      this.editedItemrisks = Object.assign({}, item);
+      // this.editedItemrisks = Object.assign({}, item);
       this.dialogEdit = true;
+
+      store.commit("riskPolicyStore/loadRiskState", item);
+
+      store
+        .dispatch("riskPolicyStore/getSummsAssuredRisk")
+        .then(resp => {})
+        .catch(err => {});
+
+      store
+        .dispatch("riskPolicyStore/getCoveragesRisk")
+        .then(resp => {})
+        .catch(err => {});
     },
     deleteItemrisks(item) {
       const index = this.risks.indexOf(item);
@@ -901,17 +927,11 @@ export default {
           });
 
           store.commit("formPropertyStore/addNewRiskList");
-<<<<<<< HEAD
           store.commit("riskPolicyStore/resetState");
-          store.commit("productConfigurationStore/resetProductPlanSummsAssured")
-          this.dialogEdit =false
-=======
-          store.commit("formPropertyStore/resetState");
           store.commit(
             "productConfigurationStore/resetProductPlanSummsAssured"
           );
           this.dialogEdit = false;
->>>>>>> 26a48ed6330c0583a083d58dcc0721b32ab1a686
           this.$swal({
             position: "center",
             icon: "success",
@@ -969,7 +989,6 @@ export default {
                   });
                   this.e6 = 2;
                   this.statusNewTariffRisk = false;
-                  store.dispatch("formPropertyStore/getCoveragePolicy");
                   console.log(
                     `statusNewTariffRisk = ${this.statusNewTariffRisk}`
                   );
