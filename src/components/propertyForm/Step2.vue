@@ -544,7 +544,7 @@
                                       outlined
                                       @click="
                                         Guardarrisks();
-                                          stepFormSubmission()
+                                        stepFormSubmission()
                                       "
                                     >Continue</v-btn>
                                   </v-col>
@@ -906,7 +906,7 @@ export default {
       store.dispatch("riskPolicyStore/postPropertyRiskPolicy");
     },
 
-    GuardarProteccion() {
+    Guardarrisks() {
       console.log(`paso 1 statusNewTariffRisk = ${this.statusNewTariffRisk}`);
       if (
         this.editedItemrisks.tipoAmparo != "" &&
@@ -1023,6 +1023,12 @@ export default {
                 showConfirmButton: false,
                 timer: 4000
               });
+              console.log("this.editedIndexrisks");
+              console.log(this.editedIndexrisks);
+              console.log("/this.editedIndexrisks");
+              store.dispatch("riskPolicyStore/postPropertyRiskPolicy", {
+                key: this.editedIndexrisks
+              });
             },
             error => {
               this.$swal({
@@ -1033,6 +1039,9 @@ export default {
                 showConfirmButton: false,
                 timer: 4000
               });
+              console.log("this.editedIndexrisks");
+              console.log(this.editedIndexrisks);
+              console.log("/this.editedIndexrisks");
             }
           );
       }

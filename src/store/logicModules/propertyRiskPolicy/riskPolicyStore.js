@@ -52,34 +52,25 @@ const actions = {
 
   },
 
-
-  postPropertyRiskPolicy({
-    commit,
-    state
-  }) {
-    console.log('postPropertyRiskPolicy');
+  postPropertyRiskPolicy(state, data) {
+    let dataRisk = state.rootState.formPropertyStore.step2.risks[data.key + 1];
     return new Promise((resolve, reject) => {
-
-      let url = Vue.prototype.$urlServices + `/api/v1/sbs/createPropertyRiskPolicy/propertyRiskPolicy
-      `
+      let url = Vue.prototype.$urlServices + `/api/v1/sbs/createPropertyRiskPolicy/propertyRiskPolicy`;
       let dataPost = {
-        address: null,
+        address: dataRisk.address,
         anniversary: this.state.formPropertyStore.step1.anniversary,
         uniqueIdentifier: this.state.formPropertyStore.step1.uniqueIdentifier,
         ciuCode: null,
-        codeTypeRisk: null,
-        riskNumber: null,
-        countryCode: null,
-        departamentCode: null,
-        municipalityCode: null,
+        codeTypeRisk: this.state.formPropertyStore.step1.typeRiskCode,
+        riskNumber: dataRisk.riskNumber,
+        countryCode: dataRisk.countryCode,
+        departamentCode: dataRisk.departamentCode,
+        municipalityCode: dataRisk.municipalityCode,
       }
 
       restApi.post(url, dataPost)
         .then(response => {
           if (response.data.status.code == 200) {
-            // dataNewRisk = Object.assign({}, state);
-            // commit('formPropertyStore/addNewRiskList', dataNewRisk);
-            console.log(response);
             resolve()
           } else {
             reject(response.data.status.message)
@@ -90,9 +81,8 @@ const actions = {
         })
     })
   },
-
-
 }
+
 const mutations = {
   setNewRisk(state, dataNewRisk) {
 
