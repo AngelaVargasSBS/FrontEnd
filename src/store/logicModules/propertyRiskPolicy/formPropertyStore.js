@@ -21,7 +21,7 @@ const actions = {
     console.log(urlData);
     console.log(data);
 
-    let url = Vue.prototype.$urlServices + `/api/v1/sbs/createProperty/property`,
+    let url = Vue.prototype.$urlServices + `/api/v1/sbs/property/create`,
       // dataPropertyController = state.state.propertyController;
       dataPropertyController = Object.assign({}, urlData);
 
@@ -40,6 +40,7 @@ const actions = {
       restApi.post(url, dataPropertyController).then(response => {
         if (response.data.status.code == '200' && response.data.status.message.indexOf("Successful") > -1) {
           resolve(response);
+          
         } else {
           reject(response);
         }

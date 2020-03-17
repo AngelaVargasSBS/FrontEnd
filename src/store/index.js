@@ -13,7 +13,6 @@ import productConfigurationStore from './globalModules/productConfigurationStore
 /* logicModules */
 import formPropertyStore from './logicModules/propertyRiskPolicy/formPropertyStore'
 import riskPolicyStore from './logicModules/propertyRiskPolicy/riskPolicyStore'
-import propertyRiskPolicy from './logicModules/propertyRiskPolicy/propertyRiskPolicy'
 import coveragePolicyStore from './logicModules/propertyRiskPolicy/coveragePolicyStore'
 import riskSummAssuredStrore from './logicModules/propertyRiskPolicy/riskSummAssuredStrore'
 
@@ -29,7 +28,6 @@ export default new Vuex.Store({
     productPlanStore,
     productConfigurationStore,
     riskPolicyStore,
-    propertyRiskPolicy,
     coveragePolicyStore,
     riskSummAssuredStrore
   }

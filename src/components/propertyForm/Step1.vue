@@ -739,7 +739,6 @@ export default {
                   });
                   store.dispatch("formPropertyStore/stepState", { index: 2 });
 		store.dispatch("formPropertyStore/getIntermediaryPolicy");
-                  store.dispatch("propertyRiskPolicy/postPropertyRiskPolicy");
                 })
                 .catch(err => {
                   this.$swal({
