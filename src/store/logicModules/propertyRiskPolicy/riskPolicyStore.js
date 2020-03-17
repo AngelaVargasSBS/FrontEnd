@@ -49,8 +49,7 @@ const getters = {
 const actions = {
 
   createRiskPolicy({
-    commit,
-    state
+    commit, state
   }) {
 
 
@@ -138,35 +137,35 @@ const actions = {
   },
   postPropertyRiskPolicy(state, data) {
     let dataRisk = state.rootState.formPropertyStore.step2.risks[data.key + 1];
+
+
     return new Promise((resolve, reject) => {
-      let url = Vue.prototype.$urlServices + `/api/v1/sbs/createPropertyRiskPolicy/propertyRiskPolicy`;
-      let dataPost = {
-        address: dataRisk.address,
-        anniversary: this.state.formPropertyStore.step1.anniversary,
-        uniqueIdentifier: this.state.formPropertyStore.step1.uniqueIdentifier,
-        ciuCode: null,
-        codeTypeRisk: this.state.formPropertyStore.step1.typeRiskCode,
-        riskNumber: dataRisk.riskNumber,
-        countryCode: dataRisk.countryCode,
-        departamentCode: dataRisk.departamentCode,
-        municipalityCode: dataRisk.municipalityCode,
-      }
+
+      let url = Vue.prototype.$urlServices + `/api/v1/oal/sumInsuredRisk`
 
       restApi.post(url, dataPost)
         .then(response => {
+
           if (response.data.status.code == 200) {
+
+            commit('setNewSummAssuredRisk', dataPost);
             resolve()
+
           } else {
+
             reject(response.data.status.message)
           }
+
         })
         .catch(e => {
+
           reject(e)
         })
-    })
-  },
-}
 
+    })
+
+  }
+}
 const mutations = {
   setNewRisk(state, dataNewRisk) {
 
@@ -179,7 +178,7 @@ const mutations = {
     state.riskSummsAssured.push(dataNewSumm)
 
   },
-  resetState(state) {
+  resetState(state){
     Object.assign(state, defaultState)
   }
 
