@@ -416,6 +416,7 @@ const { mapFields } = createHelpers({
   mutationType: "formPropertyStore/updateField"
 });
 
+
 export default {
   name: "Step1",
 
@@ -481,6 +482,7 @@ export default {
       typeEvent: "eventPolicy.typeEvent",
       typeSubEvent: "eventPolicy.typeSubEvent"
     }),
+
 
     ...mapState("formPropertyStore", ["step1", "stepNumber"]),
     ...mapState("dictionariesStore", [
