@@ -1,0 +1,29 @@
+.base-title {
+  h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.5;
+    font-size: 3rem;
+    font-weight: 300;
+    color: #404040;
+  }
+  p {
+    color: #404040;
+  }
+}
+
+.hr-line {
+  background: #404040;
+}
+.v-parallax {
+  .v-parallax__image-container {
+    &::before {
+      content: "";
+      background-color: black;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

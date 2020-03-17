@@ -1,0 +1,133 @@
+/****** Base ******/
+@import "~@/assets/styles/global.scss";
+
+.headerSBS {
+
+
+  // Header
+  .navBarr__header {
+    text-align: left;
+
+    .navBar__title {
+      h1 {
+        color: #9E1C64;
+        font-weight: bold;
+        font-size: 30px !important;
+        line-height: normal;
+      }
+      h2 {
+        color: #ADB3B7;
+        font-weight: bold;
+        font-size: 30px !important;
+        line-height: normal;
+      }
+    }
+
+    .navBar__subtitle {
+      h2 {
+        color: #ADB3B7;
+        font-size: 18px;
+        line-height: 25px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .product-line {
+    margin: 0;
+
+    h4 {
+      font-size: 24px !important;
+      color:
+        #9e1d64;
+      font-weight: bold;
+      float: left;
+      text-transform: capitalize;
+    }
+
+
+
+  }
+
+  // items Menu
+  .itemMenu {
+    align-items: center;
+
+    a {
+      display: block;
+      font-size: 14px;
+      color: #5C6670;
+      border: 1px solid #EFF0F1;
+      box-sizing: border-box;
+      border-radius: 6px;
+      padding: 1.5rem 1rem;
+      width: 90%;
+      text-align: center;
+      text-decoration: none;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+
+      &:hover {
+        border: 1px solid #9E1C64;
+      }
+    }
+  }
+
+  header {
+    box-shadow: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: #E7E7E7;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .v-toolbar__title {
+    img {
+      width: 60%;
+      height: auto;
+    }
+  }
+
+  .m-multiselect .typo__label {
+    color:
+      #9E1C64;
+    line-height: 16px;
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .m-multiselect {
+    position: relative;
+    margin-left: auto;
+    max-width: 160px;
+    z-index: 5;
+  }
+
+  .mr-4,
+  .mx-4 {
+    margin-right: 1.5rem !important;
+  }
+
+  .user-name {
+    border-bottom: 2px solid #9E1C64;
+    font-size: 13px;
+    padding: 0 0 .3rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 160px;
+  }
+}
+
+.v-list-item{
+  min-height: 30px !important;
+}

@@ -1,0 +1,123 @@
+/****** Base ******/
+@import "~@/assets/styles/global.scss";
+
+.generalContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  display: -webkit-flex;
+
+  #leftContainer {
+    background-size: cover;
+    width: 40%;
+    height: 100vh;
+    position: relative;
+
+    &::after {
+      background: #9E1C64;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      content: "";
+      opacity: 0.9;
+    }
+  }
+
+  #bodyContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    position: relative;
+
+    footer {
+      font-size: 12px;
+      font-family: "Nunito";
+      color:
+        #858C94;
+      line-height: 2rem;
+      display: flex !important;
+      justify-content: space-between;
+
+      a {
+        color: #850C4F;
+        text-decoration: none;
+      }
+
+      .copyright,
+      .terms-and-conditions {
+        text-align: center;
+
+        span {
+          font-display: 10px;
+        }
+
+      }
+    }
+
+    header {
+      width: 380px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+
+      .logo {
+        margin-bottom: 30px;
+
+        img {
+          max-width: 275px;
+        }
+      }
+
+      .title {
+        margin-bottom: 1rem;
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px !important;
+        line-height: 41px !important;
+        color: #5C6670;
+        display: flex;
+        align-items: center;
+      }
+
+      #message {
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 251px;
+        color: #5C6670;
+        margin: 0 auto 30px;
+        justify-content: center;
+      }
+    }
+  }
+
+  .btn-login {
+    background-color:
+      #9E1C64 !important;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    color:
+      #fff;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 19px;
+    width: 200px;
+    padding: 16px;
+    letter-spacing: 1px;
+  }
+
+}

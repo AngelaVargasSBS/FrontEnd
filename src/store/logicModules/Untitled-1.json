@@ -1,0 +1,34 @@
+[
+  {
+    "intermediaryName": "hjklñ",
+    "intermediaryPercentage": 0,
+    "intermediaryValue": 0,
+    "agentCode": 0,
+    "anniversary": 0,
+    "extraShareInIssueCurrency": 0,
+    "extraShareInlocalCurrency": 0,
+    "main": "false",
+    "modificationDate": "string",
+    "percentageOfExtraParticipation": 0,
+    "shareInLocalCurrency": 0,
+    "shareIssueCurrency": 0,
+    "sharePercentage": 0,
+    "uniqueIdentifier": 0
+  },
+  {
+    "intermediaryName": "fghjk",
+    "intermediaryPercentage": 0,
+    "intermediaryValue": 0,
+    "agentCode": 0,
+    "anniversary": 0,
+    "extraShareInIssueCurrency": 0,
+    "extraShareInlocalCurrency": 0,
+    "main": "false",
+    "modificationDate": "string",
+    "percentageOfExtraParticipation": 0,
+    "shareInLocalCurrency": 0,
+    "shareIssueCurrency": 0,
+    "sharePercentage": 0,
+    "uniqueIdentifier": 0
+  }
+]

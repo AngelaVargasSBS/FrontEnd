@@ -1,0 +1,5590 @@
+{
+  "userStore": {
+    "status": "Success Authentication",
+    "errorLogin": "",
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNTgxNjkyNDk0LCJleHAiOjE1ODE3Mjg0OTR9.ehZyVR6j0PZ_K9WZKTAh-LM56MCPkAlr390g-fIaYG4",
+    "user": {
+      "user": "AngelaV",
+      "password": "81dc9bdb52d04dc20036dbd8313ed055",
+      "applicationCode": "2"
+    },
+    "registeredComponents": "",
+    "userProfile": {
+      "typeDocument": 1,
+      "documentNumber": "53047662",
+      "fullNameBusinessName": "Angela Vargas",
+      "gender": 1,
+      "creationDate": "09/01/2020"
+    },
+    "userModules": [
+      {
+        "applicationCode": 2,
+        "profileCode": 1,
+        "moduleCode": 1,
+        "active": true,
+        "moduleApp": {
+          "getResult": {
+            "resultCode": 1,
+            "message": "Query Result."
+          },
+          "applicationCode": 2,
+          "moduleCode": 1,
+          "moduleDescription": "Propiedad",
+          "image": "icon-coproperties.png",
+          "moduleTitle": "Propiedad",
+          "active": true
+        },
+        "subModuleProfileAppAuthenticate": [
+          {
+            "applicationCode": 2,
+            "profileCode": 1,
+            "moduleCode": 1,
+            "subModuleCode": 1,
+            "all": true,
+            "active": true,
+            "subModuleApp": {
+              "getResult": {
+                "resultCode": 1,
+                "message": "Query Result."
+              },
+              "applicationCode": 2,
+              "moduleCode": 1,
+              "subModuleCode": 1,
+              "subModuleDescription": "Cotizador Hogar",
+              "image": "icon-house.png",
+              "moduleTitle": "Hogar",
+              "active": true,
+              "componetCode": 1
+            },
+            "appComponent": {
+              "getResult": {
+                "resultCode": 1,
+                "message": "Query Result."
+              },
+              "componentCode": 1,
+              "path": "formProperty",
+              "name": "FormProperty",
+              "component": "views/FormProperty",
+              "trigger": "component",
+              "function": "component"
+            }
+          }
+        ]
+      },
+      {
+        "applicationCode": 2,
+        "profileCode": 1,
+        "moduleCode": 2,
+        "active": true,
+        "moduleApp": {
+          "getResult": {
+            "resultCode": 1,
+            "message": "Query Result."
+          },
+          "applicationCode": 2,
+          "moduleCode": 2,
+          "moduleDescription": "Vida",
+          "image": "vida.svg",
+          "moduleTitle": "Vida",
+          "active": true
+        },
+        "subModuleProfileAppAuthenticate": []
+      }
+    ],
+    "appComponents": [
+      {
+        "componentCode": 1,
+        "path": "formProperty",
+        "name": "FormProperty",
+        "component": "views/FormProperty",
+        "trigger": "component",
+        "function": "component"
+      }
+    ],
+    "branchGroupSelect": 1,
+    "registerComponentsSuccess": "true"
+  },
+  "dictionariesStore": {
+    "typeAddress": [],
+    "genderDir": [
+      {
+        "dictionary": "genero",
+        "field1": "1",
+        "field2": "FEMENINO",
+        "field3": " F",
+        "field4": "MUJER"
+      },
+      {
+        "dictionary": "genero",
+        "field1": "2",
+        "field2": "MASCULINO",
+        "field3": " M",
+        "field4": "HOMBRE"
+      },
+      {
+        "dictionary": "genero",
+        "field1": "3",
+        "field2": "NO APLICA",
+        "field3": " N",
+        "field4": "NO APLICA"
+      }
+    ],
+    "branchsDir": [
+      {
+        "dictionary": "ramo",
+        "field1": "931",
+        "field2": "3",
+        "field3": "ACCIDENTES PERSONALES",
+        "field4": "ACC PERSONALES",
+        "field5": "false",
+        "field6": "false",
+        "field7": "2",
+        "field8": "TT"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "121",
+        "field2": "3",
+        "field3": "ACCIDENTES PERSONALES ATRACO CAJERO MASIVO",
+        "field4": "AP ATRACO CAJERO M",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AX"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "108",
+        "field2": "3",
+        "field3": "ACCIDENTES PERSONALES CAMPAÐAS MERCADEO MASIVO",
+        "field4": "AP CAMPAÐAS DM",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AI"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "102",
+        "field2": "3",
+        "field3": "ACCIDENTES PERSONALES COLECTIVO",
+        "field4": "AP COLECTIVO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AC"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "131",
+        "field2": "3",
+        "field3": "ACCIDENTES PERSONALES EN VUELO",
+        "field4": "APVUELO",
+        "field5": "true",
+        "field6": "true",
+        "field7": "2",
+        "field8": "DT"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "101",
+        "field2": "3",
+        "field3": "ACCIDENTES PERSONALES ESCOLAR",
+        "field4": "AP ESCOLAR",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AB"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "107",
+        "field2": "3",
+        "field3": "ACCIDENTES PERSONALES GAS NATURAL",
+        "field4": "AP GAS NATURAL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AH"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "130",
+        "field2": "3",
+        "field3": "ACCIDENTES PERSONALES GRUPOS ESPECIALIZADOS",
+        "field4": "AP SPECIALTY",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "FI"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "100",
+        "field2": "3",
+        "field3": "ACCIDENTES PERSONALES INDIVIDUAL",
+        "field4": "AP INDIVIDUAL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AA"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "104",
+        "field2": "3",
+        "field3": "ACCIDENTES PERSONALES MERCADEO MASIVO",
+        "field4": "AP MERCADEO MASIVO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AE"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "105",
+        "field2": "2",
+        "field3": "ACCIDENTES PERSONALES OCUPANTES",
+        "field4": "AP OCUPANTES",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AF"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "120",
+        "field2": "2",
+        "field3": "ACCIDENTES PERSONALES OCUPANTES VOLUNTARIO",
+        "field4": "APO VOLUNTARIO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AW"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "109",
+        "field2": "3",
+        "field3": "ACCIDENTES PERSONALES SALARIO GARANTIZADO",
+        "field4": "AP S GARANTIZADO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AJ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "103",
+        "field2": "3",
+        "field3": "ACCIDENTES PERSONALES VOLUNTARIO",
+        "field4": "AP VOLUNTARIO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AD"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "903",
+        "field2": "2",
+        "field3": "AUTOMOVILES",
+        "field4": "AUTOMOVILES",
+        "field5": "false",
+        "field6": "true",
+        "field7": "1",
+        "field8": "TB"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "205",
+        "field2": "2",
+        "field3": "AUTOMOVILES",
+        "field4": "AUTOS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BE"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "206",
+        "field2": "2",
+        "field3": "AUTOMOVILES CLASICOS",
+        "field4": "AUTOS CLASICOS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BF"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "208",
+        "field2": "2",
+        "field3": "AUTOMOVILES DM",
+        "field4": "AUTOS DM",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BG"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "200",
+        "field2": "2",
+        "field3": "AUTOMËVILES - CONCESIONARIOS -",
+        "field4": "AUTOS CONCESIONARIOS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "AV"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "201",
+        "field2": "2",
+        "field3": "AUTOMËVILES COMERCIAL",
+        "field4": "AUTOS COMERCIAL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BA"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "202",
+        "field2": "2",
+        "field3": "AUTOMËVILES MASIVO",
+        "field4": "AUTOS MASIVO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BB"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "203",
+        "field2": "2",
+        "field3": "AUTOS CITIBANK",
+        "field4": "AUTOS CITI",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BC"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "204",
+        "field2": "2",
+        "field3": "AUTOS EMPRESARIAL",
+        "field4": "AUTOS EMP.",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BD"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "330",
+        "field2": "2",
+        "field3": "AUTOS GL EMPRESARIAL",
+        "field4": "AUTOS GL EMPRES",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "SD"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "327",
+        "field2": "2",
+        "field3": "AUTOS GL EXCESO",
+        "field4": "AUTOS GL EXCESO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "SA"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "328",
+        "field2": "2",
+        "field3": "AUTOS GL EXCESO MASIVO",
+        "field4": "AUTOS GL EXC MASIVO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "SB"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "331",
+        "field2": "2",
+        "field3": "AUTOS GL MASIVO",
+        "field4": "AUTOS GL MASIVO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "SE"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "916",
+        "field2": "7",
+        "field3": "AVIACION",
+        "field4": "AVIACION",
+        "field5": "false",
+        "field6": "true",
+        "field7": "6",
+        "field8": "TO"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "705",
+        "field2": "7",
+        "field3": "AVIACION",
+        "field4": "AVIACION",
+        "field5": "true",
+        "field6": "false",
+        "field7": "14",
+        "field8": "GC"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "420",
+        "field2": "14",
+        "field3": "BANCARIO E INFIDELIDAD Y RIESGOS FINANCIEROS",
+        "field4": "FIDELITY",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DU"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "323",
+        "field2": "2",
+        "field3": "BANSUPERIOR-CARCET",
+        "field4": "BANSUPERIOR CARCET",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CW"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "601",
+        "field2": "1",
+        "field3": "CAR",
+        "field4": "CAR",
+        "field5": "true",
+        "field6": "false",
+        "field7": "10",
+        "field8": "FB"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "515",
+        "field2": "1",
+        "field3": "CAR DEALER PLUS",
+        "field4": "CAR DEALER PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "EP"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "220",
+        "field2": "1",
+        "field3": "CARD PROTECTION",
+        "field4": "CARD PROTECTION",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "VB"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "221",
+        "field2": "1",
+        "field3": "CARD PROTECTION MASIVO",
+        "field4": "CARD PROT MASIVO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "VE"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "329",
+        "field2": "2",
+        "field3": "CITIAUTOS GL EXCESO",
+        "field4": "CITIAUTO GL EXCESO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "SC"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "253",
+        "field2": "1",
+        "field3": "CITIBANK HOGAR EXPRESS",
+        "field4": "CITIEXPRESS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BL"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "808",
+        "field2": "1",
+        "field3": "CODIGO DE RAMO DISPONIBLE",
+        "field4": "DISPONIBLE",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "5"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "406",
+        "field2": "14",
+        "field3": "COMISIONISTAS DE BOLSA",
+        "field4": "COM. DE BOLSA",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DG"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "525",
+        "field2": "1",
+        "field3": "COMMERCIAL PLUS EXPRESS",
+        "field4": "COMMERCIAL PLUS EXPR",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "UM"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "508",
+        "field2": "1",
+        "field3": "COMMERCIAL PLUS GENERAL",
+        "field4": "COMMERCIAL PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "EI"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "528",
+        "field2": "1",
+        "field3": "CONDOMINIOS",
+        "field4": "CONDOMINIOS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "BX"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "505",
+        "field2": "1",
+        "field3": "COPROPIEDADES",
+        "field4": "COPROPIEDADES",
+        "field5": "true",
+        "field6": "false",
+        "field7": "9",
+        "field8": "EF"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "522",
+        "field2": "1",
+        "field3": "COPROPIEDADES SBS",
+        "field4": "COPROPIEDADES SBS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "UA"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "531",
+        "field2": "1",
+        "field3": "COPROPIEDADES TRANSACT",
+        "field4": "COPROPIEDADES TR",
+        "field5": "true",
+        "field6": "false",
+        "field7": "9",
+        "field8": "BZ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "905",
+        "field2": "0",
+        "field3": "CUMPLIMIENTO",
+        "field4": "CUMPLIMIENTO",
+        "field5": "false",
+        "field6": "true",
+        "field7": "8",
+        "field8": "TD"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "806",
+        "field2": "14",
+        "field3": "CUMPLIMIENTO A FAVOR DE ENTIDADES PUBLICAS CON REGIMEN PRIVADO DE CONTRATACION",
+        "field4": "CUMP ENTIDADES PUB",
+        "field5": "true",
+        "field6": "false",
+        "field7": "8",
+        "field8": "VJ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "805",
+        "field2": "14",
+        "field3": "CUMPLIMIENTO DE DISPOSICIONES LEGALES",
+        "field4": "DISPOSICION LEGAL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "8",
+        "field8": "VA"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "807",
+        "field2": "14",
+        "field3": "CUMPLIMIENTO PARA CONTRATOS ESTATALES A FAVOR DE LA AGENCIA NAL DE INFRAEST-ANI",
+        "field4": "CUMPESTAT-ANI",
+        "field5": "true",
+        "field6": "false",
+        "field7": "8",
+        "field8": "VK"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "804",
+        "field2": "14",
+        "field3": "CUMPLIMIENTO PARA CONTRATOS ESTATALES EN FAVOR DE ECOPETROL",
+        "field4": "CUMP. ECOPETROL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "8",
+        "field8": "UZ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "803",
+        "field2": "14",
+        "field3": "CUMPLIMIENTO PARA EMPRESAS DE SERV. PUBLICOS Y EMP.INDUST. Y COMER. DEL ESTADO",
+        "field4": "CUMP.SERV. PUBLICOS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "8",
+        "field8": "UY"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "800",
+        "field2": "14",
+        "field3": "CUMPLIMIENTO PARA ENTIDADES ESTATALES",
+        "field4": "CUMPLIMIENTO ESTATAL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "8",
+        "field8": "HA"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "802",
+        "field2": "14",
+        "field3": "CUMPLIMIENTO PARA ENTIDADES PARTICULARES",
+        "field4": "CUMPLIMIENTO PART.",
+        "field5": "true",
+        "field6": "false",
+        "field7": "8",
+        "field8": "UN"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "402",
+        "field2": "14",
+        "field3": "D&A COMERCIAL",
+        "field4": "D&A COM",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DC"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "401",
+        "field2": "14",
+        "field3": "D&A INSTITUCIONES FINANCIERAS",
+        "field4": "D&A FI",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DB"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "421",
+        "field2": "14",
+        "field3": "D&O COMERCIAL - PRIVATE EDGE",
+        "field4": "D&O COM-P.EDGE",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DV"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "426",
+        "field2": "1",
+        "field3": "D&O EMPRESARIAL",
+        "field4": "D&O EMPRESARIAL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "UR"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "428",
+        "field2": "1",
+        "field3": "D&O LISTED COL",
+        "field4": "D&O LISTED COL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "UT"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "427",
+        "field2": "1",
+        "field3": "D&O NOT LISTED",
+        "field4": "D&O NOT LISTED",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "US"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "429",
+        "field2": "1",
+        "field3": "D&O US LISTED",
+        "field4": "D&O US LISTED",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "UU"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "510",
+        "field2": "1",
+        "field3": "DRUGSTORE PLUS",
+        "field4": "DRUGSTORE PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "EK"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "607",
+        "field2": "1",
+        "field3": "EAR",
+        "field4": "EAR",
+        "field5": "true",
+        "field6": "false",
+        "field7": "10",
+        "field8": "FH"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "261",
+        "field2": "1",
+        "field3": "EN CASA ITAU",
+        "field4": "EN CASA ITAU",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "TZ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "606",
+        "field2": "1",
+        "field3": "ENERGY SABOTAJE & TERRORISMO",
+        "field4": "ENERGY SABOTAJE & TE",
+        "field5": "true",
+        "field6": "false",
+        "field7": "10",
+        "field8": "FG"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "106",
+        "field2": "3",
+        "field3": "ENFERMEDADES GRAVES COLECTIVO",
+        "field4": "ENF GRV COLEC",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AG"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "111",
+        "field2": "3",
+        "field3": "ENFERMEDADES GRAVES MERCADEO MASIVO",
+        "field4": "ENF GRV MM",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AL"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "132",
+        "field2": "3",
+        "field3": "ENFERMEDADES GRAVES VOLUNTARIO",
+        "field4": "ENF GRV VOL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "VQ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "911",
+        "field2": "1",
+        "field3": "EQUIPO ELECTRICO Y ELECTRONICO",
+        "field4": "CORRIENTE DEBIL",
+        "field5": "false",
+        "field6": "true",
+        "field7": "3",
+        "field8": "TJ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "603",
+        "field2": "1",
+        "field3": "EQUIPO ELECTRICO Y ELECTRONICO",
+        "field4": "EQUIPO ELECTRICO Y E",
+        "field5": "true",
+        "field6": "false",
+        "field7": "10",
+        "field8": "FD"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "233",
+        "field2": "1",
+        "field3": "EQUIPO ELECTRICO Y ELECTRONICO BROAD MARKET",
+        "field4": "EQPELECTBROAD",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "VM"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "232",
+        "field2": "1",
+        "field3": "EQUIPO ELECTRICO Y ELECTRONICO LINEAS PERSONALES",
+        "field4": "EQPELECTETRON",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "VL"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "524",
+        "field2": "1",
+        "field3": "EQUIPO Y MAQUINARIA SBS",
+        "field4": "EQUIPO Y MAQUINARIA",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "UI"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "404",
+        "field2": "14",
+        "field3": "FIDELIDAD",
+        "field4": "FIDELIDAD",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DE"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "280",
+        "field2": "1",
+        "field3": "GARANTÍA EXTENDIDA",
+        "field4": "GARANTÍA EXTENDIDA",
+        "field5": "true",
+        "field6": "false",
+        "field7": "13",
+        "field8": "TW"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "513",
+        "field2": "1",
+        "field3": "GAS STATION PLUS",
+        "field4": "GAS STATION PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "EN"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "605",
+        "field2": "1",
+        "field3": "GENERACION ELECTRICA",
+        "field4": "GENERACION ELECTRICA",
+        "field5": "true",
+        "field6": "false",
+        "field7": "10",
+        "field8": "FF"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "326",
+        "field2": "2",
+        "field3": "GL EMERGENCIA VIAL",
+        "field4": "GL EMERGENCIA VIAL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CZ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "925",
+        "field2": "1",
+        "field3": "HOGAR",
+        "field4": "HOGAR",
+        "field5": "false",
+        "field6": "true",
+        "field7": "1",
+        "field8": "TS"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "265",
+        "field2": "1",
+        "field3": "HOGAR ELECTROUSADOS",
+        "field4": "HOGAR ELECTROUSADOS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "VF"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "252",
+        "field2": "1",
+        "field3": "HOGAR EXPRESS",
+        "field4": "HOGAR EXPRESS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BK"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "257",
+        "field2": "1",
+        "field3": "HOGAR EXPRESS EMPRESARIAL",
+        "field4": "HOG. EXP. EMP.",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BP"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "255",
+        "field2": "1",
+        "field3": "HOGAR EXPRESS GAS NATURAL",
+        "field4": "HOG. EXP. GAS NAT.",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BN"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "254",
+        "field2": "1",
+        "field3": "HOGAR EXPRESS MASIVO",
+        "field4": "HOG. EXP. MASIVO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BM"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "263",
+        "field2": "1",
+        "field3": "HOGAR MASIVO EMCALI",
+        "field4": "HOGAR EMCALI",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "UP"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "264",
+        "field2": "1",
+        "field3": "HOGAR MASIVOS DTC",
+        "field4": "HOGAR MASIVOS DTC",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "UQ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "262",
+        "field2": "1",
+        "field3": "HOGAREÐA ELECTRICARIBE",
+        "field4": "HOG.ELECARIBE",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "UK"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "506",
+        "field2": "1",
+        "field3": "HOTEL",
+        "field4": "HOTEL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "EG"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "907",
+        "field2": "1",
+        "field3": "INCENDIO",
+        "field4": "INCENDIO",
+        "field5": "false",
+        "field6": "true",
+        "field7": "4",
+        "field8": "TF"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "250",
+        "field2": "1",
+        "field3": "INCENDIO DEUDORES",
+        "field4": "INCENDIO LP",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BI"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "260",
+        "field2": "1",
+        "field3": "INCENDIO DEUDORES ITAU CORPBANCA COLOMBIA S.A.",
+        "field4": "ITAU CORPBANCA DEUD",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "TY"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "500",
+        "field2": "1",
+        "field3": "INCENDIO Y ALIADAS",
+        "field4": "INCENDIO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "9",
+        "field8": "EA"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "405",
+        "field2": "14",
+        "field3": "INSTITUCIONES FINANCIERAS",
+        "field4": "INSTITUCIONES FINANC",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DF"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "523",
+        "field2": "1",
+        "field3": "INTEGRAL SME",
+        "field4": "INTEGRAL SME",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "UH"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "503",
+        "field2": "1",
+        "field3": "LUCRO CESANTE",
+        "field4": "LUCRO CESANTE",
+        "field5": "true",
+        "field6": "false",
+        "field7": "9",
+        "field8": "ED"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "914",
+        "field2": "1",
+        "field3": "LUCRO CESANTE",
+        "field4": "LUCRO CESANTE",
+        "field5": "false",
+        "field6": "true",
+        "field7": "4",
+        "field8": "TM"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "400",
+        "field2": "1",
+        "field3": "MANEJO",
+        "field4": "MANEJO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DA"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "913",
+        "field2": "14",
+        "field3": "MANEJO",
+        "field4": "MANEJO",
+        "field5": "false",
+        "field6": "true",
+        "field7": "6",
+        "field8": "TL"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "423",
+        "field2": "1",
+        "field3": "MANEJO SMALL BUSINESS SOLUTION",
+        "field4": "MANEJO SBS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "22"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "440",
+        "field2": "1",
+        "field3": "MANIFESTACIONES & GARANTIAS",
+        "field4": "R&W",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DW"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "520",
+        "field2": "1",
+        "field3": "MAQUINARIA Y EQUIPO",
+        "field4": "MAQUINARIA Y EQUIPO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "9",
+        "field8": "EU"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "809",
+        "field2": "5",
+        "field3": "MAQUINARIA Y EQUIPO",
+        "field4": "MAQUINARIA Y EQUIPO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "11",
+        "field8": "GE"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "527",
+        "field2": "1",
+        "field3": "MICROSEGUROS SBS",
+        "field4": "MICROSEGUROS SBS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "BT"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "918",
+        "field2": "1",
+        "field3": "MINAS Y PETROLEO",
+        "field4": "MINAS Y PETROLEO",
+        "field5": "false",
+        "field6": "true",
+        "field7": "3",
+        "field8": "TQ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "521",
+        "field2": "1",
+        "field3": "MODULAR COMERCIAL",
+        "field4": "MODULAR COMERCIAL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "9",
+        "field8": "TX"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "530",
+        "field2": "1",
+        "field3": "MODULAR COMERCIAL TRANSACT",
+        "field4": "MODULAR COMERCIAL TR",
+        "field5": "true",
+        "field6": "false",
+        "field7": "9",
+        "field8": "BY"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "240",
+        "field2": "12",
+        "field3": "MULTISEGURO FAMILIAR",
+        "field4": "MULTISEGURO FAMILIAR",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BH"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "325",
+        "field2": "2",
+        "field3": "MULTISEGUROS-GL-EXCESO",
+        "field4": "MULTISEGURO GL EXCES",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CY"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "917",
+        "field2": "1",
+        "field3": "NAVEGACION Y CASCO",
+        "field4": "NAVEGACION Y CASCO",
+        "field5": "false",
+        "field6": "true",
+        "field7": "11",
+        "field8": "TP"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "706",
+        "field2": "5",
+        "field3": "NAVEGACION Y CASCO",
+        "field4": "CASCO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "11",
+        "field8": "GD"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "511",
+        "field2": "1",
+        "field3": "OFFICE PLUS",
+        "field4": "OFFICE PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "EL"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "602",
+        "field2": "1",
+        "field3": "PETROLEO Y PETROQUIMICAS",
+        "field4": "PETROLEO Y PETROQUIM",
+        "field5": "true",
+        "field6": "false",
+        "field7": "10",
+        "field8": "FC"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "900",
+        "field2": "1",
+        "field3": "PI AJUSTADORES",
+        "field4": "PI AJ.",
+        "field5": "false",
+        "field6": "true",
+        "field7": "6",
+        "field8": "TA"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "414",
+        "field2": "1",
+        "field3": "PRIVATE EDGE",
+        "field4": "PEDGE",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DO"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "230",
+        "field2": "1",
+        "field3": "PRODUCTOS PLUS",
+        "field4": "PRODUCTOS PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "UB"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "231",
+        "field2": "1",
+        "field3": "PRODUCTOS PLUS MASIVO",
+        "field4": "PROD.PLUS.MAS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "UL"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "529",
+        "field2": "1",
+        "field3": "PYME",
+        "field4": "PYME",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "BU"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "251",
+        "field2": "1",
+        "field3": "PËLIZA HOGAREÐA",
+        "field4": "POLIZA HOGAREÐA",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BJ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "258",
+        "field2": "1",
+        "field3": "PËLIZA HOGAREÐA CITIBANK",
+        "field4": "CITI HOGAREÐA",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BQ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "256",
+        "field2": "1",
+        "field3": "PËLIZA HOGAREÐA EMPRESARIAL",
+        "field4": "HOGAREÐA EMPRESARIAL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BO"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "417",
+        "field2": "1",
+        "field3": "R. CIVIL MEDIOS",
+        "field4": "RC MED.",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DR"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "701",
+        "field2": "1",
+        "field3": "R. CIVIL MEDIOS",
+        "field4": "RCP MED.",
+        "field5": "true",
+        "field6": "false",
+        "field7": "6",
+        "field8": "GB"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "418",
+        "field2": "1",
+        "field3": "R.C.P. AJUSTADORES DE SEGUROS",
+        "field4": "RCP AJ",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DS"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "410",
+        "field2": "14",
+        "field3": "R.C.P. ARQUITECTOS E INGENIEROS",
+        "field4": "RC ARQ & ING.",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DK"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "408",
+        "field2": "14",
+        "field3": "R.C.P. INSTITUCIONES COMERCIALES",
+        "field4": "RC INST. COM",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DI"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "407",
+        "field2": "14",
+        "field3": "R.C.P. INTERMEDIARIOS DE SEGUROS",
+        "field4": "RC BROKER",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DH"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "199",
+        "field2": "3",
+        "field3": "RAMO CSG 2",
+        "field4": "RAMO CSG 2",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "VP"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "198",
+        "field2": "3",
+        "field3": "RAMO CSG NRO 1",
+        "field4": "RAMO CSG 1",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "VO"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "114",
+        "field2": "3",
+        "field3": "RAMO EN CONSTRUCCION1",
+        "field4": "RM EN CONST",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AO"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "324",
+        "field2": "2",
+        "field3": "RCIVIL EXCESOS MASIVO",
+        "field4": "RCE EXCESOS MASIVO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CX"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "415",
+        "field2": "1",
+        "field3": "RCP-ABOGADOS",
+        "field4": "RCP AB.",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DP"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "409",
+        "field2": "1",
+        "field3": "RCP-AGENCIAS/VIAJE",
+        "field4": "RCP AG.",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DJ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "411",
+        "field2": "1",
+        "field3": "RCP-CONTADORES",
+        "field4": "RCP CON.",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DL"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "412",
+        "field2": "1",
+        "field3": "RCP-MISCELANEA",
+        "field4": "RCP MIS.",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DM"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "936",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL",
+        "field4": "RESP CIVIL",
+        "field5": "false",
+        "field6": "true",
+        "field7": "3",
+        "field8": "TV"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "906",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL",
+        "field4": "RC",
+        "field5": "false",
+        "field6": "true",
+        "field7": "3",
+        "field8": "TE"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "110",
+        "field2": "2",
+        "field3": "RESPONSABILIDAD CIVIL CONTRACTUAL",
+        "field4": "RC CONTRACTUAL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AK"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "703",
+        "field2": "5",
+        "field3": "RESPONSABILIDAD CIVIL DE AGENTES DE CARGA Y OPERADORES LOGISTICOS",
+        "field4": "OPERADORES LOGISTICO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "11",
+        "field8": "VH"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "300",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL",
+        "field4": "RCE",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CA"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "332",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL ALMACENAMIENTO HIDROCARBUROS",
+        "field4": "RCE ALMAC HIDROC",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "SF"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "319",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL CAR DEALER PLUS",
+        "field4": "RCE CAR DEALER",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CT"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "335",
+        "field2": "2",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL CASCO",
+        "field4": "RCE CASCO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "3"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "308",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL CLINICAS Y HOSPITALES",
+        "field4": "RCE CLINICAS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CI"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "304",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL COMMERCIAL PLUS",
+        "field4": "RCE COMMERCIAL PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CE"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "301",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL COPROPIEDADES",
+        "field4": "RCE COPROPIEDADES",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CB"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "314",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL DRUGSTORE PLUS",
+        "field4": "RCE DRUGSTORE PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CO"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "311",
+        "field2": "2",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL EN EXCESO PARA VEHICULOS",
+        "field4": "RCE EXCESO AUTOS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CL"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "317",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL GAS STATION PLUS",
+        "field4": "RCE GAS STATION",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CR"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "321",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL GENERAL EN EXCESO",
+        "field4": "RCE EXCESO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "12",
+        "field8": "CV"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "312",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL GENERAL PLUS",
+        "field4": "RCE GENERAL PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CM"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "303",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL HOTELES",
+        "field4": "RCE HOTELES",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CD"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "302",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL INTEGRAL",
+        "field4": "RCE INTEGRAL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CC"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "307",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL MEDICA",
+        "field4": "RCE MEDICA",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CH"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "315",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL OFFICE PLUS",
+        "field4": "RCE OFFICE PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CP"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "333",
+        "field2": "5",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL PARA TRAYECTOS",
+        "field4": "RCE TRAYECTO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "SG"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "306",
+        "field2": "2",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL PARA VEHICULOS",
+        "field4": "RCE AUTOS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CG"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "341",
+        "field2": "2",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL PARA VEHICULOS - M",
+        "field4": "RCE PARA VEH-M",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "UO"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "337",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL POR MERCANCIAS PELIGROSAS",
+        "field4": "RCEMANDISALMMCIASPEL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "UE"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "336",
+        "field2": "2",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL POR MERCANCIAS PELIGROSAS - TRANSPORTE",
+        "field4": "RCETRANSMCIASPELIGRO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "UD"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "316",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL RESTAURANT PLUS",
+        "field4": "RCE RESTAURANT PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CQ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "310",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL SCHOOL PLUS",
+        "field4": "RCE SCHOOL PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CK"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "313",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL SUPERMARKET PLUS",
+        "field4": "RCE SUPERMARKET PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CN"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "320",
+        "field2": "2",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL TRANSPORTE HIDROCARBUROS",
+        "field4": "RCE TRANS HIDROC",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CU"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "318",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRACTUAL TRAVEL AGENCY PLUS",
+        "field4": "RCE TRAVEL PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CS"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "309",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD CIVIL EXTRACONTRATUAL PARA ENTRETENIMIENTO",
+        "field4": "RCE ENTERTAIMENT",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CJ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "403",
+        "field2": "14",
+        "field3": "RESPONSABILIDAD CIVIL FINANCIERA",
+        "field4": "RC FINANCIERA",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DD"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "334",
+        "field2": "2",
+        "field3": "RESPONSABILIDAD CIVIL GLOBAL",
+        "field4": "RCGLOBAL",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "SI"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "801",
+        "field2": "5",
+        "field3": "RESPONSABILIDAD CIVIL MARITIMA Y DE OPERADORES PORTUARIOS",
+        "field4": "RC MARITIMA",
+        "field5": "true",
+        "field6": "false",
+        "field7": "11",
+        "field8": "UG"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "419",
+        "field2": "14",
+        "field3": "RESPONSABILIDAD CIVIL PARA DIRECTORES Y ADMINISTRADORES DE COPROPIEDADES",
+        "field4": "RC COPROPIEDADES",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "305",
+        "field2": "2",
+        "field3": "RESPONSABILIDAD CIVIL PARA EL TRANSPORTADOR INTERNACIONAL POR CARRETERA",
+        "field4": "RCE ANDINA",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "CF"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "416",
+        "field2": "14",
+        "field3": "RESPONSABILIDAD CIVIL TARJETAS",
+        "field4": "RC TARJETAS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DQ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "653",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD LEGAL POR CONTAMINACION DEL TRANSPORTE",
+        "field4": "CONTAMINACION TRANSP",
+        "field5": "true",
+        "field6": "false",
+        "field7": "17",
+        "field8": "FM"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "338",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD POR CONTAMINACION",
+        "field4": "RCONTAMINACION",
+        "field5": "true",
+        "field6": "false",
+        "field7": "3",
+        "field8": "uf"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "650",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD POR CONTAMINACION AMBIENTAL",
+        "field4": "CONTAMINACION PREDIO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "17",
+        "field8": "FJ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "651",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD POR CONTAMINACION AMBIENTAL DE CONTRATISTAS",
+        "field4": "RESP. AMB. CONTRATIS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "17",
+        "field8": "FK"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "430",
+        "field2": "1",
+        "field3": "RESPONSABILIDAD PROFESIONAL POR PERDIDA DE DATOS",
+        "field4": "CYBER EDGE",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "EV"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "512",
+        "field2": "1",
+        "field3": "RESTAURANT PLUS",
+        "field4": "RESTAURANT PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "EM"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "339",
+        "field2": "1",
+        "field3": "RETIRO DE PRODUCTOS CONTAMINADOS",
+        "field4": "RETIRO DE PRODUCTOS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "15",
+        "field8": "UJ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "604",
+        "field2": "1",
+        "field3": "RIESGOS QUIMICOS",
+        "field4": "RIESGOS QUIMICOS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "10",
+        "field8": "FE"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "600",
+        "field2": "1",
+        "field3": "ROTURA DE MAQUINARIA",
+        "field4": "ROTURA DE MAQUINARIA",
+        "field5": "true",
+        "field6": "false",
+        "field7": "10",
+        "field8": "FA"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "915",
+        "field2": "1",
+        "field3": "ROTURA DE MAQUINARIA Y MONTAJE",
+        "field4": "ROTURA DE MAQUINARIA",
+        "field5": "false",
+        "field6": "true",
+        "field7": "3",
+        "field8": "TN"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "502",
+        "field2": "1",
+        "field3": "ROTURA DE VIDRIOS",
+        "field4": "VIDRIOS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "9",
+        "field8": "EC"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "516",
+        "field2": "1",
+        "field3": "SABOTAJE & TERRORISMO",
+        "field4": "SABOTAJE & TERRORISM",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "EQ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "935",
+        "field2": "3",
+        "field3": "SALUD",
+        "field4": "SALUD",
+        "field5": "false",
+        "field6": "true",
+        "field7": "9",
+        "field8": "TU"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "507",
+        "field2": "1",
+        "field3": "SCHOOL PLUS",
+        "field4": "SCHOOL PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "EH"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "116",
+        "field2": "3",
+        "field3": "SEGURO DE VIAJES CORPORATIVO",
+        "field4": "SEGURO VIAJE CORP",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AQ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "113",
+        "field2": "3",
+        "field3": "SEGURO DE VIAJES INDIVIDUAL",
+        "field4": "SEGURO VIAJE INDIV",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AN"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "425",
+        "field2": "1",
+        "field3": "SEGURO PARA FONDOS DE CAPITAL PRIVADO - PRIVATE EQUITY PROTECTOR",
+        "field4": "RCP - FONDOS CP",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "UV"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "904",
+        "field2": "11",
+        "field3": "SOAT",
+        "field4": "SOAT",
+        "field5": "false",
+        "field6": "false",
+        "field7": "1",
+        "field8": "TC"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "259",
+        "field2": "11",
+        "field3": "SOAT",
+        "field4": "SOAT",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "BR"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "413",
+        "field2": "1",
+        "field3": "SPECIAL PROGRAMS (CARD PROTECTION)",
+        "field4": "SP",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "DN"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "125",
+        "field2": "1",
+        "field3": "SPECIAL PROGRAMS (CARD PROTECTION)",
+        "field4": "S PROG.",
+        "field5": "true",
+        "field6": "false",
+        "field7": "6",
+        "field8": "AU"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "395",
+        "field2": "15",
+        "field3": "SPECIAL PROGRAMS (CARD PROTECTION) OTROS",
+        "field4": "SPECIAL PROGRAMS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "  "
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "424",
+        "field2": "1",
+        "field3": "SPECIAL PROGRAMS CARD CRIME MASIVO",
+        "field4": "SP-CARD CRIME",
+        "field5": "true",
+        "field6": "false",
+        "field7": "4",
+        "field8": "BS"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "509",
+        "field2": "1",
+        "field3": "SUPERMARKET PLUS",
+        "field4": "SUPERMARKET PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "EJ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "909",
+        "field2": "1",
+        "field3": "SUSTRACCION",
+        "field4": "SUSTRACCION",
+        "field5": "false",
+        "field6": "true",
+        "field7": "4",
+        "field8": "TH"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "501",
+        "field2": "1",
+        "field3": "SUSTRACCION CON VIOLENCIA",
+        "field4": "SUSTRACCION",
+        "field5": "true",
+        "field6": "false",
+        "field7": "9",
+        "field8": "EB"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "908",
+        "field2": "1",
+        "field3": "TERREMOTO",
+        "field4": "TERREMOTO",
+        "field5": "false",
+        "field6": "true",
+        "field7": "4",
+        "field8": "TG"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "504",
+        "field2": "1",
+        "field3": "TERREMOTO, TEMBLOR O ERUPCION VOLCANICA",
+        "field4": "TERREMOTO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "9",
+        "field8": "EE"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "266",
+        "field2": "1",
+        "field3": "TODO RIESGO BICICLETAS - HOGAR",
+        "field4": "TODO RIESGO BICIS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "1",
+        "field8": "VN"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "912",
+        "field2": "1",
+        "field3": "TODO RIESGO CONSTRUCCION",
+        "field4": "TODO RIESGO CONSTRUC",
+        "field5": "false",
+        "field6": "true",
+        "field7": "3",
+        "field8": "TK"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "519",
+        "field2": "1",
+        "field3": "TODO RIESGO DAÐOS MATERIALES",
+        "field4": "TODO RIESGO DAÐOS MA",
+        "field5": "true",
+        "field6": "false",
+        "field7": "9",
+        "field8": "ET"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "608",
+        "field2": "1",
+        "field3": "TODO RIESGO PROCESOS INDUSTRIALES",
+        "field4": "PROCESOS INDUSTRIALE",
+        "field5": "true",
+        "field6": "false",
+        "field7": "10",
+        "field8": "UC"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "700",
+        "field2": "5",
+        "field3": "TRANSPORTE DE MERCANCIAS",
+        "field4": "TRANSPORTE DE MERCAN",
+        "field5": "true",
+        "field6": "false",
+        "field7": "11",
+        "field8": "GA"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "517",
+        "field2": "5",
+        "field3": "TRANSPORTE DE VALORES",
+        "field4": "TRANSPORTE DE VALORE",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "ER"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "518",
+        "field2": "5",
+        "field3": "TRANSPORTE INTERIOR",
+        "field4": "TRANSPORTE INTERIOR",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "ES"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "910",
+        "field2": "5",
+        "field3": "TRANSPORTES",
+        "field4": "TRANSPORTES",
+        "field5": "false",
+        "field6": "true",
+        "field7": "5",
+        "field8": "TI"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "704",
+        "field2": "5",
+        "field3": "TRANSPORTISTAS - TRANSPORTE DE MERCANCIAS",
+        "field4": "TRANSPORTISTAS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "11",
+        "field8": "VI"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "514",
+        "field2": "1",
+        "field3": "TRAVEL AGENCY PLUS",
+        "field4": "TRAVEL AGENCY PLUS",
+        "field5": "true",
+        "field6": "false",
+        "field7": "5",
+        "field8": "EO"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "118",
+        "field2": "3",
+        "field3": "TRAVEL GUARD BTA - SCHENGEN",
+        "field4": "BTA - SCHENGEN",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AS"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "112",
+        "field2": "3",
+        "field3": "TRAVEL GUARD CORPORATIVO",
+        "field4": "CORPORATIVO ESTANDAR",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AM"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "119",
+        "field2": "3",
+        "field3": "TRAVEL GUARD MASIVO",
+        "field4": "TRAVEL MASIVO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AT"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "123",
+        "field2": "3",
+        "field3": "TRAVEL GUARD PLAN VISA",
+        "field4": "TGVISA",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AZ"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "115",
+        "field2": "3",
+        "field3": "TRAVEL GUARD POSTGRADOS",
+        "field4": "TRAVEL POSTGRADO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AP"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "117",
+        "field2": "3",
+        "field3": "TRAVEL GUARD SCHENGEN",
+        "field4": "TRAVEL SCHENGEN",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AR"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "122",
+        "field2": "3",
+        "field3": "TRAVEL GUARD STANDARD",
+        "field4": "TG",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "AY"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "126",
+        "field2": "3",
+        "field3": "VIDA GRUPO",
+        "field4": "VIDA GRUPO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "UX"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "934",
+        "field2": "3",
+        "field3": "VIDA GRUPO",
+        "field4": "VIDA GRUPO",
+        "field5": "false",
+        "field6": "true",
+        "field7": "2",
+        "field8": "UW"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "129",
+        "field2": "3",
+        "field3": "VIDA GRUPO CONTRIBUTIVO",
+        "field4": "VGRUPO CONTRIBUTIVO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "VG"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "127",
+        "field2": "3",
+        "field3": "VIDA GRUPO DEUDORES",
+        "field4": "VIDA GRUPO DEUDORES",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "VC"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "128",
+        "field2": "3",
+        "field3": "VIDA GRUPO MERCADEO",
+        "field4": "VIDA GRUPO MERCADEO",
+        "field5": "true",
+        "field6": "false",
+        "field7": "2",
+        "field8": "VD"
+      },
+      {
+        "dictionary": "ramo",
+        "field1": "919",
+        "field2": "1",
+        "field3": "VIDRIOS",
+        "field4": "VIDRIOS",
+        "field5": "false",
+        "field6": "true",
+        "field7": "4",
+        "field8": "TR"
+      }
+    ],
+    "branchOfficesDir": [
+      {
+        "dictionary": "sucursal",
+        "field1": "4",
+        "field2": "BARRANQUILLA",
+        "field3": "CO",
+        "field4": "08",
+        "field5": "08001",
+        "field6": "CALLE 77B NO. 57-141 OF.803",
+        "field7": "3682224",
+        "customProperty": "BARRANQUILLA - CALLE 77B NO. 57-141 OF.803"
+      },
+      {
+        "dictionary": "sucursal",
+        "field1": "1",
+        "field2": "BOGOTA",
+        "field3": "CO",
+        "field4": "11",
+        "field5": "11001",
+        "field6": "AVENIDA CARRERA 9 # 101-67 PISO 7",
+        "field7": "3138700",
+        "customProperty": "BOGOTA - AVENIDA CARRERA 9 # 101-67 PISO 7"
+      },
+      {
+        "dictionary": "sucursal",
+        "field1": "3",
+        "field2": "CALI",
+        "field3": "CO",
+        "field4": "76",
+        "field5": "76001",
+        "field6": "CALLE 64 NORTE NO. 5B-146 OFICINA 41",
+        "field7": "6662929",
+        "customProperty": "CALI - CALLE 64 NORTE NO. 5B-146 OFICINA 41"
+      },
+      {
+        "dictionary": "sucursal",
+        "field1": "2",
+        "field2": "MEDELLIN",
+        "field3": "CO",
+        "field4": "05",
+        "field5": "05001",
+        "field6": "CRA. 43 A N. 3-101 OF 301",
+        "field7": "2663311",
+        "customProperty": "MEDELLIN - CRA. 43 A N. 3-101 OF 301"
+      },
+      {
+        "dictionary": "sucursal",
+        "field1": "99",
+        "field2": "OFICINA PRINCIPAL",
+        "field3": "CO",
+        "field4": "11",
+        "field5": "11001",
+        "field6": "CALLE 78 NO. 9-57 PISO 5",
+        "field7": "3138700",
+        "customProperty": "OFICINA PRINCIPAL - CALLE 78 NO. 9-57 PISO 5"
+      },
+      {
+        "dictionary": "sucursal",
+        "field1": "5",
+        "field2": "PEREIRA",
+        "field3": "CO",
+        "field4": "66",
+        "field5": "66001",
+        "field6": "CRA. 7 N. 16-50 PISO 11",
+        "field7": "3354357",
+        "customProperty": "PEREIRA - CRA. 7 N. 16-50 PISO 11"
+      },
+      {
+        "dictionary": "sucursal",
+        "field1": "6",
+        "field2": "SUCURSAL REGIONAL ORIENTE",
+        "field3": "CO",
+        "field4": "68",
+        "field5": "68276",
+        "field6": "SECTOR NATURA ECOPARQUE EMPRESARIAL KILOMETRO 2  - 176 OFICINA 539 TORRE 2",
+        "field7": "6799966",
+        "customProperty": "SUCURSAL REGIONAL ORIENTE - SECTOR NATURA ECOPARQUE EMPRESARIAL KILOMETRO 2  - 176 OFICINA 539 TORRE 2"
+      },
+      {
+        "dictionary": "sucursal",
+        "field1": "7",
+        "field2": "VILLAVICENCIO",
+        "field3": "CO",
+        "field4": "50",
+        "field5": "50001",
+        "field6": "ALTOS DE VILLA CODEM TORRE 10 APTO 202",
+        "field7": "986732154",
+        "customProperty": "VILLAVICENCIO - ALTOS DE VILLA CODEM TORRE 10 APTO 202"
+      }
+    ],
+    "salesChannelsDir": [
+      {
+        "dictionary": "canal_venta",
+        "field1": "0",
+        "field2": "SIN CANAL",
+        "field3": "true"
+      }
+    ],
+    "numberOfFloorsDir": [],
+    "typeOfConstructions": [],
+    "typesDocumentDir": [
+      {
+        "dictionary": "tipo_documento",
+        "field1": "1",
+        "field2": "CEDULA DE CIUDADANIA",
+        "field3": "CC"
+      },
+      {
+        "dictionary": "tipo_documento",
+        "field1": "2",
+        "field2": "CEDULA DE EXTRANJERIA",
+        "field3": "CE"
+      },
+      {
+        "dictionary": "tipo_documento",
+        "field1": "3",
+        "field2": "NUMERO IDENTIFICACION TRIBUTARIA",
+        "field3": "NIT"
+      },
+      {
+        "dictionary": "tipo_documento",
+        "field1": "5",
+        "field2": "NUMERO UNICO DE IDENTIFICACION PERSONAL",
+        "field3": "NUIP"
+      },
+      {
+        "dictionary": "tipo_documento",
+        "field1": "6",
+        "field2": "PASAPORTE",
+        "field3": "PS"
+      },
+      {
+        "dictionary": "tipo_documento",
+        "field1": "9",
+        "field2": "REGISTRO CIVIL",
+        "field3": "RC"
+      },
+      {
+        "dictionary": "tipo_documento",
+        "field1": "4",
+        "field2": "TARJETA DE IDENTIDAD",
+        "field3": "TI"
+      }
+    ],
+    "countryCode": [],
+    "constructionYear": [],
+    "clausesDir": [],
+    "currenciesDir": [
+      {
+        "dictionary": "moneda",
+        "field1": "8",
+        "field2": "BL",
+        "field3": "BOLIVARES",
+        "field4": "4",
+        "field5": "BOB"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "9",
+        "field2": "CZ",
+        "field3": "CRUZADOS",
+        "field4": "4",
+        "field5": "BRL"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "1",
+        "field2": "US$",
+        "field3": "DOLAR AMERICANO",
+        "field4": "4",
+        "field5": "USD"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "17",
+        "field2": "DC",
+        "field3": "DOLAR CANADIENSE",
+        "field4": "4",
+        "field5": "CAD"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "16",
+        "field2": "EU",
+        "field3": "EURO",
+        "field4": "4",
+        "field5": "EUR"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "14",
+        "field2": "FH",
+        "field3": "FLORINES HOLANDESES",
+        "field4": "4",
+        "field5": "EUR"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "3",
+        "field2": "FR",
+        "field3": "FRANCOS SUIZOS",
+        "field4": "4",
+        "field5": "CHF"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "7",
+        "field2": "LB",
+        "field3": "LIBRAS ESTERLINAS",
+        "field4": "4",
+        "field5": "GBP"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "5",
+        "field2": "DM",
+        "field3": "MARCOS ALEMANES",
+        "field4": "4",
+        "field5": "EUR"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "6",
+        "field2": "MS",
+        "field3": "MARCOS SUIZOS",
+        "field4": "4",
+        "field5": "EUR"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "13",
+        "field2": "PZ",
+        "field3": "PESETAS ESPAÐOLAS",
+        "field4": "4",
+        "field5": "EUR"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "0",
+        "field2": "$",
+        "field3": "PESOS",
+        "field4": "4",
+        "field5": "COP"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "10",
+        "field2": "PM",
+        "field3": "PESOS MEXICANOS",
+        "field4": "4",
+        "field5": "MXN"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "12",
+        "field2": "QZ",
+        "field3": "QUETZALES",
+        "field4": "4",
+        "field5": "GTQ"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "11",
+        "field2": "SR",
+        "field3": "SUCRES",
+        "field4": "4",
+        "field5": "ECS"
+      },
+      {
+        "dictionary": "moneda",
+        "field1": "2",
+        "field2": "UP",
+        "field3": "UPACS",
+        "field4": "4",
+        "field5": "COP"
+      }
+    ],
+    "periodsBillingDir": [
+      {
+        "dictionary": "periodo_facturacion",
+        "field1": "1",
+        "field2": "ANUAL",
+        "field3": "12",
+        "field4": "1"
+      },
+      {
+        "dictionary": "periodo_facturacion",
+        "field1": "5",
+        "field2": "BIMESTRAL",
+        "field3": "2",
+        "field4": "6"
+      },
+      {
+        "dictionary": "periodo_facturacion",
+        "field1": "3",
+        "field2": "CUATRIMESTRAL",
+        "field3": "4",
+        "field4": "3"
+      },
+      {
+        "dictionary": "periodo_facturacion",
+        "field1": "6",
+        "field2": "MENSUAL",
+        "field3": "1",
+        "field4": "12"
+      },
+      {
+        "dictionary": "periodo_facturacion",
+        "field1": "2",
+        "field2": "SEMESTRAL",
+        "field3": "6",
+        "field4": "2"
+      },
+      {
+        "dictionary": "periodo_facturacion",
+        "field1": "4",
+        "field2": "TRIMESTRAL",
+        "field3": "3",
+        "field4": "4"
+      }
+    ],
+    "countryCodeDir": [],
+    "constructionYearDir": [],
+    "maritalStatusCodeDir": [
+      {
+        "dictionary": "estado_civil",
+        "field1": "2",
+        "field2": "CASADO"
+      },
+      {
+        "dictionary": "estado_civil",
+        "field1": "4",
+        "field2": "DIVORCIADO"
+      },
+      {
+        "dictionary": "estado_civil",
+        "field1": "7",
+        "field2": "OTRO"
+      },
+      {
+        "dictionary": "estado_civil",
+        "field1": "6",
+        "field2": "SEPARADO"
+      },
+      {
+        "dictionary": "estado_civil",
+        "field1": "1",
+        "field2": "SOLTERO"
+      },
+      {
+        "dictionary": "estado_civil",
+        "field1": "5",
+        "field2": "UNIÓN LIBRE"
+      },
+      {
+        "dictionary": "estado_civil",
+        "field1": "3",
+        "field2": "VIUDO"
+      }
+    ],
+    "ciiuCodeDir": [
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1313",
+        "field2": "ACABADO DE PRODUCTOS TEXTILES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8110",
+        "field2": "ACTIVIDADES COMBINADAS DE APOYO A INSTALACIONES "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8211",
+        "field2": "ACTIVIDADES COMBINADAS DE SERVICIOS ADMINISTRATIVOS DE OFICINA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6630",
+        "field2": "ACTIVIDADES DE ADMINISTRACIÓN DE FONDOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7010",
+        "field2": "ACTIVIDADES DE ADMINISTRACIÓN EMPRESARIAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5223",
+        "field2": "ACTIVIDADES DE AEROPUERTOS, SERVICIOS DE NAVEGACIÓN AÉREA Y DEMÁS ACTIVIDADES CONEXAS AL TRANSPORTE "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8291",
+        "field2": "ACTIVIDADES DE AGENCIAS DE COBRANZA Y OFICINAS DE CALIFICACIÓN CREDITICIA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7810",
+        "field2": "ACTIVIDADES DE AGENCIAS DE EMPLEO "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7820",
+        "field2": "ACTIVIDADES DE AGENCIAS DE EMPLEO TEMPORAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6391",
+        "field2": "ACTIVIDADES DE AGENCIAS DE NOTICIAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6621",
+        "field2": "ACTIVIDADES DE AGENTES Y CORREDORES DE SEGUROS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0161",
+        "field2": "ACTIVIDADES DE APOYO A LA AGRICULTURA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8560",
+        "field2": "ACTIVIDADES DE APOYO A LA EDUCACIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0162",
+        "field2": "ACTIVIDADES DE APOYO A LA GANADERÍA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8691",
+        "field2": "ACTIVIDADES DE APOYO DIAGNÓSTICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0910",
+        "field2": "ACTIVIDADES DE APOYO PARA LA EXTRACCIÓN DE PETRÓLEO Y DE GAS NATURAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0990",
+        "field2": "ACTIVIDADES DE APOYO PARA OTRAS ACTIVIDADES DE EXPLOTACIÓN DE MINAS Y CANTERAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8692",
+        "field2": "ACTIVIDADES DE APOYO TERAPÉUTICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7110",
+        "field2": "ACTIVIDADES DE ARQUITECTURA E INGENIERÍA Y OTRAS ACTIVIDADES CONEXAS DE CONSULTORÍA TÉCNICA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8810",
+        "field2": "ACTIVIDADES DE ASISTENCIA SOCIAL SIN ALOJAMIENTO PARA PERSONAS MAYORES Y DISCAPACITADAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9411",
+        "field2": "ACTIVIDADES DE ASOCIACIONES EMPRESARIALES Y DE EMPLEADORES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9492",
+        "field2": "ACTIVIDADES DE ASOCIACIONES POLÍTICAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9412",
+        "field2": "ACTIVIDADES DE ASOCIACIONES PROFESIONALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9491",
+        "field2": "ACTIVIDADES DE ASOCIACIONES RELIGIOSAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8730",
+        "field2": "ACTIVIDADES DE ATENCIÓN EN INSTITUCIONES PARA EL CUIDADO DE PERSONAS MAYORES Y/O DISCAPACITADAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8710",
+        "field2": "ACTIVIDADES DE ATENCIÓN RESIDENCIAL MEDICALIZADA DE TIPO GENERAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8720",
+        "field2": "ACTIVIDADES DE ATENCIÓN RESIDENCIAL, PARA EL CUIDADO DE PACIENTES CON RETARDO MENTAL, ENFERMEDAD MEN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9101",
+        "field2": "ACTIVIDADES DE BIBLIOTECAS Y ARCHIVOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8220",
+        "field2": "ACTIVIDADES DE CENTROS DE LLAMADAS (CALL CENTER)"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9312",
+        "field2": "ACTIVIDADES DE CLUBES DEPORTIVOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6493",
+        "field2": "ACTIVIDADES DE COMPRA DE CARTERA O FACTORING"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7020",
+        "field2": "ACTIVIDADES DE CONSULTORÍA DE GESTIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6202",
+        "field2": "ACTIVIDADES DE CONSULTORÍA INFORMÁTICA Y ACTIVIDADES DE ADMINISTRACIÓN DE INSTALACIONES INFORMÁTICAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6920",
+        "field2": "ACTIVIDADES DE CONTABILIDAD, TENEDURÍA DE LIBROS, AUDITORIA FINANCIERA Y ASESORÍA TRIBUTARIA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8422",
+        "field2": "ACTIVIDADES DE DEFENSA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6201",
+        "field2": "ACTIVIDADES DE DESARROLLO DE SISTEMAS INFORMÁTICOS (PLANIFICACIÓN, ANÁLISIS, DISEÑO, PROGRAMACIÓN, P"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8030",
+        "field2": "ACTIVIDADES DE DETECTIVES E INVESTIGADORES PRIVADOS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5913",
+        "field2": "ACTIVIDADES DE DISTRIBUCIÓN DE PELÍCULAS CINEMATOGRÁFICAS, VIDEOS, PROGRAMAS, ANUNCIOS Y COMERCIALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8292",
+        "field2": "ACTIVIDADES DE ENVASE Y EMPAQUE "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9007",
+        "field2": "ACTIVIDADES DE ESPECTÁCULOS MUSICALES EN VIVO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5221",
+        "field2": "ACTIVIDADES DE ESTACIONES, VÍAS Y SERVICIOS COMPLEMENTARIOS PARA EL TRANSPORTE TERRESTRE"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5914",
+        "field2": "ACTIVIDADES DE EXHIBICIÓN DE PELÍCULAS CINEMATOGRÁFICAS Y VIDEOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7420",
+        "field2": "ACTIVIDADES DE FOTOGRAFÍA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5920",
+        "field2": "ACTIVIDADES DE GRABACIÓN DE SONIDO Y EDICIÓN DE MÚSICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8610",
+        "field2": "ACTIVIDADES DE HOSPITALES Y CLÍNICAS, CON INTERNACIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1811",
+        "field2": "ACTIVIDADES DE IMPRESIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9103",
+        "field2": "ACTIVIDADES DE JARDINES BOTÁNICOS, ZOOLÓGICOS Y RESERVAS NATURALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9200",
+        "field2": "ACTIVIDADES DE JUEGOS DE AZAR Y APUESTAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8621",
+        "field2": "ACTIVIDADES DE LA PRÁCTICA MÉDICA, SIN INTERNACIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8622",
+        "field2": "ACTIVIDADES DE LA PRÁCTICA ODONTOLÓGICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7911",
+        "field2": "ACTIVIDADES DE LAS AGENCIAS DE VIAJES "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6614",
+        "field2": "ACTIVIDADES DE LAS CASAS DE CAMBIO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6422",
+        "field2": "ACTIVIDADES DE LAS COMPAÑÍAS DE FINANCIAMIENTO "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6424",
+        "field2": "ACTIVIDADES DE LAS COOPERATIVAS FINANCIERAS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6421",
+        "field2": "ACTIVIDADES DE LAS CORPORACIONES FINANCIERAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9700",
+        "field2": "ACTIVIDADES DE LOS HOGARES INDIVIDUALES COMO EMPLEADORES DE PERSONAL DOMÉSTICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8415",
+        "field2": "ACTIVIDADES DE LOS OTROS ÓRGANOS DE CONTROL "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6615",
+        "field2": "ACTIVIDADES DE LOS PROFESIONALES DE COMPRA Y VENTA DE DIVISAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5320",
+        "field2": "ACTIVIDADES DE MENSAJERÍA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7912",
+        "field2": "ACTIVIDADES DE OPERADORES TURÍSTICOS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9900",
+        "field2": "ACTIVIDADES DE ORGANIZACIONES Y ENTIDADES EXTRATERRITORIALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9499",
+        "field2": "ACTIVIDADES DE OTRAS ASOCIACIONES N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5629",
+        "field2": "ACTIVIDADES DE OTROS SERVICIOS DE COMIDAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8130",
+        "field2": " ACTIVIDADES DE PAISAJISMO Y SERVICIOS DE MANTENIMIENTO CONEXOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9321",
+        "field2": "ACTIVIDADES DE PARQUES DE ATRACCIONES Y PARQUES TEMÁTICOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8430",
+        "field2": "ACTIVIDADES DE PLANES DE SEGURIDAD SOCIAL DE AFILIACIÓN OBLIGATORIA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5912",
+        "field2": "ACTIVIDADES DE POSTPRODUCCIÓN DE PELÍCULAS CINEMATOGRÁFICAS, VIDEOS, PROGRAMAS, ANUNCIOS Y COMERCIAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5911",
+        "field2": "ACTIVIDADES DE PRODUCCIÓN DE PELÍCULAS CINEMATOGRÁFICAS, VIDEOS, PROGRAMAS, ANUNCIOS Y COMERCIALES D"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6020",
+        "field2": "ACTIVIDADES DE PROGRAMACIÓN Y TRANSMISIÓN DE TELEVISIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6010",
+        "field2": "ACTIVIDADES DE PROGRAMACIÓN Y TRANSMISIÓN EN EL SERVICIO DE RADIODIFUSIÓN SONORA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5222",
+        "field2": "ACTIVIDADES DE PUERTOS Y SERVICIOS COMPLEMENTARIOS PARA EL TRANSPORTE ACUÁTICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3900",
+        "field2": "ACTIVIDADES DE SANEAMIENTO AMBIENTAL Y OTROS SERVICIOS DE GESTIÓN DE DESECHOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8010",
+        "field2": "ACTIVIDADES DE SEGURIDAD PRIVADA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8020",
+        "field2": "ACTIVIDADES DE SERVICIOS DE SISTEMAS DE SEGURIDAD "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1812",
+        "field2": "ACTIVIDADES DE SERVICIOS RELACIONADOS CON LA IMPRESIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9420",
+        "field2": "ACTIVIDADES DE SINDICATOS DE EMPLEADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6110",
+        "field2": "ACTIVIDADES DE TELECOMUNICACIONES ALÁMBRICAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6120",
+        "field2": "ACTIVIDADES DE TELECOMUNICACIONES INALÁMBRICAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6130",
+        "field2": "ACTIVIDADES DE TELECOMUNICACIÓN SATELITAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5520",
+        "field2": "ACTIVIDADES DE ZONAS DE CAMPING Y PARQUES PARA VEHÍCULOS RECREACIONALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8412",
+        "field2": "ACTIVIDADES EJECUTIVAS DE LA ADMINISTRACIÓN PUBLICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7410",
+        "field2": "ACTIVIDADES ESPECIALIZADAS DE DISEÑO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6492",
+        "field2": "ACTIVIDADES FINANCIERAS DE FONDOS DE EMPLEADOS Y OTRAS FORMAS ASOCIATIVAS DEL SECTOR SOLIDARIO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6820",
+        "field2": "ACTIVIDADES INMOBILIARIAS REALIZADAS A CAMBIO DE UNA RETRIBUCIÓN O POR CONTRATA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6810",
+        "field2": "ACTIVIDADES INMOBILIARIAS REALIZADAS CON BIENES PROPIOS O ARRENDADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6910",
+        "field2": "ACTIVIDADES JURÍDICAS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8411",
+        "field2": "ACTIVIDADES LEGISLATIVAS DE LA ADMINISTRACIÓN PUBLICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9810",
+        "field2": "ACTIVIDADES NO DIFERENCIADAS DE LOS HOGARES INDIVIDUALES COMO PRODUCTORES DE BIENES PARA USO PROPIO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9820",
+        "field2": "ACTIVIDADES NO DIFERENCIADAS DE LOS HOGARES INDIVIDUALES COMO PRODUCTORES DE SERVICIOS PARA USO PROP"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5310",
+        "field2": "ACTIVIDADES POSTALES NACIONALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0163",
+        "field2": "ACTIVIDADES POSTERIORES A LA COSECHA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8414",
+        "field2": "ACTIVIDADES REGULADORAS Y FACILITADORAS DE LA ACTIVIDAD ECONÓMICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9006",
+        "field2": "ACTIVIDADES TEATRALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7500",
+        "field2": "ACTIVIDADES VETERINARIAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9102",
+        "field2": "ACTIVIDADES Y FUNCIONAMIENTO DE MUSEOS, CONSERVACIÓN DE EDIFICIOS Y SITIOS HISTÓRICOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0322",
+        "field2": "ACUICULTURA DE AGUA DULCE"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0321",
+        "field2": "ACUICULTURA MARÍTIMA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8424",
+        "field2": "ADMINISTRACIÓN DE JUSTICIA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6611",
+        "field2": "ADMINISTRACIÓN DE MERCADOS FINANCIEROS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5210",
+        "field2": "ALMACENAMIENTO Y DEPÓSITO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5512",
+        "field2": "ALOJAMIENTO EN APARTA-HOTELES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5513",
+        "field2": "ALOJAMIENTO EN CENTROS VACACIONALES "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5511",
+        "field2": "ALOJAMIENTO EN HOTELES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5514",
+        "field2": "ALOJAMIENTO RURAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7722",
+        "field2": "ALQUILER DE VIDEOS Y DISCOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7721",
+        "field2": "ALQUILER Y ARRENDAMIENTO DE EQUIPO RECREATIVO Y DEPORTIVO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7729",
+        "field2": "ALQUILER Y ARRENDAMIENTO DE OTROS EFECTOS PERSONALES Y ENSERES DOMÉSTICOS N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7730",
+        "field2": "ALQUILER Y ARRENDAMIENTO DE OTROS TIPOS DE MAQUINARIA, EQUIPO Y BIENES TANGIBLES N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7710",
+        "field2": "ALQUILER Y ARRENDAMIENTO DE VEHÍCULOS AUTOMOTORES "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7740",
+        "field2": "ARRENDAMIENTO DE PROPIEDAD INTELECTUAL Y PRODUCTOS SIMILARES, EXCEPTO OBRAS PROTEGIDAS POR DERECHOS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9005",
+        "field2": "ARTES PLÁSTICAS Y VISUALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0010",
+        "field2": "ASALARIADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1610",
+        "field2": "ASERRADO, ACEPILLADO E IMPREGNACIÓN DE LA MADERA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6423",
+        "field2": "BANCA DE SEGUNDO PISO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6411",
+        "field2": "BANCO CENTRAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6412",
+        "field2": "BANCOS COMERCIALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6514",
+        "field2": "CAPITALIZACIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3600",
+        "field2": "CAPTACIÓN, TRATAMIENTO Y DISTRIBUCIÓN DE AGUA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5621",
+        "field2": "CATERING PARA EVENTOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0170",
+        "field2": "CAZA ORDINARIA Y MEDIANTE TRAMPAS Y ACTIVIDADES DE SERVICIOS CONEXAS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3514",
+        "field2": "COMERCIALIZACIÓN DE ENERGÍA ELÉCTRICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4719",
+        "field2": "COMERCIO A POR MENOR EN ESTABLECIMIENTOS NO ESPECIALIZADOS, CON SURTIDO COMPUESTO PRINCIPALMENTE POR"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4610",
+        "field2": "COMERCIO AL POR MAYOR A CAMBIO DE UNA RETRIBUCIÓN O POR CONTRATA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4644",
+        "field2": "COMERCIO AL POR MAYOR DE APARATOS Y EQUIPO DE USO DOMÉSTICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4632",
+        "field2": "COMERCIO AL POR MAYOR DE BEBIDAS Y TABACO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4643",
+        "field2": "COMERCIO AL POR MAYOR DE CALZADO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4661",
+        "field2": "COMERCIO AL POR MAYOR DE COMBUSTIBLES SÓLIDOS, LÍQUIDOS, GASEOSOS Y PRODUCTOS CONEXOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4651",
+        "field2": "COMERCIO AL POR MAYOR DE COMPUTADORES, EQUIPO PERIFÉRICO Y PROGRAMAS DE INFORMÁTICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4665",
+        "field2": "COMERCIO AL POR MAYOR DE DESPERDICIOS, DESECHOS Y CHATARRA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4652",
+        "field2": "COMERCIO AL POR MAYOR DE EQUIPO, PARTES Y PIEZAS ELECTRÓNICOS Y DE TELECOMUNICACIONES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4653",
+        "field2": "COMERCIO AL POR MAYOR DE MAQUINARIA Y EQUIPO AGROPECUARIOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4663",
+        "field2": "COMERCIO AL POR MAYOR DE MATERIALES DE CONSTRUCCIÓN, ARTÍCULOS DE FERRETERÍA, PINTURAS, PRODUCTOS DE"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4620",
+        "field2": "COMERCIO AL POR MAYOR DE MATERIAS PRIMAS AGROPECUARIAS: ANIMALES VIVOS.\n"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4662",
+        "field2": "COMERCIO AL POR MAYOR DE METALES Y PRODUCTOS METALÍFEROS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4669",
+        "field2": "COMERCIO AL POR MAYOR DE OTROS PRODUCTOS N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4659",
+        "field2": "COMERCIO AL POR MAYOR DE OTROS TIPOS DE MAQUINARIA Y EQUIPO N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4649",
+        "field2": "COMERCIO AL POR MAYOR DE OTROS UTENSILIOS DOMÉSTICOS N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4642",
+        "field2": "COMERCIO AL POR MAYOR DE PRENDAS DE VESTIR"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4631",
+        "field2": "COMERCIO AL POR MAYOR DE PRODUCTOS ALIMENTICIOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4645",
+        "field2": "COMERCIO AL POR MAYOR DE PRODUCTOS FARMACÉUTICOS, MEDICINALES, COSMÉTICOS Y DE TOCADOR"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4664",
+        "field2": "COMERCIO AL POR MAYOR DE PRODUCTOS QUÍMICOS BÁSICOS, CAUCHOS Y PLÁSTICOS EN FORMAS PRIMARIAS Y PRODU"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4641",
+        "field2": "COMERCIO AL POR MAYOR DE PRODUCTOS TEXTILES: PRODUCTOS CONFECCIONADOS PARA USO DOMÉSTICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4690",
+        "field2": "COMERCIO AL POR MAYOR NO ESPECIALIZADO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4781",
+        "field2": "COMERCIO AL POR MENOR DE ALIMENTOS, BEBIDAS Y TABACO EN PUESTOS DE VENTA MÓVILES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4752",
+        "field2": "COMERCIO AL POR MENOR DE ARTÍCULOS DE FERRETERÍA, PINTURAS Y PRODUCTOS DE VIDRIO EN ESTABLECIMIENTOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4775",
+        "field2": "COMERCIO AL POR MENOR DE ARTÍCULOS DE SEGUNDA MANO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4762",
+        "field2": "COMERCIO AL POR MENOR DE ARTÍCULOS DEPORTIVOS, EN ESTABLECIMIENTOS ESPECIALIZADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4755",
+        "field2": "COMERCIO AL POR MENOR DE ARTÍCULOS Y UTENSILIOS DE USO DOMÉSTICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4724",
+        "field2": "COMERCIO AL POR MENOR DE BEBIDAS Y PRODUCTOS DE TABACO, EN ESTABLECIMIENTOS ESPECIALIZADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4723",
+        "field2": "COMERCIO AL POR MENOR DE CARNES (INCLUYE AVES DE CORRAL), PRODUCTOS CÁRNICOS, PESCADOS Y PRODUCTOS D"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4731",
+        "field2": "COMERCIO AL POR MENOR DE COMBUSTIBLE PARA AUTOMOTORES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4741",
+        "field2": "COMERCIO AL POR MENOR DE COMPUTADORES, EQUIPOS PERIFÉRICOS, PROGRAMAS DE INFORMÁTICA Y EQUIPOS DE TE"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4754",
+        "field2": "COMERCIO AL POR MENOR DE ELECTRODOMÉSTICOS Y GASODOMESTICOS DE USO DOMÉSTICO, MUEBLES Y EQUIPOS DE I"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4742",
+        "field2": "COMERCIO AL POR MENOR DE EQUIPOS Y APARATOS DE SONIDO Y DE VIDEO, EN ESTABLECIMIENTOS ESPECIALIZADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4722",
+        "field2": "COMERCIO AL POR MENOR DE LECHE, PRODUCTOS LÁCTEOS Y HUEVOS EN ESTABLECIMIENTOS ESPECIALIZADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4761",
+        "field2": "COMERCIO AL POR MENOR DE LIBROS, PERIÓDICOS, MATERIALES Y ARTÍCULOS DE PAPELERÍA Y ESCRITORIO, EN ES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4732",
+        "field2": "COMERCIO AL POR MENOR DE LUBRICANTES (ACEITES Y GRASAS) ADITIVOS Y PRODUCTOS DE LIMPIEZA PARA VEHÍCU"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4769",
+        "field2": "COMERCIO AL POR MENOR DE OTROS ARTÍCULOS CULTURALES Y DE ENTRETENIMIENTO N.C.P. EN ESTABLECIMIENTOS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4759",
+        "field2": "COMERCIO AL POR MENOR DE OTROS ARTÍCULOS DOMÉSTICOS EN ESTABLECIMIENTOS ESPECIALIZADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4729",
+        "field2": "COMERCIO AL POR MENOR DE OTROS PRODUCTOS ALIMENTICIOS N.C.P., EN ESTABLECIMIENTOS ESPECIALIZADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4774",
+        "field2": "COMERCIO AL POR MENOR DE OTROS PRODUCTOS NUEVOS, EN ESTABLECIMIENTOS ESPECIALIZADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4789",
+        "field2": "COMERCIO AL POR MENOR DE OTROS PRODUCTOS, EN PUESTOS DE VENTA MÓVILES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4771",
+        "field2": "COMERCIO AL POR MENOR DE PRENDAS DE VESTIR Y SUS ACCESORIOS (INCLUYE ARTÍCULOS DE PIEL) EN ESTABLECI"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4721",
+        "field2": "COMERCIO AL POR MENOR DE PRODUCTOS AGRÍCOLAS PARA EL CONSUMO EN ESTABLECIMIENTOS ESPECIALIZADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4773",
+        "field2": "COMERCIO AL POR MENOR DE PRODUCTOS FARMACÉUTICOS Y MEDICINALES, COSMÉTICOS Y ARTÍCULOS DE TOCADOR EN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4751",
+        "field2": "COMERCIO AL POR MENOR DE PRODUCTOS TEXTILES EN ESTABLECIMIENTOS ESPECIALIZADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4782",
+        "field2": "COMERCIO AL POR MENOR DE PRODUCTOS TEXTILES, PRENDAS DE VESTIR Y CALZADO, EN PUESTOS DE VENTA MÓVILE"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4753",
+        "field2": "COMERCIO AL POR MENOR DE TAPICES, ALFOMBRAS Y RECUBRIMIENTOS PARA PAREDES Y PISOS EN ESTABLECIMIENTO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4772",
+        "field2": "COMERCIO AL POR MENOR DE TODO TIPO DE CALZADO Y ARTÍCULOS DE CUERO Y SUCEDÁNEOS DEL CUERO EN ESTABLE"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4711",
+        "field2": "COMERCIO AL POR MENOR EN ESTABLECIMIENTOS NO ESPECIALIZADOS CON SURTIDO COMPUESTO PRINCIPALMENTE POR"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4792",
+        "field2": "COMERCIO AL POR MENOR REALIZADO A TRAVÉS DE CASAS DE VENTA O POR CORREO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4791",
+        "field2": "COMERCIO AL POR MENOR REALIZADO A TRAVÉS DE INTERNET"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4541",
+        "field2": "COMERCIO DE MOTOCICLETAS Y DE SUS PARTES, PIEZAS Y ACCESORIOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4530",
+        "field2": "COMERCIO DE PARTES, PIEZAS (AUTOPARTES) Y ACCESORIOS (LUJOS) PARA VEHÍCULOS AUTOMOTORES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4511",
+        "field2": "COMERCIO DE VEHÍCULOS AUTOMOTORES NUEVOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4512",
+        "field2": "COMERCIO DE VEHÍCULOS AUTOMOTORES USADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1392",
+        "field2": "CONFECCIÓN DE ARTÍCULOS CON MATERIALES TEXTILES, EXCEPTO PRENDAS DE VESTIR"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1410",
+        "field2": "CONFECCIÓN DE PRENDAS DE VESTIR, EXCEPTO PRENDAS DE PIEL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3011",
+        "field2": "CONSTRUCCIÓN DE BARCOS Y DE ESTRUCTURAS FLOTANTES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4210",
+        "field2": "CONSTRUCCIÓN DE CARRETERAS Y VÍAS DE FERROCARRIL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4112",
+        "field2": "CONSTRUCCIÓN DE EDIFICIOS NO RESIDENCIALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4111",
+        "field2": "CONSTRUCCIÓN DE EDIFICIOS RESIDENCIALES "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3012",
+        "field2": "CONSTRUCCIÓN DE EMBARCACIONES DE RECREO Y DEPORTE"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4290",
+        "field2": "CONSTRUCCIÓN DE OTRAS OBRAS DE INGENIERÍA CIVIL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4220",
+        "field2": "CONSTRUCCIÓN DE PROYECTOS DE SERVICIO PÚBLICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6612",
+        "field2": "CORRETAJE DE VALORES Y DE CONTRATOS DE PRODUCTOS BÁSICOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2396",
+        "field2": "CORTE, TALLADO Y ACABADO DE LA PIEDRA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9004",
+        "field2": "CREACIÓN AUDIOVISUAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9001",
+        "field2": "CREACIÓN LITERARIA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9002",
+        "field2": "CREACIÓN MUSICAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9003",
+        "field2": "CREACIÓN TEATRAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0145",
+        "field2": "CRÍA DE AVES DE CORRAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0142",
+        "field2": "CRÍA DE CABALLOS Y OTROS EQUINOS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0141",
+        "field2": "CRÍA DE GANADO BOVINO Y BUFALINO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0144",
+        "field2": "CRÍA DE GANADO PORCINO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0149",
+        "field2": "CRÍA DE OTROS ANIMALES N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0143",
+        "field2": "CRÍA DE OVEJAS Y CABRAS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0112",
+        "field2": "CULTIVO DE ARROZ "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0123",
+        "field2": "CULTIVO DE CAFÉ"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0111",
+        "field2": "CULTIVO DE CAFÉ"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0124",
+        "field2": "CULTIVO DE CAÑA DE AZÚCAR"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0128",
+        "field2": "CULTIVO DE ESPECIAS Y DE PLANTAS AROMÁTICAS Y MEDICINALES "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0125",
+        "field2": "CULTIVO DE FLOR DE CORTE"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0121",
+        "field2": "CULTIVO DE FRUTAS TROPICALES Y SUBTROPICALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0113",
+        "field2": "CULTIVO DE HORTALIZAS, RAÍCES Y TUBÉRCULOS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0126",
+        "field2": "CULTIVO DE PALMA PARA ACEITE (PALMA AFRICANA) Y OTROS FRUTOS OLEAGINOSOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0127",
+        "field2": "CULTIVO DE PLANTAS CON LAS QUE SE PREPARAN BEBIDAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0115",
+        "field2": "CULTIVO DE PLANTAS TEXTILES "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0122",
+        "field2": "CULTIVO DE PLÁTANO Y BANANO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0114",
+        "field2": "CULTIVO DE TABACO "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1511",
+        "field2": "CURTIDO Y RECURTIDO DE CUEROS: RECURTIDO Y TEÑIDO DE PIELES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4311",
+        "field2": "DEMOLICIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1062",
+        "field2": "DESCAFEINADO, TOSTIÓN Y MOLIENDA DEL CAFÉ"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1101",
+        "field2": "DESTILACIÓN, RECTIFICACIÓN Y MEZCLA DE BEBIDAS ALCOHÓLICAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3513",
+        "field2": "DISTRIBUCIÓN DE ENERGÍA ELÉCTRICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5812",
+        "field2": "EDICIÓN DE DIRECTORIOS Y LISTAS DE CORREO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5811",
+        "field2": "EDICIÓN DE LIBROS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5813",
+        "field2": "EDICIÓN DE PERIÓDICOS, REVISTAS Y OTRAS PUBLICACIONES PERIÓDICAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5820",
+        "field2": "EDICIÓN DE PROGRAMAS DE INFORMÁTICA (SOFTWARE) "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8513",
+        "field2": "EDUCACIÓN BÁSICA PRIMARIA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8521",
+        "field2": "EDUCACIÓN BÁSICA SECUNDARIA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8543",
+        "field2": "EDUCACIÓN DE INSTITUCIONES UNIVERSITARIAS O DE ESCUELAS TECNOLÓGICAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8544",
+        "field2": "EDUCACIÓN DE UNIVERSIDADES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8522",
+        "field2": "EDUCACIÓN MEDIA ACADÉMICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8523",
+        "field2": "EDUCACIÓN MEDIA TÉCNICA Y DE FORMACIÓN LABORAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8512",
+        "field2": "EDUCACIÓN PREESCOLAR"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8542",
+        "field2": "EDUCACIÓN TECNOLÓGICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8541",
+        "field2": "EDUCACIÓN TÉCNICA PROFESIONAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1030",
+        "field2": "ELABORACIÓN DE ACEITES Y GRASAS DE ORIGEN VEGETAL Y ANIMAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1090",
+        "field2": "ELABORACIÓN DE ALIMENTOS PREPARADOS PARA ANIMALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1052",
+        "field2": "ELABORACIÓN DE ALMIDONES Y PRODUCTOS DERIVADOS DEL ALMIDÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1102",
+        "field2": "ELABORACIÓN DE BEBIDAS FERMENTADAS NO DESTILADAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1104",
+        "field2": "ELABORACIÓN DE BEBIDAS NO ALCOHÓLICAS, PRODUCCIÓN DE AGUAS MINERALES Y DE OTRAS AGUAS EMBOTELLADAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1082",
+        "field2": "ELABORACIÓN DE CACAO, CHOCOLATE Y PRODUCTOS DE CONFITERÍA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1084",
+        "field2": "ELABORACIÓN DE COMIDAS Y PLATOS PREPARADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1083",
+        "field2": "ELABORACIÓN DE MACARRONES, FIDEOS, ALCUZCUZ Y PRODUCTOS FARINÁCEOS SIMILARES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1089",
+        "field2": "ELABORACIÓN DE OTROS PRODUCTOS ALIMENTICIOS N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1072",
+        "field2": "ELABORACIÓN DE PANELA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1051",
+        "field2": "ELABORACIÓN DE PRODUCTOS DE MOLINERÍA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1081",
+        "field2": "ELABORACIÓN DE PRODUCTOS DE PANADERÍA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1200",
+        "field2": "ELABORACIÓN DE PRODUCTOS DEL TABACO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1040",
+        "field2": "ELABORACIÓN DE PRODUCTOS LÁCTEOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1071",
+        "field2": "ELABORACIÓN Y REFINACIÓN DE AZÚCAR"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7120",
+        "field2": "ENSAYOS Y ANÁLISIS TÉCNICOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8553",
+        "field2": "ENSEÑANZA CULTURAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8530",
+        "field2": "ESTABLECIMIENTOS QUE COMBINAN DIFERENTES NIVELES DE EDUCACIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7320",
+        "field2": "ESTUDIOS DE MERCADO Y REALIZACIÓN DE ENCUESTAS DE OPINIÓN PÚBLICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3700",
+        "field2": "EVACUACIÓN Y TRATAMIENTO DE AGUAS RESIDUALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6629",
+        "field2": "EVALUACIÓN DE RIESGOS Y DAÑOS Y OTRAS ACTIVIDADES DE SERVICIOS AUXILIARES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5611",
+        "field2": "EXPENDIO A LA MESA DE COMIDAS PREPARADAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5630",
+        "field2": "EXPENDIO DE BEBIDAS ALCOHÓLICAS PARA EL CONSUMO DENTRO DEL ESTABLECIMIENTO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5613",
+        "field2": "EXPENDIO DE COMIDAS PREPARADAS EN CAFETERÍAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5612",
+        "field2": "EXPENDIO POR AUTOSERVICIO DE COMIDAS PREPARADAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0150",
+        "field2": "EXPLOTACIÓN MIXTA (AGRÍCOLA Y PECUARIA) "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0812",
+        "field2": "EXTRACCIÓN DE ARCILLAS DE USO INDUSTRIAL, CALIZA, CAOLÍN Y BENTONITAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0520",
+        "field2": "EXTRACCIÓN DE CARBÓN LIGNITO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0820",
+        "field2": "EXTRACCIÓN DE ESMERALDAS, PIEDRAS PRECIOSAS Y SEMIPRECIOSAS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0620",
+        "field2": "EXTRACCIÓN DE GAS NATURAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0892",
+        "field2": "EXTRACCIÓN DE HALITA (SAL)"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0510",
+        "field2": "EXTRACCIÓN DE HULLA (CARBÓN DE PIEDRA)"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0220",
+        "field2": "EXTRACCIÓN DE MADERA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0710",
+        "field2": "EXTRACCIÓN DE MINERALES DE HIERRO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0723",
+        "field2": "EXTRACCIÓN DE MINERALES DE NÍQUEL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0721",
+        "field2": "EXTRACCIÓN DE MINERALES DE URANIO Y DE TORIO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0891",
+        "field2": "EXTRACCIÓN DE MINERALES PARA LA FABRICACIÓN DE ABONOS Y PRODUCTOS QUÍMICOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0722",
+        "field2": "EXTRACCIÓN DE ORO Y OTROS METALES PRECIOSOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0729",
+        "field2": "EXTRACCIÓN DE OTROS MINERALES METALÍFEROS NO FERROSOS N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0899",
+        "field2": "EXTRACCIÓN DE OTROS MINERALES NO METÁLICOS N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0610",
+        "field2": "EXTRACCIÓN DE PETRÓLEO CRUDO "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0811",
+        "field2": "EXTRACCIÓN DE PIEDRA, ARENA, ARCILLAS COMUNES, YESO Y ANHIDRITA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2012",
+        "field2": "FABRICACIÓN DE ABONOS Y COMPUESTOS INORGÁNICOS NITROGENADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3030",
+        "field2": "FABRICACIÓN DE AERONAVES, NAVES ESPACIALES Y DE MAQUINARIA CONEXA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2712",
+        "field2": "FABRICACIÓN DE APARATOS DE DISTRIBUCIÓN Y CONTROL DE LA ENERGÍA ELÉCTRICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2750",
+        "field2": "FABRICACIÓN DE APARATOS DE USO DOMÉSTICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2640",
+        "field2": "FABRICACIÓN DE APARATOS ELECTRÓNICOS DE CONSUMO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2520",
+        "field2": "FABRICACIÓN DE ARMAS Y MUNICIONES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2593",
+        "field2": "FABRICACIÓN DE ARTÍCULOS DE CUCHILLERÍA, HERRAMIENTAS DE MANO Y ARTÍCULOS DE FERRETERÍA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2395",
+        "field2": "FABRICACIÓN DE ARTÍCULOS DE HORMIGÓN, CEMENTO Y YESO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1420",
+        "field2": "FABRICACIÓN DE ARTÍCULOS DE PIEL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2229",
+        "field2": "FABRICACIÓN DE ARTÍCULOS DE PLÁSTICO N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1430",
+        "field2": "FABRICACIÓN DE ARTÍCULOS DE PUNTO Y GANCHILLO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1512",
+        "field2": "FABRICACIÓN DE ARTÍCULOS DE VIAJE, BOLSOS DE MANO Y ARTÍCULOS SIMILARES ELABORADOS EN CUERO, Y FABRI"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1513",
+        "field2": "FABRICACIÓN DE ARTÍCULOS DE VIAJE, BOLSOS DE MANO Y ARTÍCULOS SIMILARES: ARTÍCULOS DE TALABARTERÍA Y"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3230",
+        "field2": "FABRICACIÓN DE ARTÍCULOS Y EQUIPO PARA LA PRÁCTICA DEL DEPORTE"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3092",
+        "field2": "FABRICACIÓN DE BICICLETAS Y DE SILLAS DE RUEDAS PARA PERSONAS CON DISCAPACIDAD"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1521",
+        "field2": "FABRICACIÓN DE CALZADO DE CUERO Y PIEL, CON CUALQUIER TIPO DE SUELA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2920",
+        "field2": "FABRICACIÓN DE CARROCERÍAS PARA VEHÍCULOS AUTOMOTORES: FABRICACIÓN DE REMOLQUES Y SEMIRREMOLQUES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2014",
+        "field2": "FABRICACIÓN DE CAUCHO SINTÉTICO EN FORMAS PRIMARIAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2394",
+        "field2": "FABRICACIÓN DE CEMENTO, CAL Y YESO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2814",
+        "field2": "FABRICACIÓN DE COJINETES, ENGRANAJES, TRENES DE ENGRANAJES Y PIEZAS DE TRANSMISIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3120",
+        "field2": "FABRICACIÓN DE COLCHONES Y SOMIERES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2610",
+        "field2": "FABRICACIÓN DE COMPONENTES Y TABLEROS ELECTRÓNICOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2620",
+        "field2": "FABRICACIÓN DE COMPUTADORAS Y DE EQUIPO PERIFÉRICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1394",
+        "field2": "FABRICACIÓN DE CUERDAS, CORDELES, CABLES, BRAMANTES Y REDES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2732",
+        "field2": "FABRICACIÓN DE DISPOSITIVOS DE CABLEADO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2816",
+        "field2": "FABRICACIÓN DE EQUIPO DE ELEVACIÓN Y MANIPULACIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2660",
+        "field2": "FABRICACIÓN DE EQUIPO DE IRRADIACIÓN Y EQUIPO ELECTRÓNICO DE USO MÉDICO Y TERAPÉUTICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2651",
+        "field2": "FABRICACIÓN DE EQUIPO DE MEDICIÓN, PRUEBA, NAVEGACIÓN Y CONTROL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2630",
+        "field2": "FABRICACIÓN DE EQUIPOS DE COMUNICACIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2812",
+        "field2": "FABRICACIÓN DE EQUIPOS DE POTENCIA HIDRÁULICA Y NEUMÁTICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2740",
+        "field2": "FABRICACIÓN DE EQUIPOS ELÉCTRICOS DE ILUMINACIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2030",
+        "field2": "FABRICACIÓN DE FIBRAS SINTÉTICAS Y ARTIFICIALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2219",
+        "field2": "FABRICACIÓN DE FORMAS BÁSICAS DE CAUCHO Y OTROS PRODUCTOS DE CAUCHO N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2221",
+        "field2": "FABRICACIÓN DE FORMAS BÁSICAS DE PLÁSTICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2513",
+        "field2": "FABRICACIÓN DE GENERADORES DE VAPOR, EXCEPTO CALDERAS DE AGUA CALIENTE PARA CALEFACCIÓN CENTRAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2818",
+        "field2": "FABRICACIÓN DE HERRAMIENTAS MANUALES CON MOTOR"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2731",
+        "field2": "FABRICACIÓN DE HILOS Y CABLES ELÉCTRICOS Y DE FIBRA ÓPTICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1620",
+        "field2": "FABRICACIÓN DE HOJAS DE MADERA PARA ENCHAPADO: FABRICACIÓN DE TABLEROS CONTRACHAPADOS, TABLEROS LAMI"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2815",
+        "field2": "FABRICACIÓN DE HORNOS, HOGARES Y QUEMADORES INDUSTRIALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3220",
+        "field2": "FABRICACIÓN DE INSTRUMENTOS MUSICALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2670",
+        "field2": "FABRICACIÓN DE INSTRUMENTOS ÓPTICOS Y EQUIPO FOTOGRÁFICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3250",
+        "field2": "FABRICACIÓN DE INSTRUMENTOS, APARATOS Y MATERIALES MÉDICOS Y ODONTOLÓGICOS (INCLUIDO MOBILIARIO)"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2023",
+        "field2": "FABRICACIÓN DE JABONES Y DETERGENTES, PREPARADOS PARA LIMPIAR Y PULIR: PERFUMES Y PREPARADOS DE TOCA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3210",
+        "field2": "FABRICACIÓN DE JOYAS, BISUTERÍA Y ARTÍCULOS CONEXOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3240",
+        "field2": "FABRICACIÓN DE JUEGOS, JUGUETES Y ROMPECABEZAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2211",
+        "field2": "FABRICACIÓN DE LLANTAS Y NEUMÁTICOS DE CAUCHO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3020",
+        "field2": "FABRICACIÓN DE LOCOMOTORAS Y DE MATERIAL RODANTE PARA FERROCARRILES "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2821",
+        "field2": "FABRICACIÓN DE MAQUINARIA AGROPECUARIA Y FORESTAL "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2824",
+        "field2": "FABRICACIÓN DE MAQUINARIA PARA EXPLOTACIÓN DE MINAS Y CANTERAS Y PARA OBRAS DE CONSTRUCCIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2825",
+        "field2": "FABRICACIÓN DE MAQUINARIA PARA LA ELABORACIÓN DE ALIMENTOS, BEBIDAS Y TABACO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2826",
+        "field2": "FABRICACIÓN DE MAQUINARIA PARA LA ELABORACIÓN DE PRODUCTOS TEXTILES, PRENDAS DE VESTIR Y CUEROS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2823",
+        "field2": "FABRICACIÓN DE MAQUINARIA PARA LA METALURGIA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2817",
+        "field2": "FABRICACIÓN DE MAQUINARIA Y EQUIPO DE OFICINA (EXCEPTO COMPUTADORAS Y EQUIPO PERIFÉRICO)"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2392",
+        "field2": "FABRICACIÓN DE MATERIALES DE ARCILLA PARA LA CONSTRUCCIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2680",
+        "field2": "FABRICACIÓN DE MEDIOS MAGNÉTICOS Y ÓPTICOS PARA ALMACENAMIENTO DE DATOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3091",
+        "field2": "FABRICACIÓN DE MOTOCICLETAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2711",
+        "field2": "FABRICACIÓN DE MOTORES, GENERADORES Y TRANSFORMADORES ELÉCTRICOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2811",
+        "field2": "FABRICACIÓN DE MOTORES, TURBINAS, Y PARTES PARA MOTORES DE COMBUSTIÓN INTERNA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3110",
+        "field2": "FABRICACIÓN DE MUEBLES "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2822",
+        "field2": "FABRICACIÓN DE MÁQUINAS FORMADORAS DE METAL Y DE MÁQUINAS HERRAMIENTA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2813",
+        "field2": "FABRICACIÓN DE OTRAS BOMBAS, COMPRESORES, GRIFOS Y VÁLVULAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1709",
+        "field2": "FABRICACIÓN DE OTROS ARTÍCULOS DE PAPEL Y CARTÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1399",
+        "field2": "FABRICACIÓN DE OTROS ARTÍCULOS TEXTILES N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2393",
+        "field2": "FABRICACIÓN DE OTROS PRODUCTOS DE CERÁMICA Y PORCELANA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1690",
+        "field2": "FABRICACIÓN DE OTROS PRODUCTOS DE MADERA: FABRICACIÓN DE ARTÍCULOS DE CORCHO, CESTERÍA Y ESPARTERÍA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2599",
+        "field2": "FABRICACIÓN DE OTROS PRODUCTOS ELABORADOS DE METAL N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2399",
+        "field2": "FABRICACIÓN DE OTROS PRODUCTOS MINERALES NO METÁLICOS N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2029",
+        "field2": "FABRICACIÓN DE OTROS PRODUCTOS QUÍMICOS N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1522",
+        "field2": "FABRICACIÓN DE OTROS TIPOS DE CALZADO, EXCEPTO CALZADO DE CUERO Y PIEL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3099",
+        "field2": "FABRICACIÓN DE OTROS TIPOS DE EQUIPO DE TRANSPORTE N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2790",
+        "field2": "FABRICACIÓN DE OTROS TIPOS DE EQUIPO ELÉCTRICO N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2829",
+        "field2": "FABRICACIÓN DE OTROS TIPOS DE MAQUINARIA Y EQUIPO DE USO ESPECIAL N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2819",
+        "field2": "FABRICACIÓN DE OTROS TIPOS DE MAQUINARIA Y EQUIPO DE USO GENERAL N.C.P.."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1702",
+        "field2": "FABRICACIÓN DE PAPEL Y CARTÓN ONDULADO (CORRUGADO): FABRICACIÓN DE ENVASES, EMPAQUES Y DE EMBALAJES "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1523",
+        "field2": "FABRICACIÓN DE PARTES DEL CALZADO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1630",
+        "field2": "FABRICACIÓN DE PARTES Y PIEZAS DE MADERA, DE CARPINTERÍA Y EBANISTERÍA PARA LA CONSTRUCCIÓN\n"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2930",
+        "field2": "FABRICACIÓN DE PARTES, PIEZAS (AUTOPARTES) Y ACCESORIOS (LUJOS) PARA VEHÍCULOS AUTOMOTORES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2720",
+        "field2": "FABRICACIÓN DE PILAS, BATERÍAS Y ACUMULADORES ELÉCTRICOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2022",
+        "field2": "FABRICACIÓN DE PINTURAS, BARNICES Y REVESTIMIENTOS SIMILARES, TINTAS PARA IMPRESIÓN Y MASILLAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2021",
+        "field2": "FABRICACIÓN DE PLAGUICIDAS Y OTROS PRODUCTOS QUÍMICOS DE USO AGROPECUARIO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2013",
+        "field2": "FABRICACIÓN DE PLÁSTICOS EN FORMAS PRIMARIAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1910",
+        "field2": "FABRICACIÓN DE PRODUCTOS DE HORNOS DE COQUE "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1921",
+        "field2": "FABRICACIÓN DE PRODUCTOS DE LA REFINACIÓN DEL PETRÓLEO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2100",
+        "field2": "FABRICACIÓN DE PRODUCTOS FARMACÉUTICOS, SUSTANCIAS QUÍMICAS MEDICINALES Y PRODUCTOS BOTÁNICOS DE USO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2511",
+        "field2": "FABRICACIÓN DE PRODUCTOS METÁLICOS PARA USO ESTRUCTURAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2391",
+        "field2": "FABRICACIÓN DE PRODUCTOS REFRACTARIOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1701",
+        "field2": "FABRICACIÓN DE PULPAS (PASTAS) CELULÓSICAS: PAPEL Y CARTÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1640",
+        "field2": "FABRICACIÓN DE RECIPIENTES DE MADERA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2652",
+        "field2": "FABRICACIÓN DE RELOJES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2011",
+        "field2": "FABRICACIÓN DE SUSTANCIAS Y PRODUCTOS QUÍMICOS BÁSICOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2512",
+        "field2": "FABRICACIÓN DE TANQUES, DEPÓSITOS Y RECIPIENTES DE METAL, EXCEPTO LOS UTILIZADOS PARA EL ENVASE O TR"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1393",
+        "field2": "FABRICACIÓN DE TAPETES Y ALFOMBRAS PARA PISOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1391",
+        "field2": "FABRICACIÓN DE TEJIDOS DE PUNTO Y GANCHILLO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2910",
+        "field2": "FABRICACIÓN DE VEHÍCULOS AUTOMOTORES Y SUS MOTORES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3040",
+        "field2": "FABRICACIÓN DE VEHÍCULOS MILITARES DE COMBATE"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2310",
+        "field2": "FABRICACIÓN DE VIDRIO Y PRODUCTOS DE VIDRIO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6431",
+        "field2": "FIDEICOMISOS, FONDOS Y ENTIDADES FINANCIERAS SIMILARES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6432",
+        "field2": "FONDOS DE CESANTÍAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2591",
+        "field2": "FORJA, PRENSADO, ESTAMPADO Y LAMINADO DE METAL: PULVIMETALURGIA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8551",
+        "field2": "FORMACIÓN ACADÉMICA NO FORMAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8219",
+        "field2": "FOTOCOPIADO, PREPARACIÓN DE DOCUMENTOS Y OTRAS ACTIVIDADES ESPECIALIZADAS DE APOYO A OFICINA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2431",
+        "field2": "FUNDICIÓN DE HIERRO Y DE ACERO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2432",
+        "field2": "FUNDICIÓN DE METALES NO FERROSOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3511",
+        "field2": "GENERACIÓN DE ENERGÍA ELÉCTRICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9311",
+        "field2": "GESTIÓN DE INSTALACIONES DEPORTIVAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2410",
+        "field2": "INDUSTRIAS BÁSICAS DE HIERRO Y DE ACERO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2421",
+        "field2": "INDUSTRIAS BÁSICAS DE METALES PRECIOSOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2429",
+        "field2": "INDUSTRIAS BÁSICAS DE OTROS METALES NO FERROSOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4322",
+        "field2": "INSTALACIONES DE FONTANERÍA, CALEFACCIÓN Y AIRE ACONDICIONADO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4321",
+        "field2": "INSTALACIONES ELÉCTRICAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3320",
+        "field2": "INSTALACIÓN ESPECIALIZADA DE MAQUINARIA Y EQUIPO INDUSTRIAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6495",
+        "field2": "INSTITUCIONES ESPECIALES OFICIALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7210",
+        "field2": "INVESTIGACIONES Y DESARROLLO EXPERIMENTAL EN EL CAMPO DE LAS CIENCIAS NATURALES Y LA INGENIERÍA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7220",
+        "field2": "INVESTIGACIONES Y DESARROLLO EXPERIMENTAL EN EL CAMPO DE LAS CIENCIAS SOCIALES Y LAS HUMANIDADES "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9601",
+        "field2": "LAVADO Y LIMPIEZA, INCLUSO LA LIMPIEZA EN SECO, DE PRODUCTOS TEXTILES Y DE PIEL "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6491",
+        "field2": "LEASING FINANCIERO (ARRENDAMIENTO FINANCIERO)"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8121",
+        "field2": "LIMPIEZA GENERAL INTERIOR DE EDIFICIOS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5224",
+        "field2": "MANIPULACIÓN DE CARGA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9521",
+        "field2": "MANTENIMIENTO Y REPARACIÓN DE APARATOS ELECTRÓNICOS DE CONSUMO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9522",
+        "field2": "MANTENIMIENTO Y REPARACIÓN DE APARATOS Y EQUIPOS DOMÉSTICOS Y DE JARDINERÍA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9511",
+        "field2": "MANTENIMIENTO Y REPARACIÓN DE COMPUTADORAS Y DE EQUIPO PERIFÉRICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9512",
+        "field2": "MANTENIMIENTO Y REPARACIÓN DE EQUIPOS DE COMUNICACIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4542",
+        "field2": "MANTENIMIENTO Y REPARACIÓN DE MOTOCICLETAS Y DE SUS PARTES Y PIEZAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9529",
+        "field2": "MANTENIMIENTO Y REPARACIÓN DE OTROS EFECTOS PERSONALES Y ENSERES DOMÉSTICOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3319",
+        "field2": "MANTENIMIENTO Y REPARACIÓN DE OTROS TIPOS DE EQUIPOS Y SUS COMPONENTES N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4520",
+        "field2": "MANTENIMIENTO Y REPARACIÓN DE VEHÍCULOS AUTOMOTORES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3315",
+        "field2": "MANTENIMIENTO Y REPARACIÓN ESPECIALIZADO DE EQUIPO DE TRANSPORTE, EXCEPTO LOS VEHÍCULOS AUTOMOTORES,"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3313",
+        "field2": "MANTENIMIENTO Y REPARACIÓN ESPECIALIZADO DE EQUIPO ELECTRÓNICO Y ÓPTICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3314",
+        "field2": "MANTENIMIENTO Y REPARACIÓN ESPECIALIZADO DE EQUIPO ELÉCTRICO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3312",
+        "field2": "MANTENIMIENTO Y REPARACIÓN ESPECIALIZADO DE MAQUINARIA Y EQUIPO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3311",
+        "field2": "MANTENIMIENTO Y REPARACIÓN ESPECIALIZADO DE PRODUCTOS ELABORADOS EN METAL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8423",
+        "field2": "ORDEN PÚBLICO Y ACTIVIDADES DE SEGURIDAD "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8230",
+        "field2": "ORGANIZACIÓN DE CONVENCIONES Y EVENTOS COMERCIALES "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6619",
+        "field2": "OTRAS ACTIVIDADES AUXILIARES DE LAS ACTIVIDADES DE SERVICIOS FINANCIEROS N.C.P"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5229",
+        "field2": "OTRAS ACTIVIDADES COMPLEMENTARIAS AL TRANSPORTE"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8890",
+        "field2": "OTRAS ACTIVIDADES DE ASISTENCIA SOCIAL SIN ALOJAMIENTO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8699",
+        "field2": "OTRAS ACTIVIDADES DE ATENCIÓN DE LA SALUD HUMANA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8790",
+        "field2": "OTRAS ACTIVIDADES DE ATENCIÓN EN INSTITUCIONES CON ALOJAMIENTO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6494",
+        "field2": "OTRAS ACTIVIDADES DE DISTRIBUCIÓN DE FONDOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9008",
+        "field2": "OTRAS ACTIVIDADES DE ESPECTÁCULOS EN VIVO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8129",
+        "field2": "OTRAS ACTIVIDADES DE LIMPIEZA DE EDIFICIOS E INSTALACIONES INDUSTRIALES "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8299",
+        "field2": "OTRAS ACTIVIDADES DE SERVICIO DE APOYO A LAS EMPRESAS N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6399",
+        "field2": "OTRAS ACTIVIDADES DE SERVICIO DE INFORMACIÓN N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6499",
+        "field2": "OTRAS ACTIVIDADES DE SERVICIO FINANCIERO, EXCEPTO LAS DE SEGUROS Y PENSIONES N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9609",
+        "field2": "OTRAS ACTIVIDADES DE SERVICIOS PERSONALES N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7830",
+        "field2": "OTRAS ACTIVIDADES DE SUMINISTRO DE RECURSO HUMANO "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6209",
+        "field2": "OTRAS ACTIVIDADES DE TECNOLOGÍAS DE INFORMACIÓN Y ACTIVIDADES DE SERVICIOS INFORMÁTICOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6190",
+        "field2": "OTRAS ACTIVIDADES DE TELECOMUNICACIONES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9319",
+        "field2": "OTRAS ACTIVIDADES DEPORTIVAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4390",
+        "field2": "OTRAS ACTIVIDADES ESPECIALIZADAS PARA LA CONSTRUCCIÓN DE EDIFICIOS Y OBRAS DE INGENIERÍA CIVIL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7490",
+        "field2": "OTRAS ACTIVIDADES PROFESIONALES, CIENTÍFICAS Y TÉCNICAS N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9329",
+        "field2": "OTRAS ACTIVIDADES RECREATIVAS Y DE ESPARCIMIENTO N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6613",
+        "field2": "OTRAS ACTIVIDADES RELACIONADAS CON EL MERCADO DE VALORES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3290",
+        "field2": "OTRAS INDUSTRIAS MANUFACTURERAS N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4329",
+        "field2": "OTRAS INSTALACIONES ESPECIALIZADAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0129",
+        "field2": "OTROS CULTIVOS PERMANENTES N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0119",
+        "field2": "OTROS CULTIVOS TRANSITORIOS N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1063",
+        "field2": "OTROS DERIVADOS DEL CAFÉ"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7990",
+        "field2": "OTROS SERVICIOS DE RESERVA Y ACTIVIDADES RELACIONADAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5590",
+        "field2": "OTROS TIPOS DE ALOJAMIENTO N.C.P. "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5519",
+        "field2": "OTROS TIPOS DE ALOJAMIENTOS PARA VISITANTES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4799",
+        "field2": "OTROS TIPOS DE COMERCIO AL POR MENOR NO REALIZADO EN ESTABLECIMIENTOS, PUESTOS DE VENTA O MERCADOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8559",
+        "field2": "OTROS TIPOS DE EDUCACIÓN N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5619",
+        "field2": "OTROS TIPOS DE EXPENDIO DE COMIDAS PREPARADAS N.C.P."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5819",
+        "field2": "OTROS TRABAJOS DE EDICIÓN"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9602",
+        "field2": "PELUQUERÍA Y OTROS TRATAMIENTOS DE BELLEZA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0082",
+        "field2": "PERSONAS NATURALES SUBSIDIADAS POR TERCEROS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0312",
+        "field2": "PESCA DE AGUA DULCE "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0311",
+        "field2": "PESCA MARÍTIMA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9603",
+        "field2": "POMPAS FÚNEBRES Y ACTIVIDADES RELACIONADAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6312",
+        "field2": "PORTALES WEB"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4312",
+        "field2": "PREPARACIÓN DEL TERRENO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1311",
+        "field2": "PREPARACIÓN E HILATURA DE FIBRAS TEXTILES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6311",
+        "field2": "PROCESAMIENTO DE DATOS, ALOJAMIENTO (HOSTING) Y ACTIVIDADES RELACIONADAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1011",
+        "field2": "PROCESAMIENTO Y CONSERVACIÓN DE CARNE Y PRODUCTOS CÁRNICOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1020",
+        "field2": "PROCESAMIENTO Y CONSERVACIÓN DE FRUTAS, LEGUMBRES, HORTALIZAS Y TUBÉRCULOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1012",
+        "field2": "PROCESAMIENTO Y CONSERVACIÓN DE PESCADOS, CRUSTÁCEOS Y MOLUSCOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1820",
+        "field2": "PRODUCCIÓN DE COPIAS A PARTIR DE GRABACIONES ORIGINALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3520",
+        "field2": "PRODUCCIÓN DE GAS: DISTRIBUCIÓN DE COMBUSTIBLES GASEOSOS POR TUBERÍAS. "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1103",
+        "field2": "PRODUCCIÓN DE MALTA, ELABORACIÓN DE CERVEZAS Y OTRAS BEBIDAS MALTEADAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0130",
+        "field2": "PROPAGACIÓN DE PLANTAS (ACTIVIDADES DE LOS VIVEROS, EXCEPTO VIVEROS FORESTALES) "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "7310",
+        "field2": "PUBLICIDAD"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6513",
+        "field2": "REASEGUROS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3811",
+        "field2": "RECOLECCIÓN DE DESECHOS NO PELIGROSOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3812",
+        "field2": "RECOLECCIÓN DE DESECHOS PELIGROSOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0230",
+        "field2": "RECOLECCIÓN DE PRODUCTOS FORESTALES DIFERENTES A LA MADERA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3830",
+        "field2": "RECUPERACIÓN DE MATERIALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2212",
+        "field2": "REENCAUCHE DE LLANTAS USADAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8413",
+        "field2": "REGULACIÓN DE LAS ACTIVIDADES DE ORGANISMOS QUE PRESTAN SERVICIOS DE SALUD, EDUCATIVOS, CULTURALES Y"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "8421",
+        "field2": "RELACIONES EXTERIORES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0090",
+        "field2": "RENTISTAS DE CAPITAL, SOLO PARA PERSONAS NATURALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9523",
+        "field2": "REPARACIÓN DE CALZADO Y ARTÍCULOS DE CUERO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "9524",
+        "field2": "REPARACIÓN DE MUEBLES Y ACCESORIOS PARA EL HOGAR"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6532",
+        "field2": " RÉGIMEN DE AHORRO INDIVIDUAL (RAI)."
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6531",
+        "field2": "RÉGIMEN DE PRIMA MEDIA CON PRESTACIÓN DEFINIDA (RPM)"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6512",
+        "field2": "SEGUROS DE VIDA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6511",
+        "field2": "SEGUROS GENERALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0240",
+        "field2": "SERVICIOS DE APOYO A LA SILVICULTURA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6522",
+        "field2": "SERVICIOS DE SEGUROS SOCIALES DE RIESGOS PROFESIONALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "6521",
+        "field2": "SERVICIOS DE SEGUROS SOCIALES DE SALUD "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5530",
+        "field2": "SERVICIOS POR HORAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0210",
+        "field2": "SILVICULTURA Y OTRAS ACTIVIDADES FORESTALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0081",
+        "field2": "SIN ACTIVIDAD ECONÓMICA, SOLO PARA PERSONAS NATURALES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3530",
+        "field2": "SUMINISTRO DE VAPOR Y AIRE ACONDICIONADO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1312",
+        "field2": "TEJEDURÍA DE PRODUCTOS TEXTILES"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4330",
+        "field2": "TERMINACIÓN Y ACABADO DE EDIFICIOS Y OBRAS DE INGENIERÍA CIVIL"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3512",
+        "field2": "TRANSMISIÓN DE ENERGÍA ELÉCTRICA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5122",
+        "field2": "TRANSPORTE AÉREO INTERNACIONAL DE CARGA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5112",
+        "field2": "TRANSPORTE AÉREO INTERNACIONAL DE PASAJEROS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5121",
+        "field2": "TRANSPORTE AÉREO NACIONAL DE CARGA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5111",
+        "field2": "TRANSPORTE AÉREO NACIONAL DE PASAJEROS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5012",
+        "field2": "TRANSPORTE DE CARGA MARÍTIMO Y DE CABOTAJE "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4923",
+        "field2": "TRANSPORTE DE CARGA POR CARRETERA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4921",
+        "field2": "TRANSPORTE DE PASAJEROS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5011",
+        "field2": "TRANSPORTE DE PASAJEROS MARÍTIMO Y DE CABOTAJE "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5022",
+        "field2": "TRANSPORTE FLUVIAL DE CARGA"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "5021",
+        "field2": "TRANSPORTE FLUVIAL DE PASAJEROS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4912",
+        "field2": "TRANSPORTE FÉRREO DE CARGA "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4911",
+        "field2": "TRANSPORTE FÉRREO DE PASAJEROS "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4922",
+        "field2": "TRANSPORTE MIXTO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "4930",
+        "field2": "TRANSPORTE POR TUBERÍAS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "0164",
+        "field2": "TRATAMIENTO DE SEMILLAS PARA PROPAGACIÓN "
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3821",
+        "field2": "TRATAMIENTO Y DISPOSICIÓN DE DESECHOS NO PELIGROSOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "3822",
+        "field2": "TRATAMIENTO Y DISPOSICIÓN DE DESECHOS PELIGROSOS"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "2592",
+        "field2": "TRATAMIENTO Y REVESTIMIENTO DE METALES: MECANIZADO"
+      },
+      {
+        "dictionary": "actividad_economica",
+        "field1": "1061",
+        "field2": "TRILLA DE CAFÉ"
+      }
+    ],
+    "municipalityCodeDir": [],
+    "occupationTypeDir": [
+      {
+        "dictionary": "tipo_ocupacion",
+        "field1": "2",
+        "field2": "COMERCIAL",
+        "field3": "865121"
+      },
+      {
+        "dictionary": "tipo_ocupacion",
+        "field1": "3",
+        "field2": "MIXTO",
+        "field3": "865121"
+      },
+      {
+        "dictionary": "tipo_ocupacion",
+        "field1": "4",
+        "field2": "NO APLICA"
+      },
+      {
+        "dictionary": "tipo_ocupacion",
+        "field1": "1",
+        "field2": "RESIDENCIAL",
+        "field3": "865131"
+      }
+    ],
+    "originSystemDir": [
+      {
+        "dictionary": "sistema_origen",
+        "field1": "3",
+        "field2": "POLIZAS OAL"
+      },
+      {
+        "dictionary": "sistema_origen",
+        "field1": "1",
+        "field2": "POLIZAS OAL"
+      }
+    ],
+    "maritalStatusDir": [],
+    "departmentsDir": [],
+    "townCodeDir": []
+  },
+  "formPropertyStore": {
+    "namespaced": true,
+    "stepNumber": 0,
+    "step1": {
+      "branch": null,
+      "branchOffice": null,
+      "salesChannel": null,
+      "product": null,
+      "clause": null,
+      "productPlan": null,
+      "validityDateFrom": null,
+      "validityDateUpTo": null,
+      "taker": null,
+      "insured": null,
+      "wayToPay": null,
+      "payment": null,
+      "takerTypeDocument": null,
+      "takerNumberDocument": null,
+      "takerName": null
+    },
+    "step2": {
+      "tipoDireccion": null,
+      "riskDirection": null,
+      "numberOfFloors": null,
+      "buildingDate": null,
+      "typeOfConstruction": null,
+      "risks": [
+        {
+          "tipoAmparo": "fghjklñkjhgfds",
+          "valorAsegurado": "032456789",
+          "tipoDireccion": null,
+          "direccionRiesgo": null,
+          "numeroPisos": null,
+          "fechaConstruccion": null,
+          "tipoConstruccion": null
+        }
+      ],
+      "editedIndexrisks": -1,
+      "editedItemrisks": {
+        "tipoAmparo": null,
+        "valorAsegurado": null,
+        "tipoDireccion": null,
+        "direccionRiesgo": null,
+        "numeroPisos": null,
+        "fechaConstruccion": null,
+        "tipoConstruccion": ""
+      },
+      "defaultItemrisks": {
+        "tipoAmparo": null,
+        "valorAsegurado": null,
+        "tipoDireccion": null,
+        "direccionRiesgo": null,
+        "numeroPisos": null,
+        "fechaConstruccion": null,
+        "tipoConstruccion": null
+      }
+    },
+    "step3": {
+      "riskDirection": null,
+      "numberOfFloors": null,
+      "buildingDate": null,
+      "typeOfConstruction": null
+    },
+    "coverageUpdate": [],
+    "dataForm": {},
+    "propertyController": {
+      "address": null,
+      "complementaryAddress": null,
+      "constructionYear": null,
+      "countryCode": null,
+      "departamentCode": null,
+      "intersectionStreetTypeCode": null,
+      "latitudeNumber": null,
+      "townCode": null,
+      "normalizedAddress": null,
+      "numberLength": null,
+      "numberOfFloors": null,
+      "numberUnits": null,
+      "postalCode": null,
+      "propertyName": null,
+      "street1": null,
+      "street1Complement": null,
+      "street2": null,
+      "street2Complement": null,
+      "streetTypeCode": null,
+      "urban": true
+    }
+  },
+  "personStore": {
+    "numberUserPhones": 1,
+    "numberUserPhones2": [
+      {
+        "id": 1,
+        "type": null,
+        "date": null
+      }
+    ],
+    "newPerson": {
+      "authorizeMedicalHistory": null,
+      "birthDate": null,
+      "birthDepartment": null,
+      "birthMunicipality": null,
+      "bloodType": null,
+      "childrenNumber": null,
+      "ciuCode": null,
+      "collectiontoken": null,
+      "countryOfBirth": null,
+      "creationDate": null,
+      "currentSarlaft": null,
+      "dateOfDeath": null,
+      "dateUpdate": null,
+      "documentNumber": null,
+      "employee": null,
+      "epsCode": null,
+      "fullNameBusinessName": null,
+      "gender": null,
+      "habeasData": null,
+      "height": null,
+      "issueDateDocument": null,
+      "maritalStatusCode": null,
+      "names": null,
+      "naturalPerson": null,
+      "nitVerificationDigit": null,
+      "occupation": null,
+      "origin": null,
+      "professionProfession": null,
+      "rhSanguineo": null,
+      "sarlaftFormDate": null,
+      "secondSurname": null,
+      "stratum": null,
+      "subCollectiontoken": null,
+      "surname": null,
+      "typeDocument": null,
+      "weight": null
+    }
+  },
+  "productStore": {
+    "productStructuresDir": []
+  },
+  "productPlanStore": {
+    "productPlanStructuresDir": []
+  }
+}

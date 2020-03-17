@@ -1,0 +1,35 @@
+/****** Base ******/
+@import "libs/vuetify.min";
+@import "base/_variables";
+@import "base/_mixin";
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+$body-font-family: Nunito;
+$title-font: Nunito;
+
+.v-application {
+  font-family: $body-font-family, sans-serif !important;
+
+  .title {
+    // To pin point specific classes of some components
+    font-family: $title-font, sans-serif !important;
+  }
+
+
+}
+
+.v-card__title {
+  word-break: normal !important;
+}
+
+.theme--light.v-application {
+  background: #fff !important;
+}
+
+.v-application .primary {
+  background-color: #9e1c64 !important;
+  border-color: #9e1c64 !important;
+}
+
+.container{
+  max-width: 1240px !important;
+}
