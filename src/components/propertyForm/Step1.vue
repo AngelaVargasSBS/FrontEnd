@@ -738,7 +738,7 @@ export default {
                     timer: 4000
                   });
                   store.dispatch("formPropertyStore/stepState", { index: 2 });
-		store.dispatch("formPropertyStore/getIntermediaryPolicy");
+                  store.dispatch("formPropertyStore/getIntermediaryPolicy");
                 })
                 .catch(err => {
                   this.$swal({
@@ -772,7 +772,7 @@ export default {
                 timer: 4000
               });
               store.dispatch("formPropertyStore/stepState", { index: 2 });
-store.dispatch("formPropertyStore/getIntermediaryPolicy");
+              store.dispatch("formPropertyStore/getIntermediaryPolicy");
               store.dispatch("formPropertyStore/getIntermediaryPolicy");
             })
             .catch(err => {
