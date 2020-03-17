@@ -544,7 +544,7 @@
                                       outlined
                                       @click="
                                         Guardarrisks();
-                                        stepFormSubmission()
+                                          stepFormSubmission()
                                       "
                                     >Continue</v-btn>
                                   </v-col>
@@ -880,8 +880,33 @@ export default {
       store
         .dispatch("riskPolicyStore/createRiskPolicy")
         .then(resp => {
-          store.commit("formPropertyStore/addNewRiskList");
+         
 
+         let arraySumms =  this.$store.state[
+      "productConfigurationStore"
+    ].productPlan.productPlanSummsAssured
+
+          arraySumms.forEach(element => { 
+            //if (element.summIncluded == true) {
+              store.dispatch("riskPolicyStore/createSummAssuredPolicy", element)
+                .then(resp => {
+                })
+                .catch(err => {
+                  this.$swal({
+                    position: "center",
+                    icon: "error",
+                    title: "Error: ",
+                    text: err,
+                    showConfirmButton: true
+                  });
+                });
+            //}
+          });
+
+          store.commit("formPropertyStore/addNewRiskList");
+          store.commit("formPropertyStore/resetState");
+          store.commit("productConfigurationStore/resetProductPlanSummsAssured")
+          this.dialogEdit =false
           this.$swal({
             position: "center",
             icon: "success",
@@ -902,11 +927,8 @@ export default {
           });
         });
     },
-    saveNewPropertyRiskPolicy() {
-      store.dispatch("riskPolicyStore/postPropertyRiskPolicy");
-    },
 
-    Guardarrisks() {
+    GuardarProteccion() {
       console.log(`paso 1 statusNewTariffRisk = ${this.statusNewTariffRisk}`);
       if (
         this.editedItemrisks.tipoAmparo != "" &&
@@ -1023,12 +1045,6 @@ export default {
                 showConfirmButton: false,
                 timer: 4000
               });
-              console.log("this.editedIndexrisks");
-              console.log(this.editedIndexrisks);
-              console.log("/this.editedIndexrisks");
-              store.dispatch("riskPolicyStore/postPropertyRiskPolicy", {
-                key: this.editedIndexrisks
-              });
             },
             error => {
               this.$swal({
@@ -1039,9 +1055,6 @@ export default {
                 showConfirmButton: false,
                 timer: 4000
               });
-              console.log("this.editedIndexrisks");
-              console.log(this.editedIndexrisks);
-              console.log("/this.editedIndexrisks");
             }
           );
       }
