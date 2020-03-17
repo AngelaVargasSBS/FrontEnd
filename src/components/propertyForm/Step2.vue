@@ -969,6 +969,7 @@ export default {
                   });
                   this.e6 = 2;
                   this.statusNewTariffRisk = false;
+                  store.dispatch("formPropertyStore/getCoveragePolicy");
                   console.log(
                     `statusNewTariffRisk = ${this.statusNewTariffRisk}`
                   );
