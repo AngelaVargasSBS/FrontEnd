@@ -51,7 +51,7 @@
                           class="elevation-1"
                           hide-default-footer
                         >
-                         <template v-slot:item.summIncluded="{ item }">
+                          <template v-slot:item.summIncluded="{ item }">
                             <v-simple-checkbox v-model="item.summIncluded"></v-simple-checkbox>
                           </template>
                           <template v-slot:item.summAssured="{ item }">
@@ -62,8 +62,6 @@
                               prefix="$"
                             ></v-text-field>
                           </template>
-                      
-
                         </v-data-table>
                       </v-col>
                     </v-row>
@@ -903,6 +901,9 @@ export default {
             showConfirmButton: true
           });
         });
+    },
+    saveNewPropertyRiskPolicy() {
+      store.dispatch("riskPolicyStore/postPropertyRiskPolicy");
     },
 
     GuardarProteccion() {

@@ -7,15 +7,16 @@ const getters = {
 const actions = {
 
   createRiskPolicy({
-    commit, state
+    commit,
+    state
   }) {
 
 
-     
+
     let uniqueIdentifier = this.state.formPropertyStore.step1.uniqueIdentifier,
-        anniversary = this.state.formPropertyStore.step1.anniversary,
-        planCode= this.state.formPropertyStore.step1.planCode,
-        riskNumber = this.state.formPropertyStore.step1.serialNumberRisk
+      anniversary = this.state.formPropertyStore.step1.anniversary,
+      planCode = this.state.formPropertyStore.step1.planCode,
+      riskNumber = this.state.formPropertyStore.step1.serialNumberRisk
 
 
     return new Promise((resolve, reject) => {
@@ -24,7 +25,7 @@ const actions = {
       let dataPost = {
         uniqueIdentifier: uniqueIdentifier,
         anniversary: anniversary,
-        riskNumber:  riskNumber,
+        riskNumber: riskNumber,
         planCode: planCode
       }
 
@@ -32,7 +33,7 @@ const actions = {
         .then(response => {
 
           if (response.data.status.code == 200) {
-          
+
             commit('setNewRisk', dataPost);
             resolve()
 
@@ -52,13 +53,52 @@ const actions = {
   },
 
 
+  postPropertyRiskPolicy({
+    commit,
+    state
+  }) {
+    console.log('postPropertyRiskPolicy');
+    return new Promise((resolve, reject) => {
+
+      let url = Vue.prototype.$urlServices + `/api/v1/sbs/createPropertyRiskPolicy/propertyRiskPolicy
+      `
+      let dataPost = {
+        address: null,
+        anniversary: this.state.formPropertyStore.step1.anniversary,
+        uniqueIdentifier: this.state.formPropertyStore.step1.uniqueIdentifier,
+        ciuCode: null,
+        codeTypeRisk: null,
+        riskNumber: null,
+        countryCode: null,
+        departamentCode: null,
+        municipalityCode: null,
+      }
+
+      restApi.post(url, dataPost)
+        .then(response => {
+          if (response.data.status.code == 200) {
+            // dataNewRisk = Object.assign({}, state);
+            // commit('formPropertyStore/addNewRiskList', dataNewRisk);
+            console.log(response);
+            resolve()
+          } else {
+            reject(response.data.status.message)
+          }
+        })
+        .catch(e => {
+          reject(e)
+        })
+    })
+  },
+
+
 }
 const mutations = {
-  setNewRisk(state, dataNewRisk){
+  setNewRisk(state, dataNewRisk) {
 
-    state.riskNumber =  dataNewRisk.riskNumber
-    state.planCode =  dataNewRisk.planCode
-    
+    state.riskNumber = dataNewRisk.riskNumber
+    state.planCode = dataNewRisk.planCode
+
   }
 
 }
