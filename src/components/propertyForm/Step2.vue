@@ -880,33 +880,38 @@ export default {
       store
         .dispatch("riskPolicyStore/createRiskPolicy")
         .then(resp => {
-         
+          let arraySumms = this.$store.state["productConfigurationStore"]
+            .productPlan.productPlanSummsAssured;
 
-         let arraySumms =  this.$store.state[
-      "productConfigurationStore"
-    ].productPlan.productPlanSummsAssured
-
-          arraySumms.forEach(element => { 
+          arraySumms.forEach(element => {
             //if (element.summIncluded == true) {
-              store.dispatch("riskPolicyStore/createSummAssuredPolicy", element)
-                .then(resp => {
-                })
-                .catch(err => {
-                  this.$swal({
-                    position: "center",
-                    icon: "error",
-                    title: "Error: ",
-                    text: err,
-                    showConfirmButton: true
-                  });
+            store
+              .dispatch("riskPolicyStore/createSummAssuredPolicy", element)
+              .then(resp => {})
+              .catch(err => {
+                this.$swal({
+                  position: "center",
+                  icon: "error",
+                  title: "Error: ",
+                  text: err,
+                  showConfirmButton: true
                 });
+              });
             //}
           });
 
           store.commit("formPropertyStore/addNewRiskList");
+<<<<<<< HEAD
           store.commit("riskPolicyStore/resetState");
           store.commit("productConfigurationStore/resetProductPlanSummsAssured")
           this.dialogEdit =false
+=======
+          store.commit("formPropertyStore/resetState");
+          store.commit(
+            "productConfigurationStore/resetProductPlanSummsAssured"
+          );
+          this.dialogEdit = false;
+>>>>>>> 26a48ed6330c0583a083d58dcc0721b32ab1a686
           this.$swal({
             position: "center",
             icon: "success",
@@ -928,7 +933,7 @@ export default {
         });
     },
 
-    GuardarProteccion() {
+    Guardarrisks() {
       console.log(`paso 1 statusNewTariffRisk = ${this.statusNewTariffRisk}`);
       if (
         this.editedItemrisks.tipoAmparo != "" &&
@@ -1044,6 +1049,9 @@ export default {
                 text: "Se creo con éxito la propiedad.",
                 showConfirmButton: false,
                 timer: 4000
+              });
+              store.dispatch("riskPolicyStore/postPropertyRiskPolicy", {
+                key: this.editedIndexrisks
               });
             },
             error => {
