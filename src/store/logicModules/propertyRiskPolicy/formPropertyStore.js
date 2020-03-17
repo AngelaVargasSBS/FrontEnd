@@ -40,7 +40,7 @@ const actions = {
       restApi.post(url, dataPropertyController).then(response => {
         if (response.data.status.code == '200' && response.data.status.message.indexOf("Successful") > -1) {
           resolve(response);
-          
+
         } else {
           reject(response);
         }
@@ -277,7 +277,7 @@ const actions = {
 
       let uniqueIdentifier = state.step1.uniqueIdentifier,
         anniversary = -1;
-
+        getCoveragePolicygetCoveragePolicy
       let url = Vue.prototype.$urlServices + `/api/v1/sbs/intermediaryPolicy/uniqueIdentifier/${uniqueIdentifier}/anniversary/${anniversary}`
       restApi.get(url)
         .then(response => {
@@ -285,6 +285,35 @@ const actions = {
             resolve()
             console.log(response);
             commit('setIntermediaryPolicy', response.data.getIntermediaryPolicyDTOS);
+          } else {
+            reject(response.data.status.message)
+          }
+        })
+        .catch(e => {
+          reject(e)
+        })
+    })
+  },
+  getCoveragePolicy(state, data) {
+    let urlData = state.state.step2.risks[data.key];
+    console.log('urlData');
+    console.log(data);
+    console.log(urlData);
+    console.log('/ urlData');
+    return new Promise((resolve, reject) => {
+      // console.log(state.step1.anniversary);
+
+      //let uniqueIdentifier = state.step1.uniqueIdentifier,
+      let anniversary = -1;
+      let uniqueIdentifier = 1;
+      let riskNumber = 1;
+      let url = Vue.prototype.$urlServices + `/api/v1/sbs/coveragePolicy/uniqueIdentifier/${uniqueIdentifier}/anniversary/${anniversary}/riskNumber/${riskNumber}`
+      restApi.get(url)
+        .then(response => {
+          if (response.data.status.code == 200) {
+            resolve()
+            console.log(response);
+            commit('setCoveragePolicy', response.data.getCoveragePolicyDTOS);
           } else {
             reject(response.data.status.message)
           }
@@ -416,6 +445,9 @@ const mutations = {
   setIntermediaryPolicy(state, data) {
     state.step4.intermediaries = data;
   },
+  setCoveragePolicy(state, data) {
+    state.step2.coverages = data;
+  },
 
   clearHeaderPolicy(state) {
 
@@ -459,7 +491,7 @@ const mutations = {
   addNewRiskList(state) {
 
     console.log(this.state.riskPolicyStore)
-    let dataNewRisk = Object.assign({}, this.state.riskPolicyStore); 
+    let dataNewRisk = Object.assign({}, this.state.riskPolicyStore);
     state.step2.risks.push(dataNewRisk);
   },
 
@@ -494,7 +526,7 @@ export default {
         policyNumber: '999',
         productCode: '',
         planCode: '',
-        typeRiskCode:'',
+        typeRiskCode: '',
         validityTimeFrom: null,
         validityTimeUpTo: null,
         typeDocumentHolder: null,
@@ -523,6 +555,7 @@ export default {
         buildingDate: null,
         typeOfConstruction: null,
         risks: [],
+        coverages: [],
         editedIndexrisks: -1,
         editedItemrisks: {
           tipoAmparo: null,
