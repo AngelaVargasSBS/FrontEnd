@@ -51,7 +51,7 @@
                           class="elevation-1"
                           hide-default-footer
                         >
-                         <template v-slot:item.summIncluded="{ item }">
+                          <template v-slot:item.summIncluded="{ item }">
                             <v-simple-checkbox v-model="item.summIncluded"></v-simple-checkbox>
                           </template>
                           <template v-slot:item.summAssured="{ item }">
@@ -62,8 +62,6 @@
                               prefix="$"
                             ></v-text-field>
                           </template>
-                      
-
                         </v-data-table>
                       </v-col>
                     </v-row>
@@ -882,8 +880,32 @@ export default {
       store
         .dispatch("riskPolicyStore/createRiskPolicy")
         .then(resp => {
-          store.commit("formPropertyStore/addNewRiskList");
+        
+         let arraySumms =  this.$store.state[
+      "productConfigurationStore"
+    ].productPlan.productPlanSummsAssured
 
+          arraySumms.forEach(element => { 
+            //if (element.summIncluded == true) {
+              store.dispatch("riskPolicyStore/createSummAssuredPolicy", element)
+                .then(resp => {
+                })
+                .catch(err => {
+                  this.$swal({
+                    position: "center",
+                    icon: "error",
+                    title: "Error: ",
+                    text: err,
+                    showConfirmButton: true
+                  });
+                });
+            //}
+          });
+
+          store.commit("formPropertyStore/addNewRiskList");
+          store.commit("formPropertyStore/resetState");
+          store.commit("productConfigurationStore/resetProductPlanSummsAssured")
+          this.dialogEdit =false
           this.$swal({
             position: "center",
             icon: "success",

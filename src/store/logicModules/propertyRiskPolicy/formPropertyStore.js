@@ -460,8 +460,9 @@ const mutations = {
     console.log(this.state.riskPolicyStore)
     let dataNewRisk = Object.assign({}, this.state.riskPolicyStore); 
     state.step2.risks.push(dataNewRisk);
-  },
 
+
+  }
 
 
 }
