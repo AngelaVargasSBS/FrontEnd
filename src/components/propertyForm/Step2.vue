@@ -5,9 +5,6 @@
         <v-toolbar-title color="sbs">Paso 2 - Información Inmueble </v-toolbar-title>
       </v-toolbar>
     </v-row>
-
-
-
     <v-row>
       <v-col>
         <v-data-table
@@ -888,7 +885,6 @@ export default {
           : this.editedPropertyRisk.street2QuadrantCode);
     }
   },
-
   watch: {
     dialogEdit(val) {
       val || this.closerisks();
