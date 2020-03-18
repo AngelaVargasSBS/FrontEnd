@@ -358,11 +358,8 @@ const actions = {
     state
   }) {
     return new Promise((resolve, reject) => {
-      // console.log(state.step1.anniversary);
-
-      let uniqueIdentifier = state.step1.uniqueIdentifier,
-        anniversary = -1;
-      getCoveragePolicygetCoveragePolicy
+      let uniqueIdentifier = this.state.formPropertyStore.step1.uniqueIdentifier,
+        anniversary = this.state.formPropertyStore.step1.anniversary;
       let url = Vue.prototype.$urlServices + `/api/v1/sbs/intermediaryPolicy/uniqueIdentifier/${uniqueIdentifier}/anniversary/${anniversary}`
       restApi.get(url)
         .then(response => {

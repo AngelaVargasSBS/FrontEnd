@@ -79,7 +79,9 @@ const actions = {
         })
     })
   },
-  postPropertyController({ state }, data) {
+  postPropertyController({
+    state
+  }, data) {
     let urlData = state.riskProperty;
     console.log(urlData);
 
@@ -233,7 +235,9 @@ const actions = {
         })
     })
   },
-  postNewFunctionalityTariffRisk({ state }) {
+  postNewFunctionalityTariffRisk({
+    state
+  }) {
 
     let dataTariffRisk = {};
     dataTariffRisk.riskNumber = state.riskNumber;
@@ -266,17 +270,17 @@ const actions = {
 
 
     let uniqueIdentifier = this.state.formPropertyStore.step1.uniqueIdentifier,
-    anniversary= this.state.formPropertyStore.step1.anniversary,
-    riskNumber= state.riskNumber
-   
+      anniversary = this.state.formPropertyStore.step1.anniversary,
+      riskNumber = state.riskNumber
+
     return new Promise((resolve, reject) => {
       let url = Vue.prototype.$urlServices + `/api/v1/oal/sumInsuredRisk/uniqueIdentifier/${uniqueIdentifier}/anniversary/${anniversary}/riskNumber/${riskNumber}`
       restApi.get(url)
         .then(response => {
 
           if (response.data.status.code == 200) {
-          
-            
+
+
             commit('loadSummsAsured', response.data.getSumInsuredRiskDTOS)
             resolve()
 
@@ -299,10 +303,48 @@ const actions = {
   }) {
 
 
-  }
+  },
+
+  getCoveragePolicy({
+    commit,
+    state
+  }, data) {
+    let dataRisk = state.riskNumber;
+    return new Promise((resolve, reject) => {
+      let uniqueIdentifier = this.state.formPropertyStore.step1.uniqueIdentifier,
+        anniversary = this.state.formPropertyStore.step1.anniversary;
+      /*  let anniversary = -1;
+       let uniqueIdentifier = 1; */
+      let riskNumber = data.riskNumber;
+
+      let url = Vue.prototype.$urlServices + `/api/v1/sbs/coveragePolicy/uniqueIdentifier/${uniqueIdentifier}/anniversary/${anniversary}/riskNumber/${riskNumber}`
+      restApi.get(url)
+        .then(response => {
+          if (response.data.status.code == 200) {
+            console.log('response');
+            var dataCoverage = {
+              key: data.riskNumber,
+              data: response.data.getCoveragePolicyDTOS
+            };
+            commit('coveragePolicyMutation', dataCoverage);
+            resolve()
+          } else {
+            reject(response)
+          }
+        })
+        .catch(e => {
+          reject(e)
+        })
+    })
+  },
+
 }
 const mutations = {
   updateField,
+  
+  coveragePolicyMutation(state, dataCoverage) {
+    state.riskCoverages = dataCoverage.data;
+  },
 
   setNewRisk(state, dataNewRisk) {
 
