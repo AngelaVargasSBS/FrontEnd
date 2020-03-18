@@ -277,7 +277,7 @@ const actions = {
 
       let uniqueIdentifier = state.step1.uniqueIdentifier,
         anniversary = -1;
-        getCoveragePolicygetCoveragePolicy
+    
       let url = Vue.prototype.$urlServices + `/api/v1/sbs/intermediaryPolicy/uniqueIdentifier/${uniqueIdentifier}/anniversary/${anniversary}`
       restApi.get(url)
         .then(response => {
@@ -493,6 +493,11 @@ const mutations = {
     console.log(this.state.riskPolicyStore)
     let dataNewRisk = Object.assign({}, this.state.riskPolicyStore);
     state.step2.risks.push(dataNewRisk);
+  },
+  updateRiskList(state) {
+    
+    let dataNewRisk = Object.assign({}, this.state.riskPolicyStore);
+    state.step2.risks[ state.step2.editedIndexrisks]= dataNewRisk;
   },
 
 

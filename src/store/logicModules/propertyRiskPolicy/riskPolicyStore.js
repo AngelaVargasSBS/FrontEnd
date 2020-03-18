@@ -18,6 +18,7 @@ const defaultState = {
     constructionYear: null,
     countryCode: null,
     departamentCode: null,
+    municipalityCode:null,
     intersectionStreetTypeCode: null,
     latitudeNumber: null,
     townCode: null,
@@ -51,6 +52,42 @@ const getters = {
   getField,
 }
 const actions = {
+
+  postPropertyController({state}, data) {
+    let urlData = state.riskProperty;
+    console.log(urlData);
+
+    //console.log(data);
+    let url = Vue.prototype.$urlServices + `/api/v1/sbs/property/create`,
+      // dataPropertyController = state.state.propertyController;
+    dataPropertyController = Object.assign({}, urlData);
+
+    dataPropertyController.streetTypeCode = dataPropertyController.streetTypeCode != null ? dataPropertyController.streetTypeCode.field1 : null;
+    dataPropertyController.intersectionStreetTypeCode = dataPropertyController.intersectionStreetTypeCode != null ? dataPropertyController.intersectionStreetTypeCode.field1 : null;
+
+    dataPropertyController.latitudeNumber = Number(dataPropertyController.latitudeNumber);
+    dataPropertyController.numberLength = Number(dataPropertyController.numberLength);
+
+    //dataPropertyController.municipalityCode = dataPropertyController.townCode;
+    //dataPropertyController.stateCode = dataPropertyController.departamentCode;
+    dataPropertyController.normalizedAddress = 'Temporal';
+
+    return new Promise((resolve, reject) => {
+
+      restApi.post(url, dataPropertyController).then(response => {
+        if (response.data.status.code == '200' && response.data.status.message.indexOf("Successful") > -1) {
+          resolve(response);
+
+        } else {
+          reject(response);
+        }
+      }, error => {
+        reject(error);
+      })
+    });
+
+
+  },
 
   createRiskPolicy({
     commit,
@@ -170,16 +207,48 @@ const actions = {
         })
     })
   },
-  getSummsAssuredRisk({
-    commit,
-    state
-  }) {
-    
+  postNewFunctionalityTariffRisk({state}) {
+
+    let dataTariffRisk = {};
+    dataTariffRisk.riskNumber = state.riskNumber;
+    dataTariffRisk.anniversary = this.state.formPropertyStore.step1.anniversary;
+    dataTariffRisk.uniqueIdentifier = this.state.formPropertyStore.step1.uniqueIdentifier;
+    return new Promise((resolve, reject) => {
+      let url = Vue.prototype.$urlServices + `/api/v1/sbs/getFunctionalityTariffRisk/functionalityTariffRisk`;
+      restApi.post(url, dataTariffRisk)
+        .then(response => {
+          if (response.data.status.code == '200' && response.data.status.message.indexOf("Successful") > -1) {
+            resolve(response);
+          } else {
+            reject(response);
+          }
+        }, error => {
+          reject(error);
+        });
+    })
   },
   getSummsAssuredRisk({
     commit,
     state
   }) {
+
+
+    let productPlanSummsAssuredProv = [
+
+      { codigoSuma: 1, descripcion: 'ESTRUCTURA', sumaMinima: 50000000, sumaMaxima: 2000000000, obligatoria: false, summAssured: 100, summIncluded: true },
+      { codigoSuma: 2, descripcion: 'CONTENIDOS', sumaMinima: 10000000, sumaMaxima: 500000000, obligatoria: true, summAssured: 200, summIncluded: true },
+      { codigoSuma: 3, descripcion: 'TODO RIESGO', sumaMinima: 1000000, sumaMaxima: 50000000, obligatoria: false, summAssured: 300, summIncluded: true }
+    ]
+
+    commit('loadSummsAsured', productPlanSummsAssuredProv)
+
+  },
+  getCoveragesRisk({
+    commit,
+    state
+  }) {
+
+
   }
 }
 const mutations = {
@@ -199,8 +268,15 @@ const mutations = {
   resetState(state) {
     Object.assign(state, defaultState)
   },
-  loadRiskState(state, dataRiskList) {
-    Object.assign(state, dataRiskList)
+  
+  loadRiskState(state, dataRisk) {
+    Object.assign(state, dataRisk)
+  },
+
+  loadSummsAsured(state, listSummAssuredRisk) {
+
+    state.riskSummsAssured = listSummAssuredRisk
+
   }
 
 }
@@ -220,6 +296,7 @@ export default {
         constructionYear: null,
         countryCode: null,
         departamentCode: null,
+        municipalityCode:null,
         intersectionStreetTypeCode: null,
         latitudeNumber: null,
         townCode: null,

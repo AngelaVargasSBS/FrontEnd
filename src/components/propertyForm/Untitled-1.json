@@ -5483,7 +5483,7 @@
         }
       ],
       "editedIndexrisks": -1,
-      "editedItemrisks": {
+      "editedPropertyRisk": {
         "tipoAmparo": null,
         "valorAsegurado": null,
         "tipoDireccion": null,
