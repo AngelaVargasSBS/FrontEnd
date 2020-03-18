@@ -494,11 +494,7 @@ const mutations = {
     let dataNewRisk = Object.assign({}, this.state.riskPolicyStore);
     state.step2.risks.push(dataNewRisk);
   },
-
-
-
 }
-
 export default {
   namespaced: true,
   state() {

@@ -2,10 +2,12 @@
   <v-container>
     <v-row>
       <v-toolbar color="sbs" dark>
-        <v-toolbar-title color="sbs">Paso 2 - Información Inmueble</v-toolbar-title>
+        <v-toolbar-title color="sbs">Paso 2 - Información Inmueble </v-toolbar-title>
       </v-toolbar>
     </v-row>
 
+
+    
     <v-row>
       <v-col>
         <v-data-table
@@ -27,14 +29,14 @@
                     <v-toolbar flat color="sbs" dark>
                       <v-toolbar-title>
                         {{ formTitlerisks }}
-                        {{ editedItemrisks.tipoAmparo }}
+                        <!-- {{ editedPropertyRisk.tipoAmparo }} -->
                       </v-toolbar-title>
                     </v-toolbar>
                   </v-card-title>
                   <v-card-text>
                     <v-row>
                       <v-col cols="12" md="3">
-                        <v-text-field
+                        <v-text-field  v-if="formTitlerisks === 'Nuevo Riesgo '"
                           label="Número de Riesgo"
                           outlined
                           filled
@@ -42,12 +44,42 @@
                           v-model="serialRiskNumber"
                           :readonly="true"
                         ></v-text-field>
+                     
+                        <v-text-field
+                          v-else
+                          label="Número de Riesgo"
+                          outlined
+                          filled
+                          persistent-hint
+                          v-model="riskNumber"
+                          :readonly="true"
+                        ></v-text-field>
                       </v-col>
                       <v-col cols="12" md="2"></v-col>
                       <v-col cols="12" md="7">
                         <v-data-table
+                          v-if="formTitlerisks === 'Nuevo Riesgo '"
                           :headers="headersSummsAssuredConfig"
                           :items="productPlanSummsAssured"
+                          class="elevation-1"
+                          hide-default-footer
+                        >
+                          <template v-slot:item.summIncluded="{ item }">
+                            <v-simple-checkbox v-model="item.summIncluded"></v-simple-checkbox>
+                          </template>
+                          <template v-slot:item.summAssured="{ item }">
+                            <v-text-field
+                              persistent-hint
+                              v-model="item.summAssured"
+                              type="number"
+                              prefix="$"
+                            ></v-text-field>
+                          </template>
+                        </v-data-table>
+                        <v-data-table
+                          v-else
+                          :headers="headersSummsAssuredConfig"
+                          :items="riskSummsAssured"
                           class="elevation-1"
                           hide-default-footer
                         >
@@ -123,7 +155,7 @@
                                       :items="countryCodeDir"
                                       item-text="field2"
                                       item-value="field1"
-                                      v-model="countryCode"
+                                      v-model="editedPropertyRisk.countryCode"
                                       :error-messages="countryCodeError"
                                       @input="$v.countryCode.$touch()"
                                       @blur="loadDeparment"
@@ -152,9 +184,7 @@
                                       :items="municipalityCodeDir"
                                       item-text="field4"
                                       item-value="field3"
-                                      v-model="
-                                        editedItemrisks.municipalityCode
-                                      "
+                                      v-model="municipalityCode"
                                       :error-messages="municipalityCodeError"
                                       @input="$v.municipalityCode.$touch()"
                                       @blur="$v.municipalityCode.$touch()"
@@ -163,7 +193,7 @@
                                   <v-col cols="12" md="2">
                                     <v-switch
                                       color="sbs"
-                                      v-model="editedItemrisks.urban"
+                                      v-model="editedPropertyRisk.urban"
                                       label="Urbano"
                                     ></v-switch>
                                   </v-col>
@@ -172,7 +202,7 @@
                                       label="Dirección"
                                       hint="Ingrese la Dirección *"
                                       persistent-hint
-                                      v-model="editedItemrisks.address"
+                                      v-model="editedPropertyRisk.address"
                                       :error-messages="addressError"
                                       @input="$v.address.$touch()"
                                       @blur="$v.address.$touch()"
@@ -180,13 +210,13 @@
                                       disabled
                                     ></v-text-field>
                                   </v-col>
-                                  <v-col v-if="!editedItemrisks.urban" cols="12" md="5">
+                                  <v-col v-if="!editedPropertyRisk.urban" cols="12" md="5">
                                     <v-text-field
                                       label="Dirección Complementaria"
                                       hint="Ingrese la Dirección  con comentarios"
                                       persistent-hint
                                       v-model="
-                                        editedItemrisks.complementaryAddress
+                                        editedPropertyRisk.complementaryAddress
                                       "
                                     ></v-text-field>
                                   </v-col>
@@ -209,10 +239,8 @@
                                       :items="streetTypeDir"
                                       item-text="field2"
                                       item-value="field1"
-                                      v-model="
-                                        editedItemrisks.streetTypeCode
-                                      "
                                       return-object
+                                      v-model="editedPropertyRisk.streetTypeCode"
                                       @input="generateAddress"
                                     ></v-autocomplete>
                                   </v-col>
@@ -222,7 +250,7 @@
                                       label="Num."
                                       hint
                                       persistent-hint
-                                      v-model="editedItemrisks.street1"
+                                      v-model="editedPropertyRisk.street1"
                                       @input="generateAddress"
                                     ></v-text-field>
                                   </v-col>
@@ -232,7 +260,7 @@
                                       hint
                                       persistent-hint
                                       v-model="
-                                        editedItemrisks.street1Letter
+                                        editedPropertyRisk.street1Letter
                                       "
                                       @input="generateAddress"
                                     ></v-text-field>
@@ -243,7 +271,7 @@
                                       hint
                                       persistent-hint
                                       v-model="
-                                        editedItemrisks.street1Prefix
+                                        editedPropertyRisk.street1Prefix
                                       "
                                       @input="generateAddress"
                                     ></v-text-field>
@@ -254,7 +282,7 @@
                                       hint
                                       persistent-hint
                                       v-model="
-                                        editedItemrisks.street1LetterPrefix
+                                        editedPropertyRisk.street1LetterPrefix
                                       "
                                       @input="generateAddress"
                                     ></v-text-field>
@@ -265,7 +293,7 @@
                                       hint
                                       persistent-hint
                                       v-model="
-                                        editedItemrisks.street1QuadrantCode
+                                        editedPropertyRisk.street1QuadrantCode
                                       "
                                       @input="generateAddress"
                                     ></v-text-field>
@@ -281,7 +309,7 @@
                                       item-text="field2"
                                       item-value="field1"
                                       v-model="
-                                        editedItemrisks.intersectionStreetTypeCode
+                                        editedPropertyRisk.intersectionStreetTypeCode
                                       "
                                       return-object
                                       @input="generateAddress"
@@ -293,7 +321,7 @@
                                       label="Num."
                                       hint
                                       persistent-hint
-                                      v-model="editedItemrisks.street2"
+                                      v-model="editedPropertyRisk.street2"
                                       @input="generateAddress"
                                     ></v-text-field>
                                   </v-col>
@@ -303,7 +331,7 @@
                                       hint
                                       persistent-hint
                                       v-model="
-                                        editedItemrisks.street2Letter
+                                        editedPropertyRisk.street2Letter
                                       "
                                       @input="generateAddress"
                                     ></v-text-field>
@@ -314,7 +342,7 @@
                                       hint
                                       persistent-hint
                                       v-model="
-                                        editedItemrisks.street2Prefix
+                                        editedPropertyRisk.street2Prefix
                                       "
                                       @input="generateAddress"
                                     ></v-text-field>
@@ -325,7 +353,7 @@
                                       hint
                                       persistent-hint
                                       v-model="
-                                        editedItemrisks.street2LetterPrefix
+                                        editedPropertyRisk.street2LetterPrefix
                                       "
                                       @input="generateAddress"
                                     ></v-text-field>
@@ -336,7 +364,7 @@
                                       hint
                                       persistent-hint
                                       v-model="
-                                        editedItemrisks.street2QuadrantCode
+                                        editedPropertyRisk.street2QuadrantCode
                                       "
                                       @input="generateAddress"
                                     ></v-text-field>
@@ -349,7 +377,7 @@
                                         persistent-hint
                                         disabled
                                         v-model="
-                                          editedItemrisks.normalizedAddress
+                                          editedPropertyRisk.normalizedAddress
                                         "
                                       ></v-text-field>
                                   </v-col>-->
@@ -368,7 +396,7 @@
                                       item-text="field2"
                                       item-value="field1"
                                       v-model="
-                                        editedItemrisks.neighborhoodCode
+                                        editedPropertyRisk.neighborhoodCode
                                       "
                                     ></v-autocomplete>
                                   </v-col>
@@ -378,7 +406,7 @@
                                       hint
                                       persistent-hint
                                       v-model="
-                                        editedItemrisks.neighborhoodName
+                                        editedPropertyRisk.neighborhoodName
                                       "
                                     ></v-text-field>
                                   </v-col>
@@ -392,7 +420,7 @@
                                       :items="appleCodeDir"
                                       item-text="field2"
                                       item-value="field1"
-                                      v-model="editedItemrisks.appleCode"
+                                      v-model="editedPropertyRisk.appleCode"
                                     ></v-autocomplete>
                                   </v-col>
                                   <v-col cols="12" md="4">
@@ -400,7 +428,7 @@
                                       label="# Manzana"
                                       hint
                                       persistent-hint
-                                      v-model="editedItemrisks.appleName"
+                                      v-model="editedPropertyRisk.appleName"
                                     ></v-text-field>
                                   </v-col>
                                   <v-col cols="12" md="2">
@@ -413,7 +441,7 @@
                                       item-text="field2"
                                       item-value="field1"
                                       v-model="
-                                        editedItemrisks.urbanizationCode
+                                        editedPropertyRisk.urbanizationCode
                                       "
                                     ></v-autocomplete>
                                   </v-col>
@@ -423,7 +451,7 @@
                                       hint
                                       persistent-hint
                                       v-model="
-                                        editedItemrisks.urbanizationName
+                                        editedPropertyRisk.urbanizationName
                                       "
                                     ></v-text-field>
                                   </v-col>
@@ -460,7 +488,7 @@
                                       item-text="customProperty"
                                       item-value="field1"
                                       v-model="
-                                        editedItemrisks.constructionYear
+                                        constructionYear
                                       "
                                       :error-messages="constructionYearError"
                                       @input="$v.constructionYear.$touch()"
@@ -473,7 +501,7 @@
                                       hint="Ingrese el Número de latitud"
                                       persistent-hint
                                       v-model="
-                                        editedItemrisks.latitudeNumber
+                                        editedPropertyRisk.latitudeNumber
                                       "
                                       type="number"
                                       pattern="/^\d{3}(.\d{1,8})?$/"
@@ -485,7 +513,7 @@
                                       hint="Ingrese el Número de longitud"
                                       persistent-hint
                                       v-model="
-                                        editedItemrisks.numberLength
+                                        editedPropertyRisk.numberLength
                                       "
                                     ></v-text-field>
                                   </v-col>
@@ -494,7 +522,7 @@
                                       label="Código Postal"
                                       hint="Ingrese el Código Postal"
                                       persistent-hint
-                                      v-model="editedItemrisks.postalCode"
+                                      v-model="editedPropertyRisk.postalCode"
                                     ></v-text-field>
                                   </v-col>
                                   <v-col cols="12" md="4">
@@ -502,7 +530,7 @@
                                       label="Número Unidades"
                                       hint="Ingrese el Número Unidades"
                                       persistent-hint
-                                      v-model="editedItemrisks.numberUnits"
+                                      v-model="editedPropertyRisk.numberUnits"
                                     ></v-text-field>
                                   </v-col>
                                   <v-col cols="12" md="4">
@@ -515,7 +543,7 @@
                                       item-text="customProperty"
                                       item-value="field1"
                                       v-model="
-                                        editedItemrisks.numberOfFloors
+                                        editedPropertyRisk.numberOfFloors
                                       "
                                     ></v-autocomplete>
                                   </v-col>
@@ -525,7 +553,7 @@
                                       hint="Ingrese el Nombre de la Propiedad"
                                       persistent-hint
                                       v-model="
-                                        editedItemrisks.propertyName
+                                        editedPropertyRisk.propertyName
                                       "
                                     ></v-text-field>
                                   </v-col>
@@ -543,8 +571,8 @@
                                       block
                                       outlined
                                       @click="
-                                        Guardarrisks();
-                                          stepFormSubmission()
+                                          stepFormSubmission();
+                                          saveRisk();
                                       "
                                     >Continue</v-btn>
                                   </v-col>
@@ -575,7 +603,7 @@
                     </v-btn>
                     <v-toolbar-title>
                       Coberturas y Amparos -
-                      {{ editedItemrisks.tipoAmparo }}
+                      {{ editedPropertyRisk.tipoAmparo }}
                     </v-toolbar-title>
                     <v-spacer></v-spacer>
                     <v-toolbar-items>
@@ -738,17 +766,18 @@ export default {
       serialRiskNumber: "step1.serialNumberRisk",
       risks: "step2.risks",
       editedIndexrisks: "step2.editedIndexrisks"
-      //editedItemrisks: "step2.editedItemrisks",
-      //countryCode: "step2.editedItemrisks.countryCode",
-      // departamentCode: "step2.editedItemrisks.departamentCode",
-      // municipalityCode: "step2.editedItemrisks.municipalityCode",
-      // address: "step2.editedItemrisks.address",
-      // constructionYear: "step2.editedItemrisks.constructionYear",
+      //editedPropertyRisk: "step2.editedPropertyRisk",
+      //countryCode: "step2.editedPropertyRisk.countryCode",
+      // departamentCode: "step2.editedPropertyRisk.departamentCode",
+      // municipalityCode: "step2.editedPropertyRisk.municipalityCode",
+      // address: "step2.editedPropertyRisk.address",
+      // constructionYear: "step2.editedPropertyRisk.constructionYear",
       // defaultItemrisks: "step2.defaultItemrisks"
     }),
 
     ...riskPolicyStoreFields({
-      editedItemrisks: "riskProperty",
+      riskNumber: "riskNumber",
+      editedPropertyRisk: "riskProperty",
       countryCode: "riskProperty.countryCode",
       departamentCode: "riskProperty.departamentCode",
       municipalityCode: "riskProperty.municipalityCode",
@@ -771,6 +800,7 @@ export default {
       "appleCodeDir",
       "urbanizationCodeDir"
     ]),
+    ...mapState("riskPolicyStore", ["riskSummsAssured", "riskCoverages"]),
 
     formTitlerisks() {
       return this.editedIndexrisks === -1
@@ -816,44 +846,47 @@ export default {
       return errors;
       console.log(errors);
     },
+
     generateAddress: function() {
-      this.editedItemrisks.address =
-        (this.editedItemrisks.streetTypeCode == null
+
+
+      this.editedPropertyRisk.address =
+        (this.editedPropertyRisk.streetTypeCode == null
           ? ""
-          : this.editedItemrisks.streetTypeCode.field2) +
-        (this.editedItemrisks.street1 == null
+          : this.editedPropertyRisk.streetTypeCode.field2) +
+        (this.editedPropertyRisk.street1 == null
           ? ""
-          : this.editedItemrisks.street1) +
-        (this.editedItemrisks.street1Letter == null
+          : this.editedPropertyRisk.street1) +
+        (this.editedPropertyRisk.street1Letter == null
           ? ""
-          : this.editedItemrisks.street1Letter) +
-        (this.editedItemrisks.street1Prefix == null
+          : this.editedPropertyRisk.street1Letter) +
+        (this.editedPropertyRisk.street1Prefix == null
           ? ""
-          : this.editedItemrisks.street1Prefix) +
-        (this.editedItemrisks.street1LetterPrefix == null
+          : this.editedPropertyRisk.street1Prefix) +
+        (this.editedPropertyRisk.street1LetterPrefix == null
           ? ""
-          : this.editedItemrisks.street1LetterPrefix) +
-        (this.editedItemrisks.street1QuadrantCode == null
+          : this.editedPropertyRisk.street1LetterPrefix) +
+        (this.editedPropertyRisk.street1QuadrantCode == null
           ? ""
-          : this.editedItemrisks.street1QuadrantCode) +
-        (this.editedItemrisks.intersectionStreetTypeCode == null
+          : this.editedPropertyRisk.street1QuadrantCode) +
+        (this.editedPropertyRisk.intersectionStreetTypeCode == null
           ? ""
-          : this.editedItemrisks.intersectionStreetTypeCode.field2) +
-        (this.editedItemrisks.street2 == null
+          : this.editedPropertyRisk.intersectionStreetTypeCode.field2) +
+        (this.editedPropertyRisk.street2 == null
           ? ""
-          : this.editedItemrisks.street2) +
-        (this.editedItemrisks.street2Letter == null
+          : this.editedPropertyRisk.street2) +
+        (this.editedPropertyRisk.street2Letter == null
           ? ""
-          : this.editedItemrisks.street2Letter) +
-        (this.editedItemrisks.street2Prefix == null
+          : this.editedPropertyRisk.street2Letter) +
+        (this.editedPropertyRisk.street2Prefix == null
           ? ""
-          : this.editedItemrisks.street2Prefix) +
-        (this.editedItemrisks.street2LetterPrefix == null
+          : this.editedPropertyRisk.street2Prefix) +
+        (this.editedPropertyRisk.street2LetterPrefix == null
           ? ""
-          : this.editedItemrisks.street2LetterPrefix) +
-        (this.editedItemrisks.street2QuadrantCode == null
+          : this.editedPropertyRisk.street2LetterPrefix) +
+        (this.editedPropertyRisk.street2QuadrantCode == null
           ? ""
-          : this.editedItemrisks.street2QuadrantCode);
+          : this.editedPropertyRisk.street2QuadrantCode);
     }
   },
 
@@ -875,7 +908,7 @@ export default {
     editItemrisks(item) {
       // console.log(item);
       this.editedIndexrisks = this.risks.indexOf(item);
-      // this.editedItemrisks = Object.assign({}, item);
+      // this.editedPropertyRisk = Object.assign({}, item);
       this.dialogEdit = true;
 
       store.commit("riskPolicyStore/loadRiskState", item);
@@ -898,7 +931,7 @@ export default {
     closerisks() {
       this.dialogEdit = false;
       setTimeout(() => {
-        this.editedItemrisks = Object.assign({}, this.defaultItemrisks);
+        this.editedPropertyRisk = Object.assign({}, this.defaultItemrisks);
         this.editedIndexrisks = -1;
       }, 300);
     },
@@ -950,23 +983,25 @@ export default {
             text: err,
             showConfirmButton: true
           });
+          Guardarrisks;
         });
     },
 
-    Guardarrisks() {
-      console.log(`paso 1 statusNewTariffRisk = ${this.statusNewTariffRisk}`);
-      if (
-        this.editedItemrisks.tipoAmparo != "" &&
-        this.editedItemrisks.valorAsegurado != ""
-      ) {
-        if (this.editedIndexrisks > -1) {
-          Object.assign(
-            this.risks[this.editedIndexrisks],
-            this.editedItemrisks
-          );
-        } else {
-          this.editedItemrisks.id = this.registryId++;
-          this.risks.push(this.editedItemrisks);
+    saveRisk() {
+      //console.log(`paso 1 statusNewTariffRisk = ${this.statusNewTariffRisk}`);
+      // if (
+      //   this.editedPropertyRisk.tipoAmparo != "" &&
+      //   this.editedPropertyRisk.valorAsegurado != ""
+      // ) {
+      //   if (this.editedIndexrisks > -1) {
+      //     //DUDA IF
+      //     Object.assign(
+      //       this.risks[this.editedIndexrisks],
+      //       this.editedPropertyRisk
+      //     );
+      //   } else {
+          // this.editedPropertyRisk.id = this.registryId++;
+          // this.risks.push(this.editedPropertyRisk);
 
           if (this.statusNewTariffRisk) {
             console.log(
@@ -974,19 +1009,20 @@ export default {
             );
 
             store
-              .dispatch("formPropertyStore/postNewFunctionalityTariffRisk", {
-                data: this.editedItemrisks
-              })
+              .dispatch("riskPolicyStore/postNewFunctionalityTariffRisk")
               .then(
                 response => {
-                  this.$swal({
-                    position: "center",
-                    icon: "success",
-                    title: "Muy bien",
-                    text: "Usuario creado continúe por favor.",
-                    showConfirmButton: false,
-                    timer: 4000
-                  });
+                  // this.$swal({
+                  //   position: "center",
+                  //   icon: "success",
+                  //   title: "Muy bien",
+                  //   text: "Usuario creado continúe por favor.",
+                  //   showConfirmButton: false,
+                  //   timer: 4000
+                  // });    
+
+                  store.commit('formPropertyStore/updateRiskList')   
+
                   this.e6 = 2;
                   this.statusNewTariffRisk = false;
                   console.log(
@@ -1011,23 +1047,23 @@ export default {
                 }
               );
           }
-        }
-        this.closerisks();
-      } else {
-        this.alertNewRisk = true;
-      }
+      //  }
+        //this.closerisks();
+      // } else {
+      //   this.alertNewRisk = true;
+      // }
     },
 
     // Coverage methods
     editCoverage(item) {
-      this.editedItemrisks = Object.assign({}, item);
+      //this.editedPropertyRisk = Object.assign({}, item);
       this.dialogCoverage = true;
     },
     closeCoverage() {
       this.dialogCoverage = false;
     },
     GuardarCoverage() {
-      //this.risks.push(this.editedItemrisks);
+      //this.risks.push(this.editedPropertyRisk);
       this.closeCoverage();
     },
 
@@ -1052,40 +1088,35 @@ export default {
       this.e6 = 1;
       this.$v.$touch();
       if (this.$v.$invalid) {
+        
         this.submitStatus = "ERROR";
       } else {
         this.e6 = 1;
 
-        store
-          .dispatch("formPropertyStore/postPropertyController", {
-            key: this.editedIndexrisks
-          })
-          .then(
-            response => {
-              this.$swal({
-                position: "center",
-                icon: "success",
-                title: "Muy bien",
-                text: "Se creo con éxito la propiedad.",
-                showConfirmButton: false,
-                timer: 4000
-              });
-              store.dispatch("riskPolicyStore/postPropertyRiskPolicy", {
-                key: this.editedIndexrisks
-              });
-            },
-            error => {
-              this.$swal({
-                position: "center",
-                icon: "error",
-                title: "Muy mal Error: " + error.data.status.code,
-                text: error.data.status.message,
-                showConfirmButton: false,
-                timer: 4000
-              });
-            }
-          );
-      }
+        store.dispatch("riskPolicyStore/postPropertyController").then(
+          response => {
+            this.$swal({
+              position: "center",
+              icon: "success",
+              title: "Muy bien",
+              text: "Se creo con éxito la propiedad.",
+              showConfirmButton: false,
+              timer: 4000
+            });
+            store.dispatch("riskPolicyStore/postPropertyRiskPolicy");
+          },
+          error => {
+            this.$swal({
+              position: "center",
+              icon: "error",
+              title: "Muy mal Error: " + error.data.status.code,
+              text: error.data.status.message,
+              showConfirmButton: false,
+              timer: 4000
+            });
+          }
+        );
+       }
     },
 
     formatPrice(value) {
@@ -1098,7 +1129,7 @@ export default {
         fieldSort: "field3",
         dirName: "departmentsDir",
         filterName: "field1",
-        filterCondition: this.editedItemrisks.countryCode
+        filterCondition: this.editedPropertyRisk.countryCode
       });
     },
 
@@ -1108,7 +1139,7 @@ export default {
         fieldSort: "field4",
         dirName: "municipalityCodeDir",
         filterName: "field2",
-        filterCondition: this.editedItemrisks.departamentCode
+        filterCondition: this.editedPropertyRisk.departamentCode
       });
     }
   },

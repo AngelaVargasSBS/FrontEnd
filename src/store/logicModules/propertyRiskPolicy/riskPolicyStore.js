@@ -41,12 +41,7 @@ const defaultState = {
     street2QuadrantCode: null,
     urban: true,
   }
-
 }
-
-
-
-
 const getters = {
   getField,
 }
