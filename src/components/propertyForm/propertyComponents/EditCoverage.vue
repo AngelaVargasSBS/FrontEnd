@@ -2,7 +2,7 @@
   <div>
     <v-data-table
       :headers="headers"
-      :items="desserts"
+      :items="riskCoverages"
       item-key="nameCobertura"
       :single-select="false"
       show-select
@@ -48,7 +48,8 @@ export default {
   computed: {
     ...mapFields({
       desserts: "step2.coverages"
-    })
+    }),
+     ...mapState("riskPolicyStore", [ "riskCoverages"]),
   },
 
   watch: {},

@@ -310,36 +310,25 @@ const actions = {
     state
   }, data) {
     let dataRisk = state.riskNumber;
-    //let urlData = state.state.step2.risks[data.key];
-    console.log('urlData');
-    console.log(data);
-    console.log(state);
-    console.log('/ urlData');
     return new Promise((resolve, reject) => {
-      // console.log(state.step1.anniversary);
-
-      //let uniqueIdentifier = state.step1.uniqueIdentifier,
-      let anniversary = -1;
-      let uniqueIdentifier = 1;
+      let uniqueIdentifier = this.state.formPropertyStore.step1.uniqueIdentifier,
+        anniversary = this.state.formPropertyStore.step1.anniversary;
+      /*  let anniversary = -1;
+       let uniqueIdentifier = 1; */
       let riskNumber = data.riskNumber;
 
       let url = Vue.prototype.$urlServices + `/api/v1/sbs/coveragePolicy/uniqueIdentifier/${uniqueIdentifier}/anniversary/${anniversary}/riskNumber/${riskNumber}`
       restApi.get(url)
         .then(response => {
-          var dataCoverage = {
-            key: data.riskNumber,
-            data: response.data.getCoveragePolicyDTOS
-          };
-
           if (response.data.status.code == 200) {
             console.log('response');
-
+            var dataCoverage = {
+              key: data.riskNumber,
+              data: response.data.getCoveragePolicyDTOS
+            };
             commit('coveragePolicyMutation', dataCoverage);
-            console.log(dataCoverage);
-            console.log('/ response');
             resolve()
           } else {
-            console.log('Error');
             reject(response)
           }
         })
@@ -352,6 +341,7 @@ const actions = {
 }
 const mutations = {
   updateField,
+  
   coveragePolicyMutation(state, dataCoverage) {
     state.riskCoverages = dataCoverage.data;
   },
