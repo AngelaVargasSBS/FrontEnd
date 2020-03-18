@@ -415,7 +415,7 @@ const mutations = {
   setUniqueIdentifier(state, data) {
 
     state.step1.uniqueIdentifier = data.uniqueIdentifier
-    state.step1.anniversary = 99 //Valor Provisional para grabar solo cotizaciones
+    state.step1.anniversary = -1 //Valor Provisional para grabar solo cotizaciones
 
   },
 
