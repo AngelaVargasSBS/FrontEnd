@@ -2,10 +2,9 @@
   <v-container>
     <v-row>
       <v-toolbar color="sbs" dark>
-        <v-toolbar-title color="sbs">Paso 2 - Información Inmueble</v-toolbar-title>
+        <v-toolbar-title color="sbs">Paso 2 - Información Inmueble </v-toolbar-title>
       </v-toolbar>
     </v-row>
-
     <v-row>
       <v-col>
         <v-data-table
@@ -34,18 +33,16 @@
                   <v-card-text>
                     <v-row>
                       <v-col cols="12" md="3">
-                        <v-text-field
-                          v-if="formTitlerisks === 'Nuevo Riesgo '"
+                        <!-- <v-text-field  v-if="formTitlerisks === 'Nuevo Riesgo '"
                           label="Número de Riesgo"
                           outlined
                           filled
                           persistent-hint
                           v-model="serialRiskNumber"
                           :readonly="true"
-                        ></v-text-field>
-
+                        ></v-text-field> -->
+                     
                         <v-text-field
-                          v-else
                           label="Número de Riesgo"
                           outlined
                           filled
@@ -66,10 +63,10 @@
                           <template v-slot:item.summIncluded="{ item }">
                             <v-simple-checkbox v-model="item.summIncluded"></v-simple-checkbox>
                           </template>
-                          <template v-slot:item.summAssured="{ item }">
+                          <template v-slot:item.sumAssured="{ item }">
                             <v-text-field
                               persistent-hint
-                              v-model="item.summAssured"
+                              v-model="item.sumAssured"
                               type="number"
                               prefix="$"
                             ></v-text-field>
@@ -695,24 +692,19 @@ import { mapState, mapMutations, mapActions } from "vuex";
 import store from "@/store";
 import { createHelpers } from "vuex-map-fields";
 import FilesUpload from "@/components/FilesUpload";
-
 import NewProtection from "@/components/propertyForm/propertyComponents/NewProtection.vue";
 import EditCoverage from "@/components/propertyForm/propertyComponents/EditCoverage.vue";
 import PropertyController from "@/components/propertyForm/propertyComponents/Property-controller.vue";
-
 import personModuleStore from "@/store/globalModules/personStore";
 import DatePickers from "@/components/globalComponents/DatePickers.vue";
-
 const { mapFields: formPropertyStoreFields } = createHelpers({
   getterType: "formPropertyStore/getField",
   mutationType: "formPropertyStore/updateField"
 });
-
 const { mapFields: riskPolicyStoreFields } = createHelpers({
   getterType: "riskPolicyStore/getField",
   mutationType: "riskPolicyStore/updateField"
 });
-
 export default {
   name: "Step2",
   data() {
@@ -723,7 +715,6 @@ export default {
       // State Dialog
       dialogEdit: false,
       dialogCoverage: false,
-
       e6: 1,
       //Table Amparos
       headersTableRisks: [
@@ -736,16 +727,15 @@ export default {
         { text: "Total Valor Asegurado", value: "sumInsuredLocalCurrency" },
         { text: "Acciones", value: "action", sortable: false }
       ],
-
       headersSummsAssuredConfig: [
         { text: "Incluida", value: "summIncluded" },
         {
           text: "Suma Asegurada",
           align: "left",
           sortable: false,
-          value: "descripcion"
+          value: "sumInsuredDescription"
         },
-        { text: "Valor", value: "summAssured" }
+        { text: "Valor", value: "sumAssured" }
       ],
       registryId: 1,
       statusNewTariffRisk: true
@@ -759,7 +749,6 @@ export default {
     PropertyController,
     DatePickers
   },
-
   computed: {
     ...formPropertyStoreFields({
       serialRiskNumber: "step1.serialNumberRisk",
@@ -773,7 +762,6 @@ export default {
       // constructionYear: "step2.editedPropertyRisk.constructionYear",
       // defaultItemrisks: "step2.defaultItemrisks"
     }),
-
     ...riskPolicyStoreFields({
       riskNumber: "riskNumber",
       editedPropertyRisk: "riskProperty",
@@ -800,13 +788,11 @@ export default {
       "urbanizationCodeDir"
     ]),
     ...mapState("riskPolicyStore", ["riskSummsAssured", "riskCoverages"]),
-
     formTitlerisks() {
       return this.editedIndexrisks === -1
         ? "Nuevo Riesgo "
         : "Editar Riesgo - ";
     },
-
     /* validations */
     countryCodeError() {
       const errors = [];
@@ -845,7 +831,6 @@ export default {
       return errors;
       console.log(errors);
     },
-
     generateAddress: function() {
       this.editedPropertyRisk.address =
         (this.editedPropertyRisk.streetTypeCode == null
@@ -886,10 +871,14 @@ export default {
           : this.editedPropertyRisk.street2QuadrantCode);
     }
   },
-
   watch: {
     dialogEdit(val) {
       val || this.closerisks();
+      if(val==true && this.formTitlerisks === 'Nuevo Riesgo ' ){
+   
+        store.dispatch('riskPolicyStore/getSerialRiskNumber');
+ 
+      }
     }
   },
   methods: {
@@ -900,28 +889,18 @@ export default {
       "generateProtection",
       "postPropertyController"
     ]),
-
     // risks methods
     editItemrisks(item) {
       // console.log(item);
       this.editedIndexrisks = this.risks.indexOf(item);
       // this.editedPropertyRisk = Object.assign({}, item);
       this.dialogEdit = true;
-
       store.commit("riskPolicyStore/loadRiskState", item);
-
-      /* ------------------- */
-      console.log("pso 2 item");
-      console.log(item);
-      console.log("/ item");
       store.dispatch("riskPolicyStore/getCoveragePolicy", item);
-      /* ------------------- */
-
       store
         .dispatch("riskPolicyStore/getSummsAssuredRisk")
         .then(resp => {})
         .catch(err => {});
-
       store
         .dispatch("riskPolicyStore/getCoveragesRisk")
         .then(resp => {})
@@ -945,7 +924,6 @@ export default {
         .then(resp => {
           let arraySumms = this.$store.state["productConfigurationStore"]
             .productPlan.productPlanSummsAssured;
-
           arraySumms.forEach(element => {
             //if (element.summIncluded == true) {
             store
@@ -962,7 +940,6 @@ export default {
               });
             //}
           });
-
           store.commit("formPropertyStore/addNewRiskList");
           store.commit("riskPolicyStore/resetState");
           store.commit(
@@ -987,10 +964,9 @@ export default {
             text: err,
             showConfirmButton: true
           });
-          Guardarrisks;
+          //Guardarrisks;
         });
     },
-
     saveRisk() {
       //console.log(`paso 1 statusNewTariffRisk = ${this.statusNewTariffRisk}`);
       // if (
@@ -1004,52 +980,55 @@ export default {
       //       this.editedPropertyRisk
       //     );
       //   } else {
-      // this.editedPropertyRisk.id = this.registryId++;
-      // this.risks.push(this.editedPropertyRisk);
-
-      if (this.statusNewTariffRisk) {
-        console.log(`paso 2 statusNewTariffRisk = ${this.statusNewTariffRisk}`);
-
-        store.dispatch("riskPolicyStore/postNewFunctionalityTariffRisk").then(
-          response => {
-            // this.$swal({
-            //   position: "center",
-            //   icon: "success",
-            //   title: "Muy bien",
-            //   text: "Usuario creado continúe por favor.",
-            //   showConfirmButton: false,
-            //   timer: 4000
-            // });
-
-            store.commit("formPropertyStore/updateRiskList");
-
-            this.e6 = 2;
-            this.statusNewTariffRisk = false;
-            console.log(`statusNewTariffRisk = ${this.statusNewTariffRisk}`);
-          },
-          error => {
-            this.$swal({
-              position: "center",
-              icon: "error",
-              title:
-                "Muy mal Error: " +
-                error.functionalityTariffingAll.getResult.resultCode,
-              text: error.functionalityTariffingAll.getResult.message,
-              showConfirmButton: false,
-              timer: 4000
-            });
-            this.statusNewTariffRisk = true;
-            console.log(`statusNewTariffRisk = ${this.statusNewTariffRisk}`);
+          // this.editedPropertyRisk.id = this.registryId++;
+          // this.risks.push(this.editedPropertyRisk);
+          if (this.statusNewTariffRisk) {
+            console.log(
+              `paso 2 statusNewTariffRisk = ${this.statusNewTariffRisk}`
+            );
+            store
+              .dispatch("riskPolicyStore/postNewFunctionalityTariffRisk")
+              .then(
+                response => {
+                  // this.$swal({
+                  //   position: "center",
+                  //   icon: "success",
+                  //   title: "Muy bien",
+                  //   text: "Usuario creado continúe por favor.",
+                  //   showConfirmButton: false,
+                  //   timer: 4000
+                  // });    
+                  store.commit('formPropertyStore/updateRiskList')   
+                  this.e6 = 2;
+                  this.statusNewTariffRisk = false;
+                  console.log(
+                    `statusNewTariffRisk = ${this.statusNewTariffRisk}`
+                  );
+                },
+                error => {
+                  this.$swal({
+                    position: "center",
+                    icon: "error",
+                    title:
+                      "Muy mal Error: " +
+                      error.functionalityTariffingAll.getResult.resultCode,
+                    text: error.functionalityTariffingAll.getResult.message,
+                    showConfirmButton: false,
+                    timer: 4000
+                  });
+                  this.statusNewTariffRisk = true;
+                  console.log(
+                    `statusNewTariffRisk = ${this.statusNewTariffRisk}`
+                  );
+                }
+              );
           }
-        );
-      }
       //  }
-      //this.closerisks();
+        //this.closerisks();
       // } else {
       //   this.alertNewRisk = true;
       // }
     },
-
     // Coverage methods
     editCoverage(item) {
       //this.editedPropertyRisk = Object.assign({}, item);
@@ -1062,7 +1041,6 @@ export default {
       //this.risks.push(this.editedPropertyRisk);
       this.closeCoverage();
     },
-
     stepOneShipment() {
       if (
         !this.$v.countryCode.$invalid &&
@@ -1084,10 +1062,10 @@ export default {
       this.e6 = 1;
       this.$v.$touch();
       if (this.$v.$invalid) {
+        
         this.submitStatus = "ERROR";
       } else {
         this.e6 = 1;
-
         store.dispatch("riskPolicyStore/postPropertyController").then(
           response => {
             this.$swal({
@@ -1111,9 +1089,8 @@ export default {
             });
           }
         );
-      }
+       }
     },
-
     formatPrice(value) {
       let val = (value / 1).toFixed(2).replace(".", ",");
       return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -1127,7 +1104,6 @@ export default {
         filterCondition: this.editedPropertyRisk.countryCode
       });
     },
-
     loadTown(newSelectedArray, oldSelectedArray) {
       store.dispatch("dictionariesStore/getDictionaries", {
         typeDictionaries: "municipio",
@@ -1138,12 +1114,11 @@ export default {
       });
     }
   },
-
   created: function() {
+   
     this.productPlanSummsAssured = this.$store.state[
       "productConfigurationStore"
     ].productPlan.productPlanSummsAssured;
-
     console.log(this.productPlanSummsAssured);
     store.dispatch("dictionariesStore/getDictionaries", {
       typeDictionaries: "pais",
