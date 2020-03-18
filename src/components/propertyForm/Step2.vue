@@ -5,9 +5,6 @@
         <v-toolbar-title color="sbs">Paso 2 - Información Inmueble </v-toolbar-title>
       </v-toolbar>
     </v-row>
-
-
-    
     <v-row>
       <v-col>
         <v-data-table
@@ -36,17 +33,16 @@
                   <v-card-text>
                     <v-row>
                       <v-col cols="12" md="3">
-                        <v-text-field  v-if="formTitlerisks === 'Nuevo Riesgo '"
+                        <!-- <v-text-field  v-if="formTitlerisks === 'Nuevo Riesgo '"
                           label="Número de Riesgo"
                           outlined
                           filled
                           persistent-hint
                           v-model="serialRiskNumber"
                           :readonly="true"
-                        ></v-text-field>
+                        ></v-text-field> -->
                      
                         <v-text-field
-                          v-else
                           label="Número de Riesgo"
                           outlined
                           filled
@@ -67,10 +63,10 @@
                           <template v-slot:item.summIncluded="{ item }">
                             <v-simple-checkbox v-model="item.summIncluded"></v-simple-checkbox>
                           </template>
-                          <template v-slot:item.summAssured="{ item }">
+                          <template v-slot:item.sumAssured="{ item }">
                             <v-text-field
                               persistent-hint
-                              v-model="item.summAssured"
+                              v-model="item.sumAssured"
                               type="number"
                               prefix="$"
                             ></v-text-field>
@@ -744,9 +740,9 @@ export default {
           text: "Suma Asegurada",
           align: "left",
           sortable: false,
-          value: "descripcion"
+          value: "sumInsuredDescription"
         },
-        { text: "Valor", value: "summAssured" }
+        { text: "Valor", value: "sumAssured" }
       ],
       registryId: 1,
       statusNewTariffRisk: true
@@ -893,7 +889,14 @@ export default {
   watch: {
     dialogEdit(val) {
       val || this.closerisks();
+
+      if(val==true && this.formTitlerisks === 'Nuevo Riesgo ' ){
+   
+        store.dispatch('riskPolicyStore/getSerialRiskNumber');
+ 
+      }
     }
+
   },
   methods: {
     ...mapMutations("formPropertyStore", ["generateProtectionMutation"]),
@@ -983,7 +986,7 @@ export default {
             text: err,
             showConfirmButton: true
           });
-          Guardarrisks;
+          //Guardarrisks;
         });
     },
 
@@ -1145,6 +1148,8 @@ export default {
   },
 
   created: function() {
+
+   
     this.productPlanSummsAssured = this.$store.state[
       "productConfigurationStore"
     ].productPlan.productPlanSummsAssured;
