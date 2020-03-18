@@ -2,12 +2,10 @@
   <v-container>
     <v-row>
       <v-toolbar color="sbs" dark>
-        <v-toolbar-title color="sbs">Paso 2 - Información Inmueble </v-toolbar-title>
+        <v-toolbar-title color="sbs">Paso 2 - Información Inmueble</v-toolbar-title>
       </v-toolbar>
     </v-row>
 
-
-    
     <v-row>
       <v-col>
         <v-data-table
@@ -36,7 +34,8 @@
                   <v-card-text>
                     <v-row>
                       <v-col cols="12" md="3">
-                        <v-text-field  v-if="formTitlerisks === 'Nuevo Riesgo '"
+                        <v-text-field
+                          v-if="formTitlerisks === 'Nuevo Riesgo '"
                           label="Número de Riesgo"
                           outlined
                           filled
@@ -44,7 +43,7 @@
                           v-model="serialRiskNumber"
                           :readonly="true"
                         ></v-text-field>
-                     
+
                         <v-text-field
                           v-else
                           label="Número de Riesgo"
@@ -848,8 +847,6 @@ export default {
     },
 
     generateAddress: function() {
-
-
       this.editedPropertyRisk.address =
         (this.editedPropertyRisk.streetTypeCode == null
           ? ""
@@ -912,6 +909,13 @@ export default {
       this.dialogEdit = true;
 
       store.commit("riskPolicyStore/loadRiskState", item);
+
+      /* ------------------- */
+      console.log("pso 2 item");
+      console.log(item);
+      console.log("/ item");
+      store.dispatch("riskPolicyStore/getCoveragePolicy", item);
+      /* ------------------- */
 
       store
         .dispatch("riskPolicyStore/getSummsAssuredRisk")
@@ -1000,55 +1004,47 @@ export default {
       //       this.editedPropertyRisk
       //     );
       //   } else {
-          // this.editedPropertyRisk.id = this.registryId++;
-          // this.risks.push(this.editedPropertyRisk);
+      // this.editedPropertyRisk.id = this.registryId++;
+      // this.risks.push(this.editedPropertyRisk);
 
-          if (this.statusNewTariffRisk) {
-            console.log(
-              `paso 2 statusNewTariffRisk = ${this.statusNewTariffRisk}`
-            );
+      if (this.statusNewTariffRisk) {
+        console.log(`paso 2 statusNewTariffRisk = ${this.statusNewTariffRisk}`);
 
-            store
-              .dispatch("riskPolicyStore/postNewFunctionalityTariffRisk")
-              .then(
-                response => {
-                  // this.$swal({
-                  //   position: "center",
-                  //   icon: "success",
-                  //   title: "Muy bien",
-                  //   text: "Usuario creado continúe por favor.",
-                  //   showConfirmButton: false,
-                  //   timer: 4000
-                  // });    
+        store.dispatch("riskPolicyStore/postNewFunctionalityTariffRisk").then(
+          response => {
+            // this.$swal({
+            //   position: "center",
+            //   icon: "success",
+            //   title: "Muy bien",
+            //   text: "Usuario creado continúe por favor.",
+            //   showConfirmButton: false,
+            //   timer: 4000
+            // });
 
-                  store.commit('formPropertyStore/updateRiskList')   
+            store.commit("formPropertyStore/updateRiskList");
 
-                  this.e6 = 2;
-                  this.statusNewTariffRisk = false;
-                  console.log(
-                    `statusNewTariffRisk = ${this.statusNewTariffRisk}`
-                  );
-                },
-                error => {
-                  this.$swal({
-                    position: "center",
-                    icon: "error",
-                    title:
-                      "Muy mal Error: " +
-                      error.functionalityTariffingAll.getResult.resultCode,
-                    text: error.functionalityTariffingAll.getResult.message,
-                    showConfirmButton: false,
-                    timer: 4000
-                  });
-                  this.statusNewTariffRisk = true;
-                  console.log(
-                    `statusNewTariffRisk = ${this.statusNewTariffRisk}`
-                  );
-                }
-              );
+            this.e6 = 2;
+            this.statusNewTariffRisk = false;
+            console.log(`statusNewTariffRisk = ${this.statusNewTariffRisk}`);
+          },
+          error => {
+            this.$swal({
+              position: "center",
+              icon: "error",
+              title:
+                "Muy mal Error: " +
+                error.functionalityTariffingAll.getResult.resultCode,
+              text: error.functionalityTariffingAll.getResult.message,
+              showConfirmButton: false,
+              timer: 4000
+            });
+            this.statusNewTariffRisk = true;
+            console.log(`statusNewTariffRisk = ${this.statusNewTariffRisk}`);
           }
+        );
+      }
       //  }
-        //this.closerisks();
+      //this.closerisks();
       // } else {
       //   this.alertNewRisk = true;
       // }
@@ -1088,7 +1084,6 @@ export default {
       this.e6 = 1;
       this.$v.$touch();
       if (this.$v.$invalid) {
-        
         this.submitStatus = "ERROR";
       } else {
         this.e6 = 1;
@@ -1116,7 +1111,7 @@ export default {
             });
           }
         );
-       }
+      }
     },
 
     formatPrice(value) {

@@ -277,7 +277,6 @@ const actions = {
 
       let uniqueIdentifier = state.step1.uniqueIdentifier,
         anniversary = -1;
-        getCoveragePolicygetCoveragePolicy
       let url = Vue.prototype.$urlServices + `/api/v1/sbs/intermediaryPolicy/uniqueIdentifier/${uniqueIdentifier}/anniversary/${anniversary}`
       restApi.get(url)
         .then(response => {
