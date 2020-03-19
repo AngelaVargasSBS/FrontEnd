@@ -1,9 +1,9 @@
 <template>
   <v-row justify="center">
     <v-dialog v-model="dialog" persistent max-width="80vw" transition="dialog-bottom-transition">
-      <template v-slot:activator="{ on }">
+      <!-- <template v-slot:activator="{ on }">
         <v-btn color="sbs" block outlined dark v-on="on">nuevo usuario</v-btn>
-      </template>
+      </template> -->
       <v-card>
         <v-card-title color="sbs">
           <v-toolbar flat color="sbs" dark>

@@ -9,10 +9,7 @@
       <v-col cols="12">
         <v-card class="mx-auto" max-width="100%" light outlined style="border: none">
           <v-card-title>Intermediario</v-card-title>
-          <v-card-subtitle>
-            Lorem ipsum es el texto que se usa habitualmente en diseño gráfico
-            en demostraciones de tipografías
-          </v-card-subtitle>
+          <v-card-subtitle>  </v-card-subtitle>
 
           <v-card-text>
             <v-data-table
@@ -34,7 +31,7 @@
             <v-subheader>Prima</v-subheader>
           </v-col>
           <v-col cols="10">
-            <v-text-field label="Total" value="10.00" prefix="$"></v-text-field>
+            <v-text-field label="Total" value="1231074.00" prefix="$"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
@@ -42,10 +39,10 @@
             <v-subheader>Recargo</v-subheader>
           </v-col>
           <v-col cols="5">
-            <v-text-field label="Total" value="10.00" prefix="$"></v-text-field>
+            <v-text-field label="Total" value="1" prefix="$"></v-text-field>
           </v-col>
           <v-col cols="5">
-            <v-text-field label="Total" value="10.00" prefix="$"></v-text-field>
+            <v-text-field label="Total" value="1" prefix="$"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
@@ -59,10 +56,10 @@
             <v-subheader>Derechos de Póliza</v-subheader>
           </v-col>
           <v-col cols="5">
-            <v-text-field label="Total" value="10.00" prefix="%"></v-text-field>
+            <v-text-field label="Total" value="100" prefix="%"></v-text-field>
           </v-col>
           <v-col cols="5">
-            <v-text-field label="Total" value="10.00" prefix="$"></v-text-field>
+            <v-text-field label="Total" value="1.00" prefix="$"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
@@ -70,10 +67,10 @@
             <v-subheader>I.V.A.</v-subheader>
           </v-col>
           <v-col cols="5">
-            <v-text-field label="Total" value="10.00" prefix="%"></v-text-field>
+            <v-text-field label="Total" value="58494.00" prefix="%"></v-text-field>
           </v-col>
           <v-col cols="5">
-            <v-text-field label="Total" value="10.00" prefix="$"></v-text-field>
+            <v-text-field label="Total" value="1" prefix="$"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
@@ -82,7 +79,7 @@
           </v-col>
           <v-col cols="5"></v-col>
           <v-col cols="5">
-            <v-text-field label="Total" value="10.00" prefix="$"></v-text-field>
+            <v-text-field label="Total" value="1289658" prefix="$"></v-text-field>
           </v-col>
         </v-row>
       </v-col>

@@ -737,6 +737,7 @@ export default {
                     showConfirmButton: false,
                     timer: 4000
                   });
+
                   store.dispatch("formPropertyStore/stepState", { index: 2 });
                   store.dispatch("formPropertyStore/getIntermediaryPolicy");
                 })

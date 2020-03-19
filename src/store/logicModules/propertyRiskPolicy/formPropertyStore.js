@@ -112,23 +112,12 @@ const actions = {
               commit('setDataHeaderPolicy', response.data.getHeaderPolicy);
 
 
-              this.dispatch('formPropertyStore/getPersonsPolicy').then(resp => {
-
-
-
-                this.dispatch('formPropertyStore/getRisksPolicy').then(resp => {
-                  resolve()
-                })
-                  .catch(e => {
-                    reject(e)
-                  })
-
+              this.dispatch('formPropertyStore/getRisksPolicy').then(resp => {
+                resolve()
               })
                 .catch(e => {
                   reject(e)
                 })
-
-
 
             } else {
               commit('setProductConfigurationHeaderPolicy');
@@ -194,8 +183,40 @@ const actions = {
         .then(response => {
 
           if (response.data.status.code == 200) {
+        
+            let payloadTaker ={
+              anniversary: state.step1.anniversary,
+              codeLinksPerson: 1,
+              documentNumber: state.step1.documentHolderNumber,
+              typeDocument: state.step1.typeDocumentHolder,
+              uniqueIdentifier:state.step1.uniqueIdentifier
+            }  
 
-            resolve()
+            this.dispatch('formPropertyStore/createPersonPolicy', payloadTaker).then(resp => {
+              let payloadPaying ={
+                anniversary: state.step1.anniversary,
+                codeLinksPerson: 1,
+                documentNumber: state.step1.payingDocumentNumber,
+                typeDocument: state.step1.typePayingDocument,
+                uniqueIdentifier:state.step1.uniqueIdentifier
+              }  
+              
+              this.dispatch('formPropertyStore/createPersonPolicy', payloadPaying).then(resp => {
+                resolve()
+              
+              })
+              .catch(err => {
+  
+                reject(err)
+              })
+
+
+            
+            })
+            .catch(err => {
+
+              reject(err)
+            })
 
           } else {
 
@@ -278,44 +299,33 @@ const actions = {
 
 
   },
-  getRisksPolicy({
+
+  getIntermediaryPolicy({
     commit,
     state
   }) {
-
     return new Promise((resolve, reject) => {
+      let uniqueIdentifier = this.state.formPropertyStore.step1.uniqueIdentifier,
+        anniversary = this.state.formPropertyStore.step1.anniversary;
+      // let uniqueIdentifier = 1,
+      //   anniversary = -1
 
-      let uniqueIdentifier = state.step1.uniqueIdentifier
-      anniversary = state.step1.anniversary
-
-
-      let url = Vue.prototype.$urlServices + `/api/v1/sbs/riskPolicy/uniqueIdentifier/${uniqueIdentifier}/anniversary/${anniversary}`
+      let url = Vue.prototype.$urlServices + `/api/v1/sbs/intermediaryPolicy/uniqueIdentifier/${uniqueIdentifier}/anniversary/${anniversary}`
       restApi.get(url)
         .then(response => {
-
           if (response.data.status.code == 200) {
-
-
             resolve()
-            commit('setRisksPolicy', response.data.getRiskPolicy);
-
+            console.log(response);
+            commit('setIntermediaryPolicy', response.data.getIntermediaryPolicyDTOS);
           } else {
-
             reject(response.data.status.message)
           }
-
         })
         .catch(e => {
-
           reject(e)
         })
-
     })
-
-
   },
-
-
   getPersonsPolicy({
     commit,
     state
@@ -353,58 +363,61 @@ const actions = {
 
   },
 
-  getIntermediaryPolicy({
+  createPersonPolicy({
     commit,
     state
-  }) {
-    return new Promise((resolve, reject) => {
-      let uniqueIdentifier = this.state.formPropertyStore.step1.uniqueIdentifier,
-        anniversary = this.state.formPropertyStore.step1.anniversary;
-      let url = Vue.prototype.$urlServices + `/api/v1/sbs/intermediaryPolicy/uniqueIdentifier/${uniqueIdentifier}/anniversary/${anniversary}`
-      restApi.get(url)
-        .then(response => {
-          if (response.data.status.code == 200) {
-            resolve()
-            console.log(response);
-            commit('setIntermediaryPolicy', response.data.getIntermediaryPolicyDTOS);
-          } else {
-            reject(response.data.status.message)
-          }
-        })
-        .catch(e => {
-          reject(e)
-        })
-    })
-  },
-  getCoveragePolicy(state, data) {
-    let urlData = state.state.step2.risks[data.key];
-    console.log('urlData');
-    console.log(data);
-    console.log(urlData);
-    console.log('/ urlData');
-    return new Promise((resolve, reject) => {
-      // console.log(state.step1.anniversary);
+  }, dataPerson) {
 
-      //let uniqueIdentifier = state.step1.uniqueIdentifier,
-      let anniversary = -1;
-      let uniqueIdentifier = 1;
-      let riskNumber = 1;
-      let url = Vue.prototype.$urlServices + `/api/v1/sbs/coveragePolicy/uniqueIdentifier/${uniqueIdentifier}/anniversary/${anniversary}/riskNumber/${riskNumber}`
-      restApi.get(url)
+    return new Promise((resolve, reject) => {
+
+
+      let url = Vue.prototype.$urlServices + `/api/v1/oal/createPolicylinksperson`
+      restApi.post(url, dataPerson)
         .then(response => {
+
           if (response.data.status.code == 200) {
             resolve()
-            console.log(response);
-            commit('setCoveragePolicy', response.data.getCoveragePolicyDTOS);
           } else {
             reject(response.data.status.message)
           }
+
         })
         .catch(e => {
+
           reject(e)
         })
+
     })
   }
+  // getCoveragePolicy(state, data) {
+  //   let urlData = state.state.step2.risks[data.key];
+  //   console.log('urlData');
+  //   console.log(data);
+  //   console.log(urlData);
+  //   console.log('/ urlData');
+  //   return new Promise((resolve, reject) => {
+  //     // console.log(state.step1.anniversary);
+
+  //     //let uniqueIdentifier = state.step1.uniqueIdentifier,
+  //     let anniversary = -1;
+  //     let uniqueIdentifier = 1;
+  //     let riskNumber = 1;
+  //     let url = Vue.prototype.$urlServices + `/api/v1/sbs/coveragePolicy/uniqueIdentifier/${uniqueIdentifier}/anniversary/${anniversary}/riskNumber/${riskNumber}`
+  //     restApi.get(url)
+  //       .then(response => {
+  //         if (response.data.status.code == 200) {
+  //           resolve()
+  //           console.log(response);
+  //           commit('setCoveragePolicy', response.data.getCoveragePolicyDTOS);
+  //         } else {
+  //           reject(response.data.status.message)
+  //         }
+  //       })
+  //       .catch(e => {
+  //         reject(e)
+  //       })
+  //   })
+  // }
 
 
 }
@@ -497,7 +510,7 @@ const mutations = {
   setUniqueIdentifier(state, data) {
 
     state.step1.uniqueIdentifier = data.uniqueIdentifier
-    state.step1.anniversary = 99 //Valor Provisional para grabar solo cotizaciones
+    state.step1.anniversary = -1 //Valor Provisional para grabar solo cotizaciones
 
   },
 
@@ -576,6 +589,7 @@ const mutations = {
     let dataNewRisk = Object.assign({}, this.state.riskPolicyStore);
     state.step2.risks.push(dataNewRisk);
   },
+
   setPersonsPolicy(state, dataPersons) {
 
     dataPersons.forEach(element => {
@@ -599,8 +613,8 @@ const mutations = {
       }
 
 
-    }  
-   
+    })
+
   }
 }
 export default {

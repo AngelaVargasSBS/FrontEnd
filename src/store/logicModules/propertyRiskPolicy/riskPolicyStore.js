@@ -127,7 +127,8 @@ const actions = {
     let uniqueIdentifier = this.state.formPropertyStore.step1.uniqueIdentifier,
       anniversary = this.state.formPropertyStore.step1.anniversary,
       planCode = this.state.formPropertyStore.step1.planCode,
-      riskNumber = state.riskNumber
+      riskNumber = state.riskNumber,
+      codeTypeRisk = this.state.formPropertyStore.step1.typeRiskCode
 
 
     return new Promise((resolve, reject) => {
@@ -137,7 +138,9 @@ const actions = {
         uniqueIdentifier: uniqueIdentifier,
         anniversary: anniversary,
         riskNumber: riskNumber,
-        planCode: planCode
+        planCode: planCode,
+        codeTypeRisk:  codeTypeRisk
+
       }
 
       restApi.post(url, dataPost)
@@ -243,6 +246,13 @@ const actions = {
     dataTariffRisk.riskNumber = state.riskNumber;
     dataTariffRisk.anniversary = this.state.formPropertyStore.step1.anniversary;
     dataTariffRisk.uniqueIdentifier = this.state.formPropertyStore.step1.uniqueIdentifier;
+
+
+    // let dataTariffRisk = {};
+    // dataTariffRisk.riskNumber = 1;
+    // dataTariffRisk.anniversary = 1;
+    // dataTariffRisk.uniqueIdentifier = -1;
+ 
     return new Promise((resolve, reject) => {
       let url = Vue.prototype.$urlServices + `/api/v1/sbs/getFunctionalityTariffRisk/functionalityTariffRisk`;
       restApi.post(url, dataTariffRisk)
@@ -267,7 +277,6 @@ const actions = {
     //   { codigoSuma: 2, descripcion: 'CONTENIDOS', sumaMinima: 10000000, sumaMaxima: 500000000, obligatoria: true, summAssured: 200, summIncluded: true },
     //   { codigoSuma: 3, descripcion: 'TODO RIESGO', sumaMinima: 1000000, sumaMaxima: 50000000, obligatoria: false, summAssured: 300, summIncluded: true }
     // ]
-
 
     let uniqueIdentifier = this.state.formPropertyStore.step1.uniqueIdentifier,
       anniversary = this.state.formPropertyStore.step1.anniversary,
@@ -297,13 +306,6 @@ const actions = {
 
 
   },
-  getCoveragesRisk({
-    commit,
-    state
-  }) {
-
-
-  },
 
   getCoveragePolicy({
     commit,
@@ -313,9 +315,10 @@ const actions = {
     return new Promise((resolve, reject) => {
       let uniqueIdentifier = this.state.formPropertyStore.step1.uniqueIdentifier,
         anniversary = this.state.formPropertyStore.step1.anniversary;
-      /*  let anniversary = -1;
-       let uniqueIdentifier = 1; */
       let riskNumber = data.riskNumber;
+      // let anniversary = -1;
+      // let uniqueIdentifier = 1;
+      // let riskNumber = 1;
 
       let url = Vue.prototype.$urlServices + `/api/v1/sbs/coveragePolicy/uniqueIdentifier/${uniqueIdentifier}/anniversary/${anniversary}/riskNumber/${riskNumber}`
       restApi.get(url)

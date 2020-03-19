@@ -901,10 +901,7 @@ export default {
         .dispatch("riskPolicyStore/getSummsAssuredRisk")
         .then(resp => {})
         .catch(err => {});
-      store
-        .dispatch("riskPolicyStore/getCoveragesRisk")
-        .then(resp => {})
-        .catch(err => {});
+    
     },
     deleteItemrisks(item) {
       const index = this.risks.indexOf(item);
