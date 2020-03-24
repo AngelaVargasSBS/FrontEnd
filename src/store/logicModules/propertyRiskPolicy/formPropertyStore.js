@@ -511,7 +511,7 @@ const mutations = {
 
   },
 
-  setHeaderPolicy(state, data) {
+  setDataHeaderPolicy(state, data) {
 
     // /Validar si no existen datos dejar por default los de la configuración?
     state.step1.uniqueIdentifier = data.uniqueIdentifier
@@ -528,6 +528,13 @@ const mutations = {
     state.step1.policyNumber = data.policyNumber
     state.step1.productCode = data.productCode
     state.step1.planCode = data.planCode
+    state.step1.bonusLocalCurrency =  data.bonusLocalCurrency
+    state.step1.intermediationCommission = data.intermediationCommission 
+    state.step1.discountValue = data.discountValue
+    state.step1.surchargeValue = data.surchargeValue 
+    state.step1.sumInsuredLocalCurrency = data.sumInsuredLocalCurrency
+    state.step1.localCurrencyVatBase = data.localCurrencyVatBase
+    state.step1.premiumTotal = data.localCurrencyVatBase+data.bonusLocalCurrency
 
   },
 
@@ -660,7 +667,15 @@ export default {
         takerNumberDocument: null,
         typeEvent: null,
         typeSubEvent: null,
-        flagEvent: null
+        flagEvent: null,
+        bonusLocalCurrency:null,
+        intermediationCommission:null,
+        discountValue: null,
+        surchargeValue: null,
+        sumInsuredLocalCurrency:null,
+        localCurrencyVatBase:null,
+        premiumTotal:null
+
 
       },
       step2: {
