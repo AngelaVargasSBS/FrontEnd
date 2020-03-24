@@ -7,7 +7,6 @@ import {
 //import restApi from '@/store/utils/restApi.js'
 import restApi from '@/store/utils/restApiNoToken.js'
 
-
 const getters = {
   getField,
 }
@@ -191,7 +190,6 @@ const actions = {
               typeDocument: state.step1.typeDocumentHolder,
               uniqueIdentifier:state.step1.uniqueIdentifier
             }  
-
             this.dispatch('formPropertyStore/createPersonPolicy', payloadTaker).then(resp => {
               let payloadPaying ={
                 anniversary: state.step1.anniversary,
