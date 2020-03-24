@@ -139,7 +139,7 @@
                     persistent-hint
                     hint="Seleccione un Clausulado (obligatorio)"
                     :items="clausesDir"
-                    item-text="field3"
+                    item-text="field1"
                     item-value="field2"
                     v-model="clauseCode"
                     return-object

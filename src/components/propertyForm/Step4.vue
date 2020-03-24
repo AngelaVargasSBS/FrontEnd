@@ -12,12 +12,7 @@
           <v-card-subtitle>  </v-card-subtitle>
 
           <v-card-text>
-            <v-data-table
-              :headers="headers"
-              :items="desserts"
-              :items-per-page="5"
-              class="elevation-1"
-            ></v-data-table>
+          
           </v-card-text>
         </v-card>
       </v-col>
@@ -31,7 +26,7 @@
             <v-subheader>Prima</v-subheader>
           </v-col>
           <v-col cols="10">
-            <v-text-field label="Total" value="1231074.00" prefix="$"></v-text-field>
+            <v-text-field label="Total" :value="bonusLocalCurrency" prefix="$"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
@@ -39,10 +34,10 @@
             <v-subheader>Recargo</v-subheader>
           </v-col>
           <v-col cols="5">
-            <v-text-field label="Total" value="1" prefix="$"></v-text-field>
+            <v-text-field label="Total" :value="surchargeValue" prefix="$"></v-text-field>
           </v-col>
           <v-col cols="5">
-            <v-text-field label="Total" value="1" prefix="$"></v-text-field>
+            <v-text-field label="Total" :value="surchargeValue" prefix="$"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
@@ -67,10 +62,10 @@
             <v-subheader>I.V.A.</v-subheader>
           </v-col>
           <v-col cols="5">
-            <v-text-field label="Total" value="58494.00" prefix="%"></v-text-field>
+            <v-text-field label="Total" value="19" prefix="%"></v-text-field>
           </v-col>
           <v-col cols="5">
-            <v-text-field label="Total" value="1" prefix="$"></v-text-field>
+            <v-text-field label="Total" :value="localCurrencyVatBase" prefix="$"></v-text-field>
           </v-col>
         </v-row>
         <v-row>
@@ -79,7 +74,7 @@
           </v-col>
           <v-col cols="5"></v-col>
           <v-col cols="5">
-            <v-text-field label="Total" value="1289658" prefix="$"></v-text-field>
+            <v-text-field label="Total" :value="premiumTotal" prefix="$"></v-text-field>
           </v-col>
         </v-row>
       </v-col>
@@ -135,9 +130,7 @@ export default {
   },
   components: {},
   computed: {
-    ...mapFields({
-      desserts: "step4.intermediaries"
-    })
+    ...mapState("formPropertyStore", ["bonusLocalCurrency", "surchargeValue", "localCurrencyVatBase", "premiumTotal"])
   },
 
   methods: {
